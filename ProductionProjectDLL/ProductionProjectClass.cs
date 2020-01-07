@@ -28,6 +28,42 @@ namespace ProductionProjectDLL
         FindProdutionProjectsByAssignedProjectIDDataSet aFindProductionProjectsByAssignedProjectIDDataSet;
         FindProdutionProjectsByAssignedProjectIDDataSetTableAdapters.FindProductionProjectByAssignedProjectIDTableAdapter aFindProductionProjectsByAssignedProjectsIDTableAdapter;
 
+        FindOpenProductionProjectsDataSet aFindOpenProductionProjectsDataSet;
+        FindOpenProductionProjectsDataSetTableAdapters.FindOpenProductionProjectsTableAdapter aFindOpenProductionProjectsTableAdapter;
+
+        FindProductionProjectsByCurrentStatusIDDataSet aFindProductionProjectsByCurrentStatusIDDataSet;
+        FindProductionProjectsByCurrentStatusIDDataSetTableAdapters.FindProductionProjectsByCurrentStatusIDTableAdapter aFindProductionProjectsByCurrentStatusIDTableAdapter;
+
+        public FindProductionProjectsByCurrentStatusIDDataSet FindProductionProjectsByCurrentStatusID(int intCurrentStatusID)
+        {
+            try
+            {
+                aFindProductionProjectsByCurrentStatusIDDataSet = new FindProductionProjectsByCurrentStatusIDDataSet();
+                aFindProductionProjectsByCurrentStatusIDTableAdapter = new FindProductionProjectsByCurrentStatusIDDataSetTableAdapters.FindProductionProjectsByCurrentStatusIDTableAdapter();
+                aFindProductionProjectsByCurrentStatusIDTableAdapter.Fill(aFindProductionProjectsByCurrentStatusIDDataSet.FindProductionProjectsByCurrentStatusID, intCurrentStatusID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Projects By Current ID " + Ex.Message);
+            }
+
+            return aFindProductionProjectsByCurrentStatusIDDataSet;
+        }
+        public FindOpenProductionProjectsDataSet FindOpenProductionProjects()
+        {
+            try
+            {
+                aFindOpenProductionProjectsDataSet = new FindOpenProductionProjectsDataSet();
+                aFindOpenProductionProjectsTableAdapter = new FindOpenProductionProjectsDataSetTableAdapters.FindOpenProductionProjectsTableAdapter();
+                aFindOpenProductionProjectsTableAdapter.Fill(aFindOpenProductionProjectsDataSet.FindOpenProductionProjects);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Open Production Projects " + Ex.Message);
+            }
+
+            return aFindOpenProductionProjectsDataSet;
+        }
         public FindProdutionProjectsByAssignedProjectIDDataSet FindProductionProjectsByAssignedProjectID(string strAssignedProjectID)
         {
             try
