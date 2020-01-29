@@ -97,14 +97,14 @@ namespace ProductionProjectDLL
 
             return blnFatalError;
         }
-        public bool InsertProdutionProject(int intProjectID, int intBusinessLineID, string strBusinessAddress, string strCity, string strBusinessState, int intProjectManagerID, int intAssignedOfficeID,  DateTime datECDDate, int intCurrentStatusID, string strProjectNotes)
+        public bool InsertProdutionProject(int intProjectID, int intBusinessLineID, string strBusinessAddress, string strCity, string strBusinessState, int intProjectManagerID, int intAssignedOfficeID, DateTime datReceiveDate,  DateTime datECDDate, int intCurrentStatusID, string strProjectNotes)
         {
             bool blnFatalError = false;
 
             try
             {
                 aInsertProductionProjectTableAdapter = new InsertProductionProjectEntryTableAdapters.QueriesTableAdapter();
-                aInsertProductionProjectTableAdapter.InsertProductionProject(intProjectID, intBusinessLineID, strBusinessAddress, strCity, strBusinessState, intProjectManagerID, intAssignedOfficeID, DateTime.Now, datECDDate, intCurrentStatusID, strProjectNotes);
+                aInsertProductionProjectTableAdapter.InsertProductionProject(intProjectID, intBusinessLineID, strBusinessAddress, strCity, strBusinessState, intProjectManagerID, intAssignedOfficeID, datReceiveDate, datECDDate, intCurrentStatusID, strProjectNotes);
             }
             catch (Exception Ex)
             {
