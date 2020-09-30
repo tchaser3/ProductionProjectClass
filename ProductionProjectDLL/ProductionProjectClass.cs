@@ -34,6 +34,24 @@ namespace ProductionProjectDLL
         FindProductionProjectsByCurrentStatusIDDataSet aFindProductionProjectsByCurrentStatusIDDataSet;
         FindProductionProjectsByCurrentStatusIDDataSetTableAdapters.FindProductionProjectsByCurrentStatusIDTableAdapter aFindProductionProjectsByCurrentStatusIDTableAdapter;
 
+        FindProductionProjectByProjectIDDataSet aFindProductionProjectByProjectIDDataSet;
+        FindProductionProjectByProjectIDDataSetTableAdapters.FindProductionProjectByProjectIDTableAdapter aFindProductionProjectByProjectIDTableAdapter;
+
+        public FindProductionProjectByProjectIDDataSet FindProductionProjectByProjectID(int intProjectID)
+        {
+            try
+            {
+                aFindProductionProjectByProjectIDDataSet = new FindProductionProjectByProjectIDDataSet();
+                aFindProductionProjectByProjectIDTableAdapter = new FindProductionProjectByProjectIDDataSetTableAdapters.FindProductionProjectByProjectIDTableAdapter();
+                aFindProductionProjectByProjectIDTableAdapter.Fill(aFindProductionProjectByProjectIDDataSet.FindProductionProjectByProjectID, intProjectID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project By Project ID " + Ex.Message);
+            }
+
+            return aFindProductionProjectByProjectIDDataSet;
+        }
         public FindProductionProjectsByCurrentStatusIDDataSet FindProductionProjectsByCurrentStatusID(int intCurrentStatusID)
         {
             try

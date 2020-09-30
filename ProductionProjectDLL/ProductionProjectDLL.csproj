@@ -49,6 +49,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindOpenProductionProjectsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindProductionProjectByProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectByProjectIDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindProductionProjectsByCurrentStatusIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -94,6 +99,17 @@
     </None>
     <None Include="FindOpenProductionProjectsDataSet.xss">
       <DependentUpon>FindOpenProductionProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectByProjectIDDataSet.xsc">
+      <DependentUpon>FindProductionProjectByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectByProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectByProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectByProjectIDDataSet.xss">
+      <DependentUpon>FindProductionProjectByProjectIDDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindProductionProjectsByCurrentStatusIDDataSet.xsc">
       <DependentUpon>FindProductionProjectsByCurrentStatusIDDataSet.xsd</DependentUpon>
