@@ -37,6 +37,26 @@ namespace ProductionProjectDLL
         FindProductionProjectByProjectIDDataSet aFindProductionProjectByProjectIDDataSet;
         FindProductionProjectByProjectIDDataSetTableAdapters.FindProductionProjectByProjectIDTableAdapter aFindProductionProjectByProjectIDTableAdapter;
 
+        UpdateProductionProjectTableAdapterTableAdapters.QueriesTableAdapter aUpdateProductionProjectTableAdapter;
+
+        public bool UpdateProductionProject(int intTransactionID, int intDepartmentID, string strAddress, string strCity, string strState, int intManagerID, int intOfficeID, DateTime datECDDate, string strProjectNotes)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateProductionProjectTableAdapter = new UpdateProductionProjectTableAdapterTableAdapters.QueriesTableAdapter();
+                aUpdateProductionProjectTableAdapter.UpdateProductionProject(intTransactionID, intDepartmentID, strAddress, strCity, strState, intManagerID, intOfficeID, datECDDate, strProjectNotes);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
         public FindProductionProjectByProjectIDDataSet FindProductionProjectByProjectID(int intProjectID)
         {
             try

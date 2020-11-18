@@ -86,6 +86,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdateProductionProjectStatusEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UpdateProductionProjectTableAdapter.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectTableAdapter.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -169,6 +174,17 @@
     </None>
     <None Include="UpdateProductionProjectStatusEntry.xss">
       <DependentUpon>UpdateProductionProjectStatusEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectTableAdapter.xsc">
+      <DependentUpon>UpdateProductionProjectTableAdapter.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectTableAdapter.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectTableAdapter.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectTableAdapter.xss">
+      <DependentUpon>UpdateProductionProjectTableAdapter.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
