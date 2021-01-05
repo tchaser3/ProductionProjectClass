@@ -44,6 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindOpenDepartmentProductionProjectsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenDepartmentProductionProjectsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindOpenProductionProjectsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -54,32 +59,297 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindProductionProjectByProjectIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindProductionProjectCableByProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectCableByProjectIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectCableTotalByProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectCableTotalByProjectIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectDocumentationByProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectDocumentationByProjectIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectInfoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectInfoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectInfoNeedingQCDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectInfoNeedingQCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectInfoNeedingSplicingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectInfoNeedingSplicingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectInfoPOAmountDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectInfoPOAmountDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectInvoicingTotalByProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectInvoicingTotalByProjectIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectInvoicingTotalsByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectInvoicingTotalsByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectInvoicingTransactionsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectInvoicingTransactionsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectMaterialRequestByProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectMaterialRequestByProjectIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectMaterialRequestDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectMaterialRequestDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectMaterialRequestItemsByRequestDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectMaterialRequestItemsByRequestDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectPermitsByProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectPermitsByProjectIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectQCByProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectQCByProjectIDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindProductionProjectsByCurrentStatusIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FindProductionProjectsByCurrentStatusIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectTechAssignmentByEmployeeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectTechAssignmentByEmployeeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectTechAssignmentByProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectTechAssignmentByProjectIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectTechAssignmentsOverDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectTechAssignmentsOverDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectUpdatesByProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectUpdatesByProjectIDDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="FindProdutionProjectsByAssignedProjectIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FindProdutionProjectsByAssignedProjectIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InsertProductionProjectCableEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertProductionProjectCableEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertProductionProjectDocumentEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertProductionProjectDocumentEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InsertProductionProjectEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>InsertProductionProjectEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InsertProductionProjectInfoEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertProductionProjectInfoEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertProductionProjectInvoiceEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertProductionProjectInvoiceEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertProductionProjectMaterialRequestEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertProductionProjectMaterialRequestEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertProductionProjectMaterialRequestItemsEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertProductionProjectMaterialRequestItemsEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertProductionProjectPermitEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertProductionProjectPermitEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertProductionProjectQCEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertProductionProjectQCEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertProductionProjectTechAssignmentEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertProductionProjectTechAssignmentEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertProductionProjectUpdateEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertProductionProjectUpdateEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionProjectCableDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionProjectCableDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ProductionProjectClass.cs" />
+    <Compile Include="ProductionProjectDocumentationDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionProjectDocumentationDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionProjectInfoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionProjectInfoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionProjectInvoicingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionProjectInvoicingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionProjectMaterialRequestDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionProjectMaterialRequestDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionProjectMaterialRequestItemsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionProjectMaterialRequestItemsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionProjectPermitsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionProjectPermitsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionProjectQCDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionProjectQCDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ProductionProjectsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProductionProjectsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionProjectTechAssignedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionProjectTechAssignedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionProjectUpdatesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductionProjectUpdatesDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveProductionProjectCableEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemoveProductionProjectCableEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveProductionProjectInfoEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemoveProductionProjectInfoEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveProductionProjectTechAssignmentEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemoveProductionProjectTechAssignmentEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProductionProjectCableFootageEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectCableFootageEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProductionProjectCablePartIDEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectCablePartIDEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProductionProjectCableTypeEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectCableTypeEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProductionProjectInfoHardRestorationEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectInfoHardRestorationEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProductionProjectInfoPOAmountEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectInfoPOAmountEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProductionProjectInfoQCPerformedEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectInfoQCPerformedEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProductionProjectInfoSplicingCompleteEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectInfoSplicingCompleteEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProductionProjectInvoiceStatusEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectInvoiceStatusEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProductionProjectMaterialRequestDateReceivedEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectMaterialRequestDateReceivedEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProductionProjectPermitCostEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectPermitCostEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProductionProjectPermitPermitReceivedEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectPermitPermitReceivedEntry.xsd</DependentUpon>
     </Compile>
     <Compile Include="UpdateProductionProjectStatusEntry.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -94,6 +364,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="FindOpenDepartmentProductionProjectsDataSet.xsc">
+      <DependentUpon>FindOpenDepartmentProductionProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenDepartmentProductionProjectsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenDepartmentProductionProjectsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenDepartmentProductionProjectsDataSet.xss">
+      <DependentUpon>FindOpenDepartmentProductionProjectsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindOpenProductionProjectsDataSet.xsc">
       <DependentUpon>FindOpenProductionProjectsDataSet.xsd</DependentUpon>
     </None>
@@ -116,6 +397,171 @@
     <None Include="FindProductionProjectByProjectIDDataSet.xss">
       <DependentUpon>FindProductionProjectByProjectIDDataSet.xsd</DependentUpon>
     </None>
+    <None Include="FindProductionProjectCableByProjectIDDataSet.xsc">
+      <DependentUpon>FindProductionProjectCableByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectCableByProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectCableByProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectCableByProjectIDDataSet.xss">
+      <DependentUpon>FindProductionProjectCableByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectCableTotalByProjectIDDataSet.xsc">
+      <DependentUpon>FindProductionProjectCableTotalByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectCableTotalByProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectCableTotalByProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectCableTotalByProjectIDDataSet.xss">
+      <DependentUpon>FindProductionProjectCableTotalByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectDocumentationByProjectIDDataSet.xsc">
+      <DependentUpon>FindProductionProjectDocumentationByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectDocumentationByProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectDocumentationByProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectDocumentationByProjectIDDataSet.xss">
+      <DependentUpon>FindProductionProjectDocumentationByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectInfoDataSet.xsc">
+      <DependentUpon>FindProductionProjectInfoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectInfoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectInfoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectInfoDataSet.xss">
+      <DependentUpon>FindProductionProjectInfoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectInfoNeedingQCDataSet.xsc">
+      <DependentUpon>FindProductionProjectInfoNeedingQCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectInfoNeedingQCDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectInfoNeedingQCDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectInfoNeedingQCDataSet.xss">
+      <DependentUpon>FindProductionProjectInfoNeedingQCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectInfoNeedingSplicingDataSet.xsc">
+      <DependentUpon>FindProductionProjectInfoNeedingSplicingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectInfoNeedingSplicingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectInfoNeedingSplicingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectInfoNeedingSplicingDataSet.xss">
+      <DependentUpon>FindProductionProjectInfoNeedingSplicingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectInfoPOAmountDataSet.xsc">
+      <DependentUpon>FindProductionProjectInfoPOAmountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectInfoPOAmountDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectInfoPOAmountDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectInfoPOAmountDataSet.xss">
+      <DependentUpon>FindProductionProjectInfoPOAmountDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectInvoicingTotalByProjectIDDataSet.xsc">
+      <DependentUpon>FindProductionProjectInvoicingTotalByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectInvoicingTotalByProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectInvoicingTotalByProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectInvoicingTotalByProjectIDDataSet.xss">
+      <DependentUpon>FindProductionProjectInvoicingTotalByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectInvoicingTotalsByDateRangeDataSet.xsc">
+      <DependentUpon>FindProductionProjectInvoicingTotalsByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectInvoicingTotalsByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectInvoicingTotalsByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectInvoicingTotalsByDateRangeDataSet.xss">
+      <DependentUpon>FindProductionProjectInvoicingTotalsByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectInvoicingTransactionsDataSet.xsc">
+      <DependentUpon>FindProductionProjectInvoicingTransactionsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectInvoicingTransactionsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectInvoicingTransactionsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectInvoicingTransactionsDataSet.xss">
+      <DependentUpon>FindProductionProjectInvoicingTransactionsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectMaterialRequestByProjectIDDataSet.xsc">
+      <DependentUpon>FindProductionProjectMaterialRequestByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectMaterialRequestByProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectMaterialRequestByProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectMaterialRequestByProjectIDDataSet.xss">
+      <DependentUpon>FindProductionProjectMaterialRequestByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectMaterialRequestDataSet.xsc">
+      <DependentUpon>FindProductionProjectMaterialRequestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectMaterialRequestDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectMaterialRequestDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectMaterialRequestDataSet.xss">
+      <DependentUpon>FindProductionProjectMaterialRequestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectMaterialRequestItemsByRequestDataSet.xsc">
+      <DependentUpon>FindProductionProjectMaterialRequestItemsByRequestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectMaterialRequestItemsByRequestDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectMaterialRequestItemsByRequestDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectMaterialRequestItemsByRequestDataSet.xss">
+      <DependentUpon>FindProductionProjectMaterialRequestItemsByRequestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectPermitsByProjectIDDataSet.xsc">
+      <DependentUpon>FindProductionProjectPermitsByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectPermitsByProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectPermitsByProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectPermitsByProjectIDDataSet.xss">
+      <DependentUpon>FindProductionProjectPermitsByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectQCByProjectIDDataSet.xsc">
+      <DependentUpon>FindProductionProjectQCByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectQCByProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectQCByProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectQCByProjectIDDataSet.xss">
+      <DependentUpon>FindProductionProjectQCByProjectIDDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindProductionProjectsByCurrentStatusIDDataSet.xsc">
       <DependentUpon>FindProductionProjectsByCurrentStatusIDDataSet.xsd</DependentUpon>
     </None>
@@ -126,6 +572,50 @@
     </None>
     <None Include="FindProductionProjectsByCurrentStatusIDDataSet.xss">
       <DependentUpon>FindProductionProjectsByCurrentStatusIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectTechAssignmentByEmployeeDataSet.xsc">
+      <DependentUpon>FindProductionProjectTechAssignmentByEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectTechAssignmentByEmployeeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectTechAssignmentByEmployeeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectTechAssignmentByEmployeeDataSet.xss">
+      <DependentUpon>FindProductionProjectTechAssignmentByEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectTechAssignmentByProjectIDDataSet.xsc">
+      <DependentUpon>FindProductionProjectTechAssignmentByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectTechAssignmentByProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectTechAssignmentByProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectTechAssignmentByProjectIDDataSet.xss">
+      <DependentUpon>FindProductionProjectTechAssignmentByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectTechAssignmentsOverDateRangeDataSet.xsc">
+      <DependentUpon>FindProductionProjectTechAssignmentsOverDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectTechAssignmentsOverDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectTechAssignmentsOverDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectTechAssignmentsOverDateRangeDataSet.xss">
+      <DependentUpon>FindProductionProjectTechAssignmentsOverDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectUpdatesByProjectIDDataSet.xsc">
+      <DependentUpon>FindProductionProjectUpdatesByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectUpdatesByProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectUpdatesByProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectUpdatesByProjectIDDataSet.xss">
+      <DependentUpon>FindProductionProjectUpdatesByProjectIDDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindProdutionProjectsByAssignedProjectIDDataSet.xsc">
       <DependentUpon>FindProdutionProjectsByAssignedProjectIDDataSet.xsd</DependentUpon>
@@ -138,6 +628,28 @@
     <None Include="FindProdutionProjectsByAssignedProjectIDDataSet.xss">
       <DependentUpon>FindProdutionProjectsByAssignedProjectIDDataSet.xsd</DependentUpon>
     </None>
+    <None Include="InsertProductionProjectCableEntry.xsc">
+      <DependentUpon>InsertProductionProjectCableEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectCableEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertProductionProjectCableEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertProductionProjectCableEntry.xss">
+      <DependentUpon>InsertProductionProjectCableEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectDocumentEntry.xsc">
+      <DependentUpon>InsertProductionProjectDocumentEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectDocumentEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertProductionProjectDocumentEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertProductionProjectDocumentEntry.xss">
+      <DependentUpon>InsertProductionProjectDocumentEntry.xsd</DependentUpon>
+    </None>
     <None Include="InsertProductionProjectEntry.xsc">
       <DependentUpon>InsertProductionProjectEntry.xsd</DependentUpon>
     </None>
@@ -148,6 +660,182 @@
     </None>
     <None Include="InsertProductionProjectEntry.xss">
       <DependentUpon>InsertProductionProjectEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectInfoEntry.xsc">
+      <DependentUpon>InsertProductionProjectInfoEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectInfoEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertProductionProjectInfoEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertProductionProjectInfoEntry.xss">
+      <DependentUpon>InsertProductionProjectInfoEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectInvoiceEntry.xsc">
+      <DependentUpon>InsertProductionProjectInvoiceEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectInvoiceEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertProductionProjectInvoiceEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertProductionProjectInvoiceEntry.xss">
+      <DependentUpon>InsertProductionProjectInvoiceEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectMaterialRequestEntry.xsc">
+      <DependentUpon>InsertProductionProjectMaterialRequestEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectMaterialRequestEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertProductionProjectMaterialRequestEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertProductionProjectMaterialRequestEntry.xss">
+      <DependentUpon>InsertProductionProjectMaterialRequestEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectMaterialRequestItemsEntry.xsc">
+      <DependentUpon>InsertProductionProjectMaterialRequestItemsEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectMaterialRequestItemsEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertProductionProjectMaterialRequestItemsEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertProductionProjectMaterialRequestItemsEntry.xss">
+      <DependentUpon>InsertProductionProjectMaterialRequestItemsEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectPermitEntry.xsc">
+      <DependentUpon>InsertProductionProjectPermitEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectPermitEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertProductionProjectPermitEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertProductionProjectPermitEntry.xss">
+      <DependentUpon>InsertProductionProjectPermitEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectQCEntry.xsc">
+      <DependentUpon>InsertProductionProjectQCEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectQCEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertProductionProjectQCEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertProductionProjectQCEntry.xss">
+      <DependentUpon>InsertProductionProjectQCEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectTechAssignmentEntry.xsc">
+      <DependentUpon>InsertProductionProjectTechAssignmentEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectTechAssignmentEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertProductionProjectTechAssignmentEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertProductionProjectTechAssignmentEntry.xss">
+      <DependentUpon>InsertProductionProjectTechAssignmentEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectUpdateEntry.xsc">
+      <DependentUpon>InsertProductionProjectUpdateEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertProductionProjectUpdateEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertProductionProjectUpdateEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertProductionProjectUpdateEntry.xss">
+      <DependentUpon>InsertProductionProjectUpdateEntry.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectCableDataSet.xsc">
+      <DependentUpon>ProductionProjectCableDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectCableDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductionProjectCableDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductionProjectCableDataSet.xss">
+      <DependentUpon>ProductionProjectCableDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectDocumentationDataSet.xsc">
+      <DependentUpon>ProductionProjectDocumentationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectDocumentationDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductionProjectDocumentationDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductionProjectDocumentationDataSet.xss">
+      <DependentUpon>ProductionProjectDocumentationDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectInfoDataSet.xsc">
+      <DependentUpon>ProductionProjectInfoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectInfoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductionProjectInfoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductionProjectInfoDataSet.xss">
+      <DependentUpon>ProductionProjectInfoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectInvoicingDataSet.xsc">
+      <DependentUpon>ProductionProjectInvoicingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectInvoicingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductionProjectInvoicingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductionProjectInvoicingDataSet.xss">
+      <DependentUpon>ProductionProjectInvoicingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectMaterialRequestDataSet.xsc">
+      <DependentUpon>ProductionProjectMaterialRequestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectMaterialRequestDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductionProjectMaterialRequestDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductionProjectMaterialRequestDataSet.xss">
+      <DependentUpon>ProductionProjectMaterialRequestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectMaterialRequestItemsDataSet.xsc">
+      <DependentUpon>ProductionProjectMaterialRequestItemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectMaterialRequestItemsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductionProjectMaterialRequestItemsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductionProjectMaterialRequestItemsDataSet.xss">
+      <DependentUpon>ProductionProjectMaterialRequestItemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectPermitsDataSet.xsc">
+      <DependentUpon>ProductionProjectPermitsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectPermitsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductionProjectPermitsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductionProjectPermitsDataSet.xss">
+      <DependentUpon>ProductionProjectPermitsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectQCDataSet.xsc">
+      <DependentUpon>ProductionProjectQCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectQCDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductionProjectQCDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductionProjectQCDataSet.xss">
+      <DependentUpon>ProductionProjectQCDataSet.xsd</DependentUpon>
     </None>
     <None Include="ProductionProjectsDataSet.xsc">
       <DependentUpon>ProductionProjectsDataSet.xsd</DependentUpon>
@@ -160,9 +848,185 @@
     <None Include="ProductionProjectsDataSet.xss">
       <DependentUpon>ProductionProjectsDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ProductionProjectTechAssignedDataSet.xsc">
+      <DependentUpon>ProductionProjectTechAssignedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectTechAssignedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductionProjectTechAssignedDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductionProjectTechAssignedDataSet.xss">
+      <DependentUpon>ProductionProjectTechAssignedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectUpdatesDataSet.xsc">
+      <DependentUpon>ProductionProjectUpdatesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProductionProjectUpdatesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProductionProjectUpdatesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProductionProjectUpdatesDataSet.xss">
+      <DependentUpon>ProductionProjectUpdatesDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RemoveProductionProjectCableEntry.xsc">
+      <DependentUpon>RemoveProductionProjectCableEntry.xsd</DependentUpon>
+    </None>
+    <None Include="RemoveProductionProjectCableEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RemoveProductionProjectCableEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RemoveProductionProjectCableEntry.xss">
+      <DependentUpon>RemoveProductionProjectCableEntry.xsd</DependentUpon>
+    </None>
+    <None Include="RemoveProductionProjectInfoEntry.xsc">
+      <DependentUpon>RemoveProductionProjectInfoEntry.xsd</DependentUpon>
+    </None>
+    <None Include="RemoveProductionProjectInfoEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RemoveProductionProjectInfoEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RemoveProductionProjectInfoEntry.xss">
+      <DependentUpon>RemoveProductionProjectInfoEntry.xsd</DependentUpon>
+    </None>
+    <None Include="RemoveProductionProjectTechAssignmentEntry.xsc">
+      <DependentUpon>RemoveProductionProjectTechAssignmentEntry.xsd</DependentUpon>
+    </None>
+    <None Include="RemoveProductionProjectTechAssignmentEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RemoveProductionProjectTechAssignmentEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RemoveProductionProjectTechAssignmentEntry.xss">
+      <DependentUpon>RemoveProductionProjectTechAssignmentEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectCableFootageEntry.xsc">
+      <DependentUpon>UpdateProductionProjectCableFootageEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectCableFootageEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectCableFootageEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectCableFootageEntry.xss">
+      <DependentUpon>UpdateProductionProjectCableFootageEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectCablePartIDEntry.xsc">
+      <DependentUpon>UpdateProductionProjectCablePartIDEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectCablePartIDEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectCablePartIDEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectCablePartIDEntry.xss">
+      <DependentUpon>UpdateProductionProjectCablePartIDEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectCableTypeEntry.xsc">
+      <DependentUpon>UpdateProductionProjectCableTypeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectCableTypeEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectCableTypeEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectCableTypeEntry.xss">
+      <DependentUpon>UpdateProductionProjectCableTypeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectInfoHardRestorationEntry.xsc">
+      <DependentUpon>UpdateProductionProjectInfoHardRestorationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectInfoHardRestorationEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectInfoHardRestorationEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectInfoHardRestorationEntry.xss">
+      <DependentUpon>UpdateProductionProjectInfoHardRestorationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectInfoPOAmountEntry.xsc">
+      <DependentUpon>UpdateProductionProjectInfoPOAmountEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectInfoPOAmountEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectInfoPOAmountEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectInfoPOAmountEntry.xss">
+      <DependentUpon>UpdateProductionProjectInfoPOAmountEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectInfoQCPerformedEntry.xsc">
+      <DependentUpon>UpdateProductionProjectInfoQCPerformedEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectInfoQCPerformedEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectInfoQCPerformedEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectInfoQCPerformedEntry.xss">
+      <DependentUpon>UpdateProductionProjectInfoQCPerformedEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectInfoSplicingCompleteEntry.xsc">
+      <DependentUpon>UpdateProductionProjectInfoSplicingCompleteEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectInfoSplicingCompleteEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectInfoSplicingCompleteEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectInfoSplicingCompleteEntry.xss">
+      <DependentUpon>UpdateProductionProjectInfoSplicingCompleteEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectInvoiceStatusEntry.xsc">
+      <DependentUpon>UpdateProductionProjectInvoiceStatusEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectInvoiceStatusEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectInvoiceStatusEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectInvoiceStatusEntry.xss">
+      <DependentUpon>UpdateProductionProjectInvoiceStatusEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectMaterialRequestDateReceivedEntry.xsc">
+      <DependentUpon>UpdateProductionProjectMaterialRequestDateReceivedEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectMaterialRequestDateReceivedEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectMaterialRequestDateReceivedEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectMaterialRequestDateReceivedEntry.xss">
+      <DependentUpon>UpdateProductionProjectMaterialRequestDateReceivedEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectPermitCostEntry.xsc">
+      <DependentUpon>UpdateProductionProjectPermitCostEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectPermitCostEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectPermitCostEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectPermitCostEntry.xss">
+      <DependentUpon>UpdateProductionProjectPermitCostEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectPermitPermitReceivedEntry.xsc">
+      <DependentUpon>UpdateProductionProjectPermitPermitReceivedEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectPermitPermitReceivedEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectPermitPermitReceivedEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectPermitPermitReceivedEntry.xss">
+      <DependentUpon>UpdateProductionProjectPermitPermitReceivedEntry.xsd</DependentUpon>
     </None>
     <None Include="UpdateProductionProjectStatusEntry.xsc">
       <DependentUpon>UpdateProductionProjectStatusEntry.xsd</DependentUpon>
