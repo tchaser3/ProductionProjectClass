@@ -24,7 +24,7 @@ namespace ProductionProjectDLL {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class FindProductionProjectTechAssignmentByProjectIDDataSet : global::System.Data.DataSet {
         
-        private FindProductionProjectUpdatesByProjectIDDataTable tableFindProductionProjectUpdatesByProjectID;
+        private FindProductionProjectTechAssignmentByProjectIDDataTable tableFindProductionProjectTechAssignmentByProjectID;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace ProductionProjectDLL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["FindProductionProjectUpdatesByProjectID"] != null)) {
-                    base.Tables.Add(new FindProductionProjectUpdatesByProjectIDDataTable(ds.Tables["FindProductionProjectUpdatesByProjectID"]));
+                if ((ds.Tables["FindProductionProjectTechAssignmentByProjectID"] != null)) {
+                    base.Tables.Add(new FindProductionProjectTechAssignmentByProjectIDDataTable(ds.Tables["FindProductionProjectTechAssignmentByProjectID"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace ProductionProjectDLL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public FindProductionProjectUpdatesByProjectIDDataTable FindProductionProjectUpdatesByProjectID {
+        public FindProductionProjectTechAssignmentByProjectIDDataTable FindProductionProjectTechAssignmentByProjectID {
             get {
-                return this.tableFindProductionProjectUpdatesByProjectID;
+                return this.tableFindProductionProjectTechAssignmentByProjectID;
             }
         }
         
@@ -152,8 +152,8 @@ namespace ProductionProjectDLL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["FindProductionProjectUpdatesByProjectID"] != null)) {
-                    base.Tables.Add(new FindProductionProjectUpdatesByProjectIDDataTable(ds.Tables["FindProductionProjectUpdatesByProjectID"]));
+                if ((ds.Tables["FindProductionProjectTechAssignmentByProjectID"] != null)) {
+                    base.Tables.Add(new FindProductionProjectTechAssignmentByProjectIDDataTable(ds.Tables["FindProductionProjectTechAssignmentByProjectID"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace ProductionProjectDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableFindProductionProjectUpdatesByProjectID = ((FindProductionProjectUpdatesByProjectIDDataTable)(base.Tables["FindProductionProjectUpdatesByProjectID"]));
+            this.tableFindProductionProjectTechAssignmentByProjectID = ((FindProductionProjectTechAssignmentByProjectIDDataTable)(base.Tables["FindProductionProjectTechAssignmentByProjectID"]));
             if ((initTable == true)) {
-                if ((this.tableFindProductionProjectUpdatesByProjectID != null)) {
-                    this.tableFindProductionProjectUpdatesByProjectID.InitVars();
+                if ((this.tableFindProductionProjectTechAssignmentByProjectID != null)) {
+                    this.tableFindProductionProjectTechAssignmentByProjectID.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace ProductionProjectDLL {
             this.Namespace = "http://tempuri.org/FindProductionProjectTechAssignmentByProjectIDDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableFindProductionProjectUpdatesByProjectID = new FindProductionProjectUpdatesByProjectIDDataTable();
-            base.Tables.Add(this.tableFindProductionProjectUpdatesByProjectID);
+            this.tableFindProductionProjectTechAssignmentByProjectID = new FindProductionProjectTechAssignmentByProjectIDDataTable();
+            base.Tables.Add(this.tableFindProductionProjectTechAssignmentByProjectID);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeFindProductionProjectUpdatesByProjectID() {
+        private bool ShouldSerializeFindProductionProjectTechAssignmentByProjectID() {
             return false;
         }
         
@@ -270,29 +270,25 @@ namespace ProductionProjectDLL {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void FindProductionProjectUpdatesByProjectIDRowChangeEventHandler(object sender, FindProductionProjectUpdatesByProjectIDRowChangeEvent e);
+        public delegate void FindProductionProjectTechAssignmentByProjectIDRowChangeEventHandler(object sender, FindProductionProjectTechAssignmentByProjectIDRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class FindProductionProjectUpdatesByProjectIDDataTable : global::System.Data.TypedTableBase<FindProductionProjectUpdatesByProjectIDRow> {
+        public partial class FindProductionProjectTechAssignmentByProjectIDDataTable : global::System.Data.TypedTableBase<FindProductionProjectTechAssignmentByProjectIDRow> {
             
             private global::System.Data.DataColumn columnTransactionID;
             
-            private global::System.Data.DataColumn columnTransactionDate;
+            private global::System.Data.DataColumn columnDateAssigned;
             
-            private global::System.Data.DataColumn columnFirstName;
-            
-            private global::System.Data.DataColumn columnLastName;
-            
-            private global::System.Data.DataColumn columnProjectUpdate;
+            private global::System.Data.DataColumn columnEmployee;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindProductionProjectUpdatesByProjectIDDataTable() {
-                this.TableName = "FindProductionProjectUpdatesByProjectID";
+            public FindProductionProjectTechAssignmentByProjectIDDataTable() {
+                this.TableName = "FindProductionProjectTechAssignmentByProjectID";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -300,7 +296,7 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal FindProductionProjectUpdatesByProjectIDDataTable(global::System.Data.DataTable table) {
+            internal FindProductionProjectTechAssignmentByProjectIDDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -317,7 +313,7 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected FindProductionProjectUpdatesByProjectIDDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FindProductionProjectTechAssignmentByProjectIDDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -332,33 +328,17 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn TransactionDateColumn {
+            public global::System.Data.DataColumn DateAssignedColumn {
                 get {
-                    return this.columnTransactionDate;
+                    return this.columnDateAssigned;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn FirstNameColumn {
+            public global::System.Data.DataColumn EmployeeColumn {
                 get {
-                    return this.columnFirstName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn LastNameColumn {
-                get {
-                    return this.columnLastName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ProjectUpdateColumn {
-                get {
-                    return this.columnProjectUpdate;
+                    return this.columnEmployee;
                 }
             }
             
@@ -373,56 +353,54 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindProductionProjectUpdatesByProjectIDRow this[int index] {
+            public FindProductionProjectTechAssignmentByProjectIDRow this[int index] {
                 get {
-                    return ((FindProductionProjectUpdatesByProjectIDRow)(this.Rows[index]));
+                    return ((FindProductionProjectTechAssignmentByProjectIDRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindProductionProjectUpdatesByProjectIDRowChangeEventHandler FindProductionProjectUpdatesByProjectIDRowChanging;
+            public event FindProductionProjectTechAssignmentByProjectIDRowChangeEventHandler FindProductionProjectTechAssignmentByProjectIDRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindProductionProjectUpdatesByProjectIDRowChangeEventHandler FindProductionProjectUpdatesByProjectIDRowChanged;
+            public event FindProductionProjectTechAssignmentByProjectIDRowChangeEventHandler FindProductionProjectTechAssignmentByProjectIDRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindProductionProjectUpdatesByProjectIDRowChangeEventHandler FindProductionProjectUpdatesByProjectIDRowDeleting;
+            public event FindProductionProjectTechAssignmentByProjectIDRowChangeEventHandler FindProductionProjectTechAssignmentByProjectIDRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event FindProductionProjectUpdatesByProjectIDRowChangeEventHandler FindProductionProjectUpdatesByProjectIDRowDeleted;
+            public event FindProductionProjectTechAssignmentByProjectIDRowChangeEventHandler FindProductionProjectTechAssignmentByProjectIDRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddFindProductionProjectUpdatesByProjectIDRow(FindProductionProjectUpdatesByProjectIDRow row) {
+            public void AddFindProductionProjectTechAssignmentByProjectIDRow(FindProductionProjectTechAssignmentByProjectIDRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindProductionProjectUpdatesByProjectIDRow AddFindProductionProjectUpdatesByProjectIDRow(System.DateTime TransactionDate, string FirstName, string LastName, string ProjectUpdate) {
-                FindProductionProjectUpdatesByProjectIDRow rowFindProductionProjectUpdatesByProjectIDRow = ((FindProductionProjectUpdatesByProjectIDRow)(this.NewRow()));
+            public FindProductionProjectTechAssignmentByProjectIDRow AddFindProductionProjectTechAssignmentByProjectIDRow(System.DateTime DateAssigned, string Employee) {
+                FindProductionProjectTechAssignmentByProjectIDRow rowFindProductionProjectTechAssignmentByProjectIDRow = ((FindProductionProjectTechAssignmentByProjectIDRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        TransactionDate,
-                        FirstName,
-                        LastName,
-                        ProjectUpdate};
-                rowFindProductionProjectUpdatesByProjectIDRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowFindProductionProjectUpdatesByProjectIDRow);
-                return rowFindProductionProjectUpdatesByProjectIDRow;
+                        DateAssigned,
+                        Employee};
+                rowFindProductionProjectTechAssignmentByProjectIDRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFindProductionProjectTechAssignmentByProjectIDRow);
+                return rowFindProductionProjectTechAssignmentByProjectIDRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindProductionProjectUpdatesByProjectIDRow FindByTransactionID(int TransactionID) {
-                return ((FindProductionProjectUpdatesByProjectIDRow)(this.Rows.Find(new object[] {
+            public FindProductionProjectTechAssignmentByProjectIDRow FindByTransactionID(int TransactionID) {
+                return ((FindProductionProjectTechAssignmentByProjectIDRow)(this.Rows.Find(new object[] {
                             TransactionID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                FindProductionProjectUpdatesByProjectIDDataTable cln = ((FindProductionProjectUpdatesByProjectIDDataTable)(base.Clone()));
+                FindProductionProjectTechAssignmentByProjectIDDataTable cln = ((FindProductionProjectTechAssignmentByProjectIDDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -430,17 +408,15 @@ namespace ProductionProjectDLL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new FindProductionProjectUpdatesByProjectIDDataTable();
+                return new FindProductionProjectTechAssignmentByProjectIDDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnTransactionID = base.Columns["TransactionID"];
-                this.columnTransactionDate = base.Columns["TransactionDate"];
-                this.columnFirstName = base.Columns["FirstName"];
-                this.columnLastName = base.Columns["LastName"];
-                this.columnProjectUpdate = base.Columns["ProjectUpdate"];
+                this.columnDateAssigned = base.Columns["DateAssigned"];
+                this.columnEmployee = base.Columns["Employee"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -448,53 +424,45 @@ namespace ProductionProjectDLL {
             private void InitClass() {
                 this.columnTransactionID = new global::System.Data.DataColumn("TransactionID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTransactionID);
-                this.columnTransactionDate = new global::System.Data.DataColumn("TransactionDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTransactionDate);
-                this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFirstName);
-                this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLastName);
-                this.columnProjectUpdate = new global::System.Data.DataColumn("ProjectUpdate", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProjectUpdate);
+                this.columnDateAssigned = new global::System.Data.DataColumn("DateAssigned", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateAssigned);
+                this.columnEmployee = new global::System.Data.DataColumn("Employee", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmployee);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTransactionID}, true));
                 this.columnTransactionID.AutoIncrement = true;
                 this.columnTransactionID.AllowDBNull = false;
                 this.columnTransactionID.ReadOnly = true;
                 this.columnTransactionID.Unique = true;
-                this.columnTransactionDate.AllowDBNull = false;
-                this.columnFirstName.AllowDBNull = false;
-                this.columnFirstName.MaxLength = 2147483647;
-                this.columnLastName.AllowDBNull = false;
-                this.columnLastName.MaxLength = 2147483647;
-                this.columnProjectUpdate.AllowDBNull = false;
-                this.columnProjectUpdate.MaxLength = 2147483647;
+                this.columnDateAssigned.AllowDBNull = false;
+                this.columnEmployee.ReadOnly = true;
+                this.columnEmployee.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindProductionProjectUpdatesByProjectIDRow NewFindProductionProjectUpdatesByProjectIDRow() {
-                return ((FindProductionProjectUpdatesByProjectIDRow)(this.NewRow()));
+            public FindProductionProjectTechAssignmentByProjectIDRow NewFindProductionProjectTechAssignmentByProjectIDRow() {
+                return ((FindProductionProjectTechAssignmentByProjectIDRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new FindProductionProjectUpdatesByProjectIDRow(builder);
+                return new FindProductionProjectTechAssignmentByProjectIDRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(FindProductionProjectUpdatesByProjectIDRow);
+                return typeof(FindProductionProjectTechAssignmentByProjectIDRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.FindProductionProjectUpdatesByProjectIDRowChanged != null)) {
-                    this.FindProductionProjectUpdatesByProjectIDRowChanged(this, new FindProductionProjectUpdatesByProjectIDRowChangeEvent(((FindProductionProjectUpdatesByProjectIDRow)(e.Row)), e.Action));
+                if ((this.FindProductionProjectTechAssignmentByProjectIDRowChanged != null)) {
+                    this.FindProductionProjectTechAssignmentByProjectIDRowChanged(this, new FindProductionProjectTechAssignmentByProjectIDRowChangeEvent(((FindProductionProjectTechAssignmentByProjectIDRow)(e.Row)), e.Action));
                 }
             }
             
@@ -502,8 +470,8 @@ namespace ProductionProjectDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.FindProductionProjectUpdatesByProjectIDRowChanging != null)) {
-                    this.FindProductionProjectUpdatesByProjectIDRowChanging(this, new FindProductionProjectUpdatesByProjectIDRowChangeEvent(((FindProductionProjectUpdatesByProjectIDRow)(e.Row)), e.Action));
+                if ((this.FindProductionProjectTechAssignmentByProjectIDRowChanging != null)) {
+                    this.FindProductionProjectTechAssignmentByProjectIDRowChanging(this, new FindProductionProjectTechAssignmentByProjectIDRowChangeEvent(((FindProductionProjectTechAssignmentByProjectIDRow)(e.Row)), e.Action));
                 }
             }
             
@@ -511,8 +479,8 @@ namespace ProductionProjectDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.FindProductionProjectUpdatesByProjectIDRowDeleted != null)) {
-                    this.FindProductionProjectUpdatesByProjectIDRowDeleted(this, new FindProductionProjectUpdatesByProjectIDRowChangeEvent(((FindProductionProjectUpdatesByProjectIDRow)(e.Row)), e.Action));
+                if ((this.FindProductionProjectTechAssignmentByProjectIDRowDeleted != null)) {
+                    this.FindProductionProjectTechAssignmentByProjectIDRowDeleted(this, new FindProductionProjectTechAssignmentByProjectIDRowChangeEvent(((FindProductionProjectTechAssignmentByProjectIDRow)(e.Row)), e.Action));
                 }
             }
             
@@ -520,14 +488,14 @@ namespace ProductionProjectDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.FindProductionProjectUpdatesByProjectIDRowDeleting != null)) {
-                    this.FindProductionProjectUpdatesByProjectIDRowDeleting(this, new FindProductionProjectUpdatesByProjectIDRowChangeEvent(((FindProductionProjectUpdatesByProjectIDRow)(e.Row)), e.Action));
+                if ((this.FindProductionProjectTechAssignmentByProjectIDRowDeleting != null)) {
+                    this.FindProductionProjectTechAssignmentByProjectIDRowDeleting(this, new FindProductionProjectTechAssignmentByProjectIDRowChangeEvent(((FindProductionProjectTechAssignmentByProjectIDRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveFindProductionProjectUpdatesByProjectIDRow(FindProductionProjectUpdatesByProjectIDRow row) {
+            public void RemoveFindProductionProjectTechAssignmentByProjectIDRow(FindProductionProjectTechAssignmentByProjectIDRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -554,7 +522,7 @@ namespace ProductionProjectDLL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "FindProductionProjectUpdatesByProjectIDDataTable";
+                attribute2.FixedValue = "FindProductionProjectTechAssignmentByProjectIDDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -598,70 +566,66 @@ namespace ProductionProjectDLL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class FindProductionProjectUpdatesByProjectIDRow : global::System.Data.DataRow {
+        public partial class FindProductionProjectTechAssignmentByProjectIDRow : global::System.Data.DataRow {
             
-            private FindProductionProjectUpdatesByProjectIDDataTable tableFindProductionProjectUpdatesByProjectID;
+            private FindProductionProjectTechAssignmentByProjectIDDataTable tableFindProductionProjectTechAssignmentByProjectID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal FindProductionProjectUpdatesByProjectIDRow(global::System.Data.DataRowBuilder rb) : 
+            internal FindProductionProjectTechAssignmentByProjectIDRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableFindProductionProjectUpdatesByProjectID = ((FindProductionProjectUpdatesByProjectIDDataTable)(this.Table));
+                this.tableFindProductionProjectTechAssignmentByProjectID = ((FindProductionProjectTechAssignmentByProjectIDDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int TransactionID {
                 get {
-                    return ((int)(this[this.tableFindProductionProjectUpdatesByProjectID.TransactionIDColumn]));
+                    return ((int)(this[this.tableFindProductionProjectTechAssignmentByProjectID.TransactionIDColumn]));
                 }
                 set {
-                    this[this.tableFindProductionProjectUpdatesByProjectID.TransactionIDColumn] = value;
+                    this[this.tableFindProductionProjectTechAssignmentByProjectID.TransactionIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime TransactionDate {
+            public System.DateTime DateAssigned {
                 get {
-                    return ((global::System.DateTime)(this[this.tableFindProductionProjectUpdatesByProjectID.TransactionDateColumn]));
+                    return ((global::System.DateTime)(this[this.tableFindProductionProjectTechAssignmentByProjectID.DateAssignedColumn]));
                 }
                 set {
-                    this[this.tableFindProductionProjectUpdatesByProjectID.TransactionDateColumn] = value;
+                    this[this.tableFindProductionProjectTechAssignmentByProjectID.DateAssignedColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string FirstName {
+            public string Employee {
                 get {
-                    return ((string)(this[this.tableFindProductionProjectUpdatesByProjectID.FirstNameColumn]));
+                    try {
+                        return ((string)(this[this.tableFindProductionProjectTechAssignmentByProjectID.EmployeeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Employee\' in table \'FindProductionProjectTechAssignmentByPr" +
+                                "ojectID\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableFindProductionProjectUpdatesByProjectID.FirstNameColumn] = value;
+                    this[this.tableFindProductionProjectTechAssignmentByProjectID.EmployeeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string LastName {
-                get {
-                    return ((string)(this[this.tableFindProductionProjectUpdatesByProjectID.LastNameColumn]));
-                }
-                set {
-                    this[this.tableFindProductionProjectUpdatesByProjectID.LastNameColumn] = value;
-                }
+            public bool IsEmployeeNull() {
+                return this.IsNull(this.tableFindProductionProjectTechAssignmentByProjectID.EmployeeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string ProjectUpdate {
-                get {
-                    return ((string)(this[this.tableFindProductionProjectUpdatesByProjectID.ProjectUpdateColumn]));
-                }
-                set {
-                    this[this.tableFindProductionProjectUpdatesByProjectID.ProjectUpdateColumn] = value;
-                }
+            public void SetEmployeeNull() {
+                this[this.tableFindProductionProjectTechAssignmentByProjectID.EmployeeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -669,22 +633,22 @@ namespace ProductionProjectDLL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class FindProductionProjectUpdatesByProjectIDRowChangeEvent : global::System.EventArgs {
+        public class FindProductionProjectTechAssignmentByProjectIDRowChangeEvent : global::System.EventArgs {
             
-            private FindProductionProjectUpdatesByProjectIDRow eventRow;
+            private FindProductionProjectTechAssignmentByProjectIDRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindProductionProjectUpdatesByProjectIDRowChangeEvent(FindProductionProjectUpdatesByProjectIDRow row, global::System.Data.DataRowAction action) {
+            public FindProductionProjectTechAssignmentByProjectIDRowChangeEvent(FindProductionProjectTechAssignmentByProjectIDRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindProductionProjectUpdatesByProjectIDRow Row {
+            public FindProductionProjectTechAssignmentByProjectIDRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -712,7 +676,7 @@ namespace ProductionProjectDLL.FindProductionProjectTechAssignmentByProjectIDDat
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class FindProductionProjectUpdatesByProjectIDTableAdapter : global::System.ComponentModel.Component {
+    public partial class FindProductionProjectTechAssignmentByProjectIDTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -726,7 +690,7 @@ namespace ProductionProjectDLL.FindProductionProjectTechAssignmentByProjectIDDat
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public FindProductionProjectUpdatesByProjectIDTableAdapter() {
+        public FindProductionProjectTechAssignmentByProjectIDTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -823,12 +787,10 @@ namespace ProductionProjectDLL.FindProductionProjectTechAssignmentByProjectIDDat
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "FindProductionProjectUpdatesByProjectID";
+            tableMapping.DataSetTable = "FindProductionProjectTechAssignmentByProjectID";
             tableMapping.ColumnMappings.Add("TransactionID", "TransactionID");
-            tableMapping.ColumnMappings.Add("TransactionDate", "TransactionDate");
-            tableMapping.ColumnMappings.Add("FirstName", "FirstName");
-            tableMapping.ColumnMappings.Add("LastName", "LastName");
-            tableMapping.ColumnMappings.Add("ProjectUpdate", "ProjectUpdate");
+            tableMapping.ColumnMappings.Add("DateAssigned", "DateAssigned");
+            tableMapping.ColumnMappings.Add("Employee", "Employee");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -845,7 +807,7 @@ namespace ProductionProjectDLL.FindProductionProjectTechAssignmentByProjectIDDat
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.FindProductionProjectUpdatesByProjectID";
+            this._commandCollection[0].CommandText = "dbo.FindProductionProjectTechAssignmentByProjectID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProjectID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -855,7 +817,7 @@ namespace ProductionProjectDLL.FindProductionProjectTechAssignmentByProjectIDDat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FindProductionProjectTechAssignmentByProjectIDDataSet.FindProductionProjectUpdatesByProjectIDDataTable dataTable, global::System.Nullable<int> ProjectID) {
+        public virtual int Fill(FindProductionProjectTechAssignmentByProjectIDDataSet.FindProductionProjectTechAssignmentByProjectIDDataTable dataTable, global::System.Nullable<int> ProjectID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((ProjectID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ProjectID.Value));
@@ -874,7 +836,7 @@ namespace ProductionProjectDLL.FindProductionProjectTechAssignmentByProjectIDDat
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FindProductionProjectTechAssignmentByProjectIDDataSet.FindProductionProjectUpdatesByProjectIDDataTable GetData(global::System.Nullable<int> ProjectID) {
+        public virtual FindProductionProjectTechAssignmentByProjectIDDataSet.FindProductionProjectTechAssignmentByProjectIDDataTable GetData(global::System.Nullable<int> ProjectID) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((ProjectID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ProjectID.Value));
@@ -882,7 +844,7 @@ namespace ProductionProjectDLL.FindProductionProjectTechAssignmentByProjectIDDat
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            FindProductionProjectTechAssignmentByProjectIDDataSet.FindProductionProjectUpdatesByProjectIDDataTable dataTable = new FindProductionProjectTechAssignmentByProjectIDDataSet.FindProductionProjectUpdatesByProjectIDDataTable();
+            FindProductionProjectTechAssignmentByProjectIDDataSet.FindProductionProjectTechAssignmentByProjectIDDataTable dataTable = new FindProductionProjectTechAssignmentByProjectIDDataSet.FindProductionProjectTechAssignmentByProjectIDDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

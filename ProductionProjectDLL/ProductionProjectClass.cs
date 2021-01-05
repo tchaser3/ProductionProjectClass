@@ -171,15 +171,15 @@ namespace ProductionProjectDLL
         FindProductionProjectTechAssignmentByEmployeeDataSetTableAdapters.FindProductionProjectTechAssignmentByEmployeeTableAdapter aFindProductionProjectTechAssignmentByEmployeeTableAdapter;
 
         FindProductionProjectTechAssignmentByProjectIDDataSet aFindProductionProjectTechAssignmentByProjectIDDataSet;
-        FindProductionProjectTechAssignmentByProjectIDDataSetTableAdapters.FindProductionProjectUpdatesByProjectIDTableAdapter aFindProductionProjectTechAssignmentByProjectIDTableAdapter;
+        FindProductionProjectTechAssignmentByProjectIDDataSetTableAdapters.FindProductionProjectTechAssignmentByProjectIDTableAdapter aFindProductionProjectTechAssignmentByProjectIDTableAdapter;
 
         public FindProductionProjectTechAssignmentByProjectIDDataSet FindProductionTechAssignmentByProjectID(int intProjectID)
         {
             try
             {
                 aFindProductionProjectTechAssignmentByProjectIDDataSet = new FindProductionProjectTechAssignmentByProjectIDDataSet();
-                aFindProductionProjectTechAssignmentByProjectIDTableAdapter = new FindProductionProjectTechAssignmentByProjectIDDataSetTableAdapters.FindProductionProjectUpdatesByProjectIDTableAdapter();
-                aFindProductionProjectTechAssignmentByProjectIDTableAdapter.Fill(aFindProductionProjectTechAssignmentByProjectIDDataSet.FindProductionProjectUpdatesByProjectID, intProjectID);
+                aFindProductionProjectTechAssignmentByProjectIDTableAdapter = new FindProductionProjectTechAssignmentByProjectIDDataSetTableAdapters.FindProductionProjectTechAssignmentByProjectIDTableAdapter();
+                aFindProductionProjectTechAssignmentByProjectIDTableAdapter.Fill(aFindProductionProjectTechAssignmentByProjectIDDataSet.FindProductionProjectTechAssignmentByProjectID, intProjectID);
             }
             catch (Exception Ex)
             {
