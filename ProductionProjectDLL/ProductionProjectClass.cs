@@ -173,6 +173,24 @@ namespace ProductionProjectDLL
         FindProductionProjectTechAssignmentByProjectIDDataSet aFindProductionProjectTechAssignmentByProjectIDDataSet;
         FindProductionProjectTechAssignmentByProjectIDDataSetTableAdapters.FindProductionProjectTechAssignmentByProjectIDTableAdapter aFindProductionProjectTechAssignmentByProjectIDTableAdapter;
 
+        FindOverdueOpenProductionProjectsDataSet aFindOverdueOpenProductionProjectsDataSet;
+        FindOverdueOpenProductionProjectsDataSetTableAdapters.FindOverdueOpenProductionProjectsTableAdapter aFindOverdueOpenProductionProjectsTableAdapter;
+
+        public FindOverdueOpenProductionProjectsDataSet FindOverdueProductionProjects(DateTime datECDDate)
+        {
+            try
+            {
+                aFindOverdueOpenProductionProjectsDataSet = new FindOverdueOpenProductionProjectsDataSet();
+                aFindOverdueOpenProductionProjectsTableAdapter = new FindOverdueOpenProductionProjectsDataSetTableAdapters.FindOverdueOpenProductionProjectsTableAdapter();
+                aFindOverdueOpenProductionProjectsTableAdapter.Fill(aFindOverdueOpenProductionProjectsDataSet.FindOverdueOpenProductionProjects, datECDDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Overdue Open Production Projects " + Ex.Message);
+            }
+
+            return aFindOverdueOpenProductionProjectsDataSet;
+        }
         public FindProductionProjectTechAssignmentByProjectIDDataSet FindProductionTechAssignmentByProjectID(int intProjectID)
         {
             try
