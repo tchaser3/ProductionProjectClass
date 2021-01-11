@@ -169,6 +169,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindProdutionProjectsByAssignedProjectIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindTotalOpenProductionProjectsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindTotalOpenProductionProjectsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindTotalOpenStatusProjectsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindTotalOpenStatusProjectsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindTotalOverdueProductionProjectsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindTotalOverdueProductionProjectsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindTotalOverdueProjectStatusDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindTotalOverdueProjectStatusDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InsertProductionProjectCableEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -643,6 +663,50 @@
     </None>
     <None Include="FindProdutionProjectsByAssignedProjectIDDataSet.xss">
       <DependentUpon>FindProdutionProjectsByAssignedProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTotalOpenProductionProjectsDataSet.xsc">
+      <DependentUpon>FindTotalOpenProductionProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTotalOpenProductionProjectsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindTotalOpenProductionProjectsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindTotalOpenProductionProjectsDataSet.xss">
+      <DependentUpon>FindTotalOpenProductionProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTotalOpenStatusProjectsDataSet.xsc">
+      <DependentUpon>FindTotalOpenStatusProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTotalOpenStatusProjectsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindTotalOpenStatusProjectsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindTotalOpenStatusProjectsDataSet.xss">
+      <DependentUpon>FindTotalOpenStatusProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTotalOverdueProductionProjectsDataSet.xsc">
+      <DependentUpon>FindTotalOverdueProductionProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTotalOverdueProductionProjectsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindTotalOverdueProductionProjectsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindTotalOverdueProductionProjectsDataSet.xss">
+      <DependentUpon>FindTotalOverdueProductionProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTotalOverdueProjectStatusDataSet.xsc">
+      <DependentUpon>FindTotalOverdueProjectStatusDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTotalOverdueProjectStatusDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindTotalOverdueProjectStatusDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindTotalOverdueProjectStatusDataSet.xss">
+      <DependentUpon>FindTotalOverdueProjectStatusDataSet.xsd</DependentUpon>
     </None>
     <None Include="InsertProductionProjectCableEntry.xsc">
       <DependentUpon>InsertProductionProjectCableEntry.xsd</DependentUpon>

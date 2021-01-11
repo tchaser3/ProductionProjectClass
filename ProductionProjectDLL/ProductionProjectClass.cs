@@ -176,6 +176,78 @@ namespace ProductionProjectDLL
         FindOverdueOpenProductionProjectsDataSet aFindOverdueOpenProductionProjectsDataSet;
         FindOverdueOpenProductionProjectsDataSetTableAdapters.FindOverdueOpenProductionProjectsTableAdapter aFindOverdueOpenProductionProjectsTableAdapter;
 
+        FindTotalOpenProductionProjectsDataSet aFindTotalOpenProductionProjectsDataSet;
+        FindTotalOpenProductionProjectsDataSetTableAdapters.FindTotalOpenProductionProjectsTableAdapter aFindTotalOpenProductionProjectsTableAdapter;
+
+        FindTotalOpenStatusProjectsDataSet aFindTotalOpenStatusProjectsDataSet;
+        FindTotalOpenStatusProjectsDataSetTableAdapters.FindTotalOpenStatusProjectsTableAdapter aFindTotalOpenStatusProjectsTableAdpater;
+
+        FindTotalOverdueProductionProjectsDataSet aFindTotalOverdueProductionProjectsDataSet;
+        FindTotalOverdueProductionProjectsDataSetTableAdapters.FindTotalOverdueProductionProjectsTableAdapter aFindTotalOverdueProductionProjectsTableAdapter;
+
+        FindTotalOverdueProjectStatusDataSet aFindTotalOverdueProjectStatusDataSet;
+        FindTotalOverdueProjectStatusDataSetTableAdapters.FindTotalOverdueProjectsStatusTableAdapter aFindTotalOverdueProjectStatusTableAdapter;
+
+        public FindTotalOverdueProjectStatusDataSet FindTotalOverdueProjectStatus(DateTime datTransactionDate)
+        {
+            try
+            {
+                aFindTotalOverdueProjectStatusDataSet = new FindTotalOverdueProjectStatusDataSet();
+                aFindTotalOverdueProjectStatusTableAdapter = new FindTotalOverdueProjectStatusDataSetTableAdapters.FindTotalOverdueProjectsStatusTableAdapter();
+                aFindTotalOverdueProjectStatusTableAdapter.Fill(aFindTotalOverdueProjectStatusDataSet.FindTotalOverdueProjectsStatus, datTransactionDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Total Overdue Project Status " + Ex.Message);
+            }
+
+            return aFindTotalOverdueProjectStatusDataSet;
+        }
+        public FindTotalOverdueProductionProjectsDataSet FindTotalOverdueProductionProjects(DateTime datTransactionDate)
+        {
+            try
+            {
+                aFindTotalOverdueProductionProjectsDataSet = new FindTotalOverdueProductionProjectsDataSet();
+                aFindTotalOverdueProductionProjectsTableAdapter = new FindTotalOverdueProductionProjectsDataSetTableAdapters.FindTotalOverdueProductionProjectsTableAdapter();
+                aFindTotalOverdueProductionProjectsTableAdapter.Fill(aFindTotalOverdueProductionProjectsDataSet.FindTotalOverdueProductionProjects, datTransactionDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Total Overdue Production Projects " + Ex.Message);
+            }
+
+            return aFindTotalOverdueProductionProjectsDataSet;
+        }
+        public FindTotalOpenStatusProjectsDataSet FindTotalOpenStatusProjects()
+        {
+            try
+            {
+                aFindTotalOpenStatusProjectsDataSet = new FindTotalOpenStatusProjectsDataSet();
+                aFindTotalOpenStatusProjectsTableAdpater = new FindTotalOpenStatusProjectsDataSetTableAdapters.FindTotalOpenStatusProjectsTableAdapter();
+                aFindTotalOpenStatusProjectsTableAdpater.Fill(aFindTotalOpenStatusProjectsDataSet.FindTotalOpenStatusProjects);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Total Open Status Projects " + Ex.Message);
+            }
+
+            return aFindTotalOpenStatusProjectsDataSet;
+        }
+        public FindTotalOpenProductionProjectsDataSet FindTotalOpenProductionProjects()
+        {
+            try
+            {
+                aFindTotalOpenProductionProjectsDataSet = new FindTotalOpenProductionProjectsDataSet();
+                aFindTotalOpenProductionProjectsTableAdapter = new FindTotalOpenProductionProjectsDataSetTableAdapters.FindTotalOpenProductionProjectsTableAdapter();
+                aFindTotalOpenProductionProjectsTableAdapter.Fill(aFindTotalOpenProductionProjectsDataSet.FindTotalOpenProductionProjects);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Total Open Production Projects " + Ex.Message);
+            }
+
+            return aFindTotalOpenProductionProjectsDataSet;
+        }
         public FindOverdueOpenProductionProjectsDataSet FindOverdueProductionProjects(DateTime datECDDate)
         {
             try
