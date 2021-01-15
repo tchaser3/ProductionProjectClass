@@ -188,6 +188,114 @@ namespace ProductionProjectDLL
         FindTotalOverdueProjectStatusDataSet aFindTotalOverdueProjectStatusDataSet;
         FindTotalOverdueProjectStatusDataSetTableAdapters.FindTotalOverdueProjectsStatusTableAdapter aFindTotalOverdueProjectStatusTableAdapter;
 
+        FindOverdueProjectsByOfficeBusinessDataSet aFindOverdueProjectsByOfficeBusinessDataSet;
+        FindOverdueProjectsByOfficeBusinessDataSetTableAdapters.FindOverdueProjectsByOfficeBusinessTableAdapter aFindOverdueProjectsByOfficeBusinessTableAdapter;
+
+        FindOverdueProjectsByDateRangeDataSet aFindOverdueProjectsByDateRangeDataSet;
+        FindOverdueProjectsByDateRangeDataSetTableAdapters.FindOverdueProjectsByDateRangeTableAdapter aFindOverdueProjectsByDateRangeTableAdapter;
+
+        FindOpenOfficeBusinessLineDataSet aFindOpenOfficeBusinessLineDataSet;
+        FindOpenOfficeBusinessLineDataSetTableAdapters.FindOpenOfficeBusinessLineProjectsTableAdapter aFindOpenOfficeBusinessLineTableAdapter;
+
+        FindOverdueOfficeBusinesLinesDataSet aFindOverdueOfficeBusinessLinesDataSet;
+        FindOverdueOfficeBusinesLinesDataSetTableAdapters.FindOverdueOfficeBusinessLinesTableAdapter aFindOverdueOfficeBusinessLinesTableAdapter;
+
+        FindOpenBusinessLineProjectsForOfficeDataSet aFindOpenBusinessLineProjectsForOfficeDataSet;
+        FindOpenBusinessLineProjectsForOfficeDataSetTableAdapters.FindOpenBusinessLineProjectsForOfficeTableAdapter aFindOpenBusinessLineProjectsForOfficeTableAdapter;
+
+        FindOverdueBusinessLineProjectsByOfficeDataSet aFindOverdueBusinessLineProjectsByOfficeDataSet;
+        FindOverdueBusinessLineProjectsByOfficeDataSetTableAdapters.FindOverdueBusinessLineProjectsByOfficeTableAdapter aFindOverdueBusinessLineProjectsByOfficeTableAdapter;
+
+        public FindOverdueBusinessLineProjectsByOfficeDataSet FindOverdueBusinessLineProjectsByOffice(int intWarehouseID, int intDepartmentID, DateTime datTransactionDate)
+        {
+            try
+            {
+                aFindOverdueBusinessLineProjectsByOfficeDataSet = new FindOverdueBusinessLineProjectsByOfficeDataSet();
+                aFindOverdueBusinessLineProjectsByOfficeTableAdapter = new FindOverdueBusinessLineProjectsByOfficeDataSetTableAdapters.FindOverdueBusinessLineProjectsByOfficeTableAdapter();
+                aFindOverdueBusinessLineProjectsByOfficeTableAdapter.Fill(aFindOverdueBusinessLineProjectsByOfficeDataSet.FindOverdueBusinessLineProjectsByOffice, intWarehouseID, intDepartmentID, datTransactionDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Overdue Business Line Projects By Office " + Ex.Message);
+            }
+
+            return aFindOverdueBusinessLineProjectsByOfficeDataSet;
+        }
+        public FindOpenBusinessLineProjectsForOfficeDataSet FindOpenBusinessLineProjectsForOffice(int intWarehouseID, int intDepartmentID)
+        {
+            try
+            {
+                aFindOpenBusinessLineProjectsForOfficeDataSet = new FindOpenBusinessLineProjectsForOfficeDataSet();
+                aFindOpenBusinessLineProjectsForOfficeTableAdapter = new FindOpenBusinessLineProjectsForOfficeDataSetTableAdapters.FindOpenBusinessLineProjectsForOfficeTableAdapter();
+                aFindOpenBusinessLineProjectsForOfficeTableAdapter.Fill(aFindOpenBusinessLineProjectsForOfficeDataSet.FindOpenBusinessLineProjectsForOffice, intWarehouseID, intDepartmentID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Open Business Line Projects For Office " + Ex.Message);
+            }
+
+            return aFindOpenBusinessLineProjectsForOfficeDataSet;
+        }
+        public FindOverdueOfficeBusinesLinesDataSet FindOverdueOfficeBusinessLines(int intOfficeID, int intBusinessLineID, DateTime datTransactionDate)
+        {
+            try
+            {
+                aFindOverdueOfficeBusinessLinesDataSet = new FindOverdueOfficeBusinesLinesDataSet();
+                aFindOverdueOfficeBusinessLinesTableAdapter = new FindOverdueOfficeBusinesLinesDataSetTableAdapters.FindOverdueOfficeBusinessLinesTableAdapter();
+                aFindOverdueOfficeBusinessLinesTableAdapter.Fill(aFindOverdueOfficeBusinessLinesDataSet.FindOverdueOfficeBusinessLines, intOfficeID, intBusinessLineID, datTransactionDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Overdue Office Business Lines " + Ex.Message);
+            }
+
+            return aFindOverdueOfficeBusinessLinesDataSet;
+        }
+        public FindOpenOfficeBusinessLineDataSet FindOpenOfficeBusinessLine(int intOfficeID, int intBusinessLineID)
+        {
+            try
+            {
+                aFindOpenOfficeBusinessLineDataSet = new FindOpenOfficeBusinessLineDataSet();
+                aFindOpenOfficeBusinessLineTableAdapter = new FindOpenOfficeBusinessLineDataSetTableAdapters.FindOpenOfficeBusinessLineProjectsTableAdapter();
+                aFindOpenOfficeBusinessLineTableAdapter.Fill(aFindOpenOfficeBusinessLineDataSet.FindOpenOfficeBusinessLineProjects, intOfficeID, intBusinessLineID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Open Office Business Line " + Ex.Message);
+            }
+
+            return aFindOpenOfficeBusinessLineDataSet;
+        }
+        public FindOverdueProjectsByDateRangeDataSet FindOverdueProjectsByDateRange(DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindOverdueProjectsByDateRangeDataSet = new FindOverdueProjectsByDateRangeDataSet();
+                aFindOverdueProjectsByDateRangeTableAdapter = new FindOverdueProjectsByDateRangeDataSetTableAdapters.FindOverdueProjectsByDateRangeTableAdapter();
+                aFindOverdueProjectsByDateRangeTableAdapter.Fill(aFindOverdueProjectsByDateRangeDataSet.FindOverdueProjectsByDateRange, datStartDate, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Overdue Projects By Date Range " + Ex.Message);
+            }
+
+            return aFindOverdueProjectsByDateRangeDataSet;
+        }
+        public FindOverdueProjectsByOfficeBusinessDataSet FindOverdueProjectsByOfficeBusiness(DateTime datTransactionDate)
+        {
+            try
+            {
+                aFindOverdueProjectsByOfficeBusinessDataSet = new FindOverdueProjectsByOfficeBusinessDataSet();
+                aFindOverdueProjectsByOfficeBusinessTableAdapter = new FindOverdueProjectsByOfficeBusinessDataSetTableAdapters.FindOverdueProjectsByOfficeBusinessTableAdapter();
+                aFindOverdueProjectsByOfficeBusinessTableAdapter.Fill(aFindOverdueProjectsByOfficeBusinessDataSet.FindOverdueProjectsByOfficeBusiness, datTransactionDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Overdue Projects By Office Business " + Ex.Message);
+            }
+
+            return aFindOverdueProjectsByOfficeBusinessDataSet;
+        }
         public FindTotalOverdueProjectStatusDataSet FindTotalOverdueProjectStatus(DateTime datTransactionDate)
         {
             try

@@ -44,20 +44,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindOpenBusinessLineProjectsForOfficeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenBusinessLineProjectsForOfficeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindOpenDepartmentProductionProjectsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FindOpenDepartmentProductionProjectsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOpenOfficeBusinessLineDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenOfficeBusinessLineDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="FindOpenProductionProjectsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FindOpenProductionProjectsDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindOverdueBusinessLineProjectsByOfficeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOverdueBusinessLineProjectsByOfficeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOverdueOfficeBusinesLinesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOverdueOfficeBusinesLinesDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindOverdueOpenProductionProjectsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FindOverdueOpenProductionProjectsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOverdueProjectsByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOverdueProjectsByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOverdueProjectsByOfficeBusinessDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOverdueProjectsByOfficeBusinessDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="FindProductionProjectByProjectIDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -389,6 +419,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="FindOpenBusinessLineProjectsForOfficeDataSet.xsc">
+      <DependentUpon>FindOpenBusinessLineProjectsForOfficeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenBusinessLineProjectsForOfficeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenBusinessLineProjectsForOfficeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenBusinessLineProjectsForOfficeDataSet.xss">
+      <DependentUpon>FindOpenBusinessLineProjectsForOfficeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindOpenDepartmentProductionProjectsDataSet.xsc">
       <DependentUpon>FindOpenDepartmentProductionProjectsDataSet.xsd</DependentUpon>
     </None>
@@ -399,6 +440,17 @@
     </None>
     <None Include="FindOpenDepartmentProductionProjectsDataSet.xss">
       <DependentUpon>FindOpenDepartmentProductionProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenOfficeBusinessLineDataSet.xsc">
+      <DependentUpon>FindOpenOfficeBusinessLineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenOfficeBusinessLineDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenOfficeBusinessLineDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenOfficeBusinessLineDataSet.xss">
+      <DependentUpon>FindOpenOfficeBusinessLineDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindOpenProductionProjectsDataSet.xsc">
       <DependentUpon>FindOpenProductionProjectsDataSet.xsd</DependentUpon>
@@ -411,6 +463,28 @@
     <None Include="FindOpenProductionProjectsDataSet.xss">
       <DependentUpon>FindOpenProductionProjectsDataSet.xsd</DependentUpon>
     </None>
+    <None Include="FindOverdueBusinessLineProjectsByOfficeDataSet.xsc">
+      <DependentUpon>FindOverdueBusinessLineProjectsByOfficeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOverdueBusinessLineProjectsByOfficeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOverdueBusinessLineProjectsByOfficeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOverdueBusinessLineProjectsByOfficeDataSet.xss">
+      <DependentUpon>FindOverdueBusinessLineProjectsByOfficeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOverdueOfficeBusinesLinesDataSet.xsc">
+      <DependentUpon>FindOverdueOfficeBusinesLinesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOverdueOfficeBusinesLinesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOverdueOfficeBusinesLinesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOverdueOfficeBusinesLinesDataSet.xss">
+      <DependentUpon>FindOverdueOfficeBusinesLinesDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindOverdueOpenProductionProjectsDataSet.xsc">
       <DependentUpon>FindOverdueOpenProductionProjectsDataSet.xsd</DependentUpon>
     </None>
@@ -421,6 +495,28 @@
     </None>
     <None Include="FindOverdueOpenProductionProjectsDataSet.xss">
       <DependentUpon>FindOverdueOpenProductionProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOverdueProjectsByDateRangeDataSet.xsc">
+      <DependentUpon>FindOverdueProjectsByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOverdueProjectsByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOverdueProjectsByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOverdueProjectsByDateRangeDataSet.xss">
+      <DependentUpon>FindOverdueProjectsByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOverdueProjectsByOfficeBusinessDataSet.xsc">
+      <DependentUpon>FindOverdueProjectsByOfficeBusinessDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOverdueProjectsByOfficeBusinessDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOverdueProjectsByOfficeBusinessDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOverdueProjectsByOfficeBusinessDataSet.xss">
+      <DependentUpon>FindOverdueProjectsByOfficeBusinessDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindProductionProjectByProjectIDDataSet.xsc">
       <DependentUpon>FindProductionProjectByProjectIDDataSet.xsd</DependentUpon>
