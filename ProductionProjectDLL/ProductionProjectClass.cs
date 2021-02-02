@@ -206,6 +206,24 @@ namespace ProductionProjectDLL
         FindOverdueBusinessLineProjectsByOfficeDataSet aFindOverdueBusinessLineProjectsByOfficeDataSet;
         FindOverdueBusinessLineProjectsByOfficeDataSetTableAdapters.FindOverdueBusinessLineProjectsByOfficeTableAdapter aFindOverdueBusinessLineProjectsByOfficeTableAdapter;
 
+        FindInvoicedProductionProjectsDataSet aFindInvoicedProductionProjectsDataSet;
+        FindInvoicedProductionProjectsDataSetTableAdapters.FindInvoicedProductionProjectsTableAdapter aFindInvoicedProductionProjectsTableAdapter;
+
+        public FindInvoicedProductionProjectsDataSet FindInvoicedProductionProjects()
+        {
+            try 
+            {
+                aFindInvoicedProductionProjectsDataSet = new FindInvoicedProductionProjectsDataSet());
+                aFindInvoicedProductionProjectsTableAdapter = new FindInvoicedProductionProjectsDataSetTableAdapters.FindInvoicedProductionProjectsTableAdapter();
+                aFindInvoicedProductionProjectsTableAdapter.Fill(aFindInvoicedProductionProjectsDataSet.FindInvoicedProductionProjects);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Invoiced Production Projects " + Ex.Message);
+            }
+
+            return aFindInvoicedProductionProjectsDataSet;
+        }
         public FindOverdueBusinessLineProjectsByOfficeDataSet FindOverdueBusinessLineProjectsByOffice(int intWarehouseID, int intDepartmentID, DateTime datTransactionDate)
         {
             try

@@ -44,6 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindInvoicedProductionProjectsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindInvoicedProductionProjectsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindOpenBusinessLineProjectsForOfficeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -419,6 +424,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="FindInvoicedProductionProjectsDataSet.xsc">
+      <DependentUpon>FindInvoicedProductionProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindInvoicedProductionProjectsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindInvoicedProductionProjectsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindInvoicedProductionProjectsDataSet.xss">
+      <DependentUpon>FindInvoicedProductionProjectsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindOpenBusinessLineProjectsForOfficeDataSet.xsc">
       <DependentUpon>FindOpenBusinessLineProjectsForOfficeDataSet.xsd</DependentUpon>
     </None>
