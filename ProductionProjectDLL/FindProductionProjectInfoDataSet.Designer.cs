@@ -291,6 +291,8 @@ namespace ProductionProjectDLL {
             
             private global::System.Data.DataColumn columnPointOfContact;
             
+            private global::System.Data.DataColumn columnJobType;
+            
             private global::System.Data.DataColumn columnPONumber;
             
             private global::System.Data.DataColumn columnSplicingComple;
@@ -384,6 +386,14 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn JobTypeColumn {
+                get {
+                    return this.columnJobType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn PONumberColumn {
                 get {
                     return this.columnPONumber;
@@ -459,7 +469,7 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindProductionProjectInfoRow AddFindProductionProjectInfoRow(string AssignedProjectID, string CustomerAssignedID, string ProjectName, System.DateTime TransactionDate, string PointOfContact, string PONumber, bool SplicingComple, bool HardRestoration, bool QCPerformed, decimal POAmount) {
+            public FindProductionProjectInfoRow AddFindProductionProjectInfoRow(string AssignedProjectID, string CustomerAssignedID, string ProjectName, System.DateTime TransactionDate, string PointOfContact, int JobType, string PONumber, bool SplicingComple, bool HardRestoration, bool QCPerformed, decimal POAmount) {
                 FindProductionProjectInfoRow rowFindProductionProjectInfoRow = ((FindProductionProjectInfoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -468,6 +478,7 @@ namespace ProductionProjectDLL {
                         ProjectName,
                         TransactionDate,
                         PointOfContact,
+                        JobType,
                         PONumber,
                         SplicingComple,
                         HardRestoration,
@@ -508,6 +519,7 @@ namespace ProductionProjectDLL {
                 this.columnProjectName = base.Columns["ProjectName"];
                 this.columnTransactionDate = base.Columns["TransactionDate"];
                 this.columnPointOfContact = base.Columns["PointOfContact"];
+                this.columnJobType = base.Columns["JobType"];
                 this.columnPONumber = base.Columns["PONumber"];
                 this.columnSplicingComple = base.Columns["SplicingComple"];
                 this.columnHardRestoration = base.Columns["HardRestoration"];
@@ -530,6 +542,8 @@ namespace ProductionProjectDLL {
                 base.Columns.Add(this.columnTransactionDate);
                 this.columnPointOfContact = new global::System.Data.DataColumn("PointOfContact", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPointOfContact);
+                this.columnJobType = new global::System.Data.DataColumn("JobType", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJobType);
                 this.columnPONumber = new global::System.Data.DataColumn("PONumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPONumber);
                 this.columnSplicingComple = new global::System.Data.DataColumn("SplicingComple", typeof(bool), null, global::System.Data.MappingType.Element);
@@ -555,6 +569,7 @@ namespace ProductionProjectDLL {
                 this.columnTransactionDate.AllowDBNull = false;
                 this.columnPointOfContact.AllowDBNull = false;
                 this.columnPointOfContact.MaxLength = 2147483647;
+                this.columnJobType.AllowDBNull = false;
                 this.columnPONumber.AllowDBNull = false;
                 this.columnPONumber.MaxLength = 2147483647;
                 this.columnSplicingComple.AllowDBNull = false;
@@ -763,6 +778,17 @@ namespace ProductionProjectDLL {
                 }
                 set {
                     this[this.tableFindProductionProjectInfo.PointOfContactColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int JobType {
+                get {
+                    return ((int)(this[this.tableFindProductionProjectInfo.JobTypeColumn]));
+                }
+                set {
+                    this[this.tableFindProductionProjectInfo.JobTypeColumn] = value;
                 }
             }
             
@@ -1004,6 +1030,7 @@ namespace ProductionProjectDLL.FindProductionProjectInfoDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ProjectName", "ProjectName");
             tableMapping.ColumnMappings.Add("TransactionDate", "TransactionDate");
             tableMapping.ColumnMappings.Add("PointOfContact", "PointOfContact");
+            tableMapping.ColumnMappings.Add("JobType", "JobType");
             tableMapping.ColumnMappings.Add("PONumber", "PONumber");
             tableMapping.ColumnMappings.Add("SplicingComple", "SplicingComple");
             tableMapping.ColumnMappings.Add("HardRestoration", "HardRestoration");

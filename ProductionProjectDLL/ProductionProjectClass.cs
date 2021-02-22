@@ -213,7 +213,7 @@ namespace ProductionProjectDLL
         {
             try 
             {
-                aFindInvoicedProductionProjectsDataSet = new FindInvoicedProductionProjectsDataSet());
+                aFindInvoicedProductionProjectsDataSet = new FindInvoicedProductionProjectsDataSet();
                 aFindInvoicedProductionProjectsTableAdapter = new FindInvoicedProductionProjectsDataSetTableAdapters.FindInvoicedProductionProjectsTableAdapter();
                 aFindInvoicedProductionProjectsTableAdapter.Fill(aFindInvoicedProductionProjectsDataSet.FindInvoicedProductionProjects);
             }

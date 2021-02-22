@@ -28,6 +28,7 @@
               <Mapping SourceColumn="ProjectName" DataSetColumn="ProjectName" />
               <Mapping SourceColumn="TransactionDate" DataSetColumn="TransactionDate" />
               <Mapping SourceColumn="PointOfContact" DataSetColumn="PointOfContact" />
+              <Mapping SourceColumn="JobType" DataSetColumn="JobType" />
               <Mapping SourceColumn="PONumber" DataSetColumn="PONumber" />
               <Mapping SourceColumn="SplicingComple" DataSetColumn="SplicingComple" />
               <Mapping SourceColumn="HardRestoration" DataSetColumn="HardRestoration" />
@@ -77,6 +78,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="JobType" msprop:Generator_ColumnVarNameInTable="columnJobType" msprop:Generator_ColumnPropNameInRow="JobType" msprop:Generator_ColumnPropNameInTable="JobTypeColumn" msprop:Generator_UserColumnName="JobType" type="xs:int" />
               <xs:element name="PONumber" msprop:Generator_ColumnVarNameInTable="columnPONumber" msprop:Generator_ColumnPropNameInRow="PONumber" msprop:Generator_ColumnPropNameInTable="PONumberColumn" msprop:Generator_UserColumnName="PONumber">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
