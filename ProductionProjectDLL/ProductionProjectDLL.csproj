@@ -376,10 +376,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdateProductionProjectInfoHardRestorationEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UpdateProductionProjectInfoJobTypeEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectInfoJobTypeEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UpdateProductionProjectInfoPOAmountEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdateProductionProjectInfoPOAmountEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProductionProjectInfoPONumberEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectInfoPONumberEntry.xsd</DependentUpon>
     </Compile>
     <Compile Include="UpdateProductionProjectInfoQCPerformedEntry.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -1143,6 +1153,17 @@
     <None Include="UpdateProductionProjectInfoHardRestorationEntry.xss">
       <DependentUpon>UpdateProductionProjectInfoHardRestorationEntry.xsd</DependentUpon>
     </None>
+    <None Include="UpdateProductionProjectInfoJobTypeEntry.xsc">
+      <DependentUpon>UpdateProductionProjectInfoJobTypeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectInfoJobTypeEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectInfoJobTypeEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectInfoJobTypeEntry.xss">
+      <DependentUpon>UpdateProductionProjectInfoJobTypeEntry.xsd</DependentUpon>
+    </None>
     <None Include="UpdateProductionProjectInfoPOAmountEntry.xsc">
       <DependentUpon>UpdateProductionProjectInfoPOAmountEntry.xsd</DependentUpon>
     </None>
@@ -1153,6 +1174,17 @@
     </None>
     <None Include="UpdateProductionProjectInfoPOAmountEntry.xss">
       <DependentUpon>UpdateProductionProjectInfoPOAmountEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectInfoPONumberEntry.xsc">
+      <DependentUpon>UpdateProductionProjectInfoPONumberEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectInfoPONumberEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectInfoPONumberEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectInfoPONumberEntry.xss">
+      <DependentUpon>UpdateProductionProjectInfoPONumberEntry.xsd</DependentUpon>
     </None>
     <None Include="UpdateProductionProjectInfoQCPerformedEntry.xsc">
       <DependentUpon>UpdateProductionProjectInfoQCPerformedEntry.xsd</DependentUpon>

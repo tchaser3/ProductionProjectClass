@@ -65,7 +65,7 @@ namespace ProductionProjectDLL
         ProductionProjectCableDataSet aProductionProjectCableDateSet;
         ProductionProjectCableDataSetTableAdapters.productionprojectcableTableAdapter aProductionProjectCableTableAdapter;
 
-        InsertProductionProjectCableEntryTableAdapters.QueriesTableAdapter aInsertProductionProjectCableTableAdapter;=
+        InsertProductionProjectCableEntryTableAdapters.QueriesTableAdapter aInsertProductionProjectCableTableAdapter;
 
         UpdateProductionProjectCableFootageEntryTableAdapters.QueriesTableAdapter aUpdateProductionProjectCableFootageTableAdapter;
 
@@ -209,6 +209,46 @@ namespace ProductionProjectDLL
         FindInvoicedProductionProjectsDataSet aFindInvoicedProductionProjectsDataSet;
         FindInvoicedProductionProjectsDataSetTableAdapters.FindInvoicedProductionProjectsTableAdapter aFindInvoicedProductionProjectsTableAdapter;
 
+        UpdateProductionProjectInfoPONumberEntryTableAdapters.QueriesTableAdapter aUpdateProductionProjectInfoPONumberTableAdapter;
+
+        UpdateProductionProjectInfoJobTypeEntryTableAdapters.QueriesTableAdapter aUpdateProductionProjectInfoJobTypeTableAdapter;
+
+        public bool UpdateProductionProjectInfoJobType(int intTransactionID, int intJobTypeID)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateProductionProjectInfoJobTypeTableAdapter = new UpdateProductionProjectInfoJobTypeEntryTableAdapters.QueriesTableAdapter();
+                aUpdateProductionProjectInfoJobTypeTableAdapter.UpdateProductionProjectInfoJobType(intTransactionID, intJobTypeID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info Job Type " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
+        public bool UpdateProductionProjectInfoPONumber(int intTransactionID, string strPONumber)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateProductionProjectInfoPONumberTableAdapter = new UpdateProductionProjectInfoPONumberEntryTableAdapters.QueriesTableAdapter();
+                aUpdateProductionProjectInfoPONumberTableAdapter.UpdateProductionProjectInfoPONumber(intTransactionID, strPONumber);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info PO Number " + Ex.Message);
+
+                blnFatalError = true;
+            }
+
+            return blnFatalError;
+        }
         public FindInvoicedProductionProjectsDataSet FindInvoicedProductionProjects()
         {
             try 
