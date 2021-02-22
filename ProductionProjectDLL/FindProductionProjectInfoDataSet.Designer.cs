@@ -469,7 +469,7 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindProductionProjectInfoRow AddFindProductionProjectInfoRow(string AssignedProjectID, string CustomerAssignedID, string ProjectName, System.DateTime TransactionDate, string PointOfContact, int JobType, string PONumber, bool SplicingComple, bool HardRestoration, bool QCPerformed, decimal POAmount) {
+            public FindProductionProjectInfoRow AddFindProductionProjectInfoRow(string AssignedProjectID, string CustomerAssignedID, string ProjectName, System.DateTime TransactionDate, string PointOfContact, string JobType, string PONumber, bool SplicingComple, bool HardRestoration, bool QCPerformed, decimal POAmount) {
                 FindProductionProjectInfoRow rowFindProductionProjectInfoRow = ((FindProductionProjectInfoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -542,7 +542,7 @@ namespace ProductionProjectDLL {
                 base.Columns.Add(this.columnTransactionDate);
                 this.columnPointOfContact = new global::System.Data.DataColumn("PointOfContact", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPointOfContact);
-                this.columnJobType = new global::System.Data.DataColumn("JobType", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnJobType = new global::System.Data.DataColumn("JobType", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnJobType);
                 this.columnPONumber = new global::System.Data.DataColumn("PONumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPONumber);
@@ -570,6 +570,7 @@ namespace ProductionProjectDLL {
                 this.columnPointOfContact.AllowDBNull = false;
                 this.columnPointOfContact.MaxLength = 2147483647;
                 this.columnJobType.AllowDBNull = false;
+                this.columnJobType.MaxLength = 2147483647;
                 this.columnPONumber.AllowDBNull = false;
                 this.columnPONumber.MaxLength = 2147483647;
                 this.columnSplicingComple.AllowDBNull = false;
@@ -783,9 +784,9 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int JobType {
+            public string JobType {
                 get {
-                    return ((int)(this[this.tableFindProductionProjectInfo.JobTypeColumn]));
+                    return ((string)(this[this.tableFindProductionProjectInfo.JobTypeColumn]));
                 }
                 set {
                     this[this.tableFindProductionProjectInfo.JobTypeColumn] = value;

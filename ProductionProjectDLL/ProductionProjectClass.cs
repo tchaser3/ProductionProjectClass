@@ -65,7 +65,7 @@ namespace ProductionProjectDLL
         ProductionProjectCableDataSet aProductionProjectCableDateSet;
         ProductionProjectCableDataSetTableAdapters.productionprojectcableTableAdapter aProductionProjectCableTableAdapter;
 
-        InsertProductionProjectCableEntryTableAdapters.QueriesTableAdapter aInsertProductionProjectCableTableAdapter;
+        InsertProductionProjectCableEntryTableAdapters.QueriesTableAdapter aInsertProductionProjectCableTableAdapter;=
 
         UpdateProductionProjectCableFootageEntryTableAdapters.QueriesTableAdapter aUpdateProductionProjectCableFootageTableAdapter;
 
