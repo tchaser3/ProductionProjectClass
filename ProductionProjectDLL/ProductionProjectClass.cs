@@ -213,6 +213,42 @@ namespace ProductionProjectDLL
 
         UpdateProductionProjectInfoJobTypeEntryTableAdapters.QueriesTableAdapter aUpdateProductionProjectInfoJobTypeTableAdapter;
 
+        UpdateProductionProjectStatusDateEntryTableAdapters.QueriesTableAdapter aUpdateProductionProjectStatusDateEntryTableAdapter;
+
+        FindProductionProjectsEnteredNewStatusDataSet aFindProductionProjectsEnteredNewStatusDataSet;
+        FindProductionProjectsEnteredNewStatusDataSetTableAdapters.FindProductionProjectsEnteredNewStatusTableAdapter aFindProductionProjectsEnteredNewStatusTableAdapter;
+
+        public FindProductionProjectsEnteredNewStatusDataSet FindProductionProjectsEnteredNewStatus(int intStatusID, DateTime datStatusChangeDate)
+        {
+            try
+            {
+                aFindProductionProjectsEnteredNewStatusDataSet = new FindProductionProjectsEnteredNewStatusDataSet();
+                aFindProductionProjectsEnteredNewStatusTableAdapter = new FindProductionProjectsEnteredNewStatusDataSetTableAdapters.FindProductionProjectsEnteredNewStatusTableAdapter();
+                aFindProductionProjectsEnteredNewStatusTableAdapter.Fill(aFindProductionProjectsEnteredNewStatusDataSet.FindProductionProjectsEnteredNewStatus, intStatusID, datStatusChangeDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Projects Entered New Status " + Ex.Message);
+            }
+
+            return aFindProductionProjectsEnteredNewStatusDataSet;
+        }
+        public bool UpdateProductionProjectStatusDate(int intTransactionID, DateTime datChangeStatusDate)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateProductionProjectStatusDateEntryTableAdapter = new UpdateProductionProjectStatusDateEntryTableAdapters.QueriesTableAdapter();
+                aUpdateProductionProjectStatusDateEntryTableAdapter.UpdateProductionProjectStatusDate(intTransactionID, datChangeStatusDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Status Date // " + Ex.Message);
+            }
+
+            return blnFatalError;
+        }
         public bool UpdateProductionProjectInfoJobType(int intTransactionID, int intJobTypeID)
         {
             bool blnFatalError = false;

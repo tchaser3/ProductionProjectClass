@@ -20,17 +20,17 @@ namespace ProductionProjectDLL {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("FindProductionProjectMaterialRequestByProjectIDDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("FindProductionProjectsEnteredNewStatusDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class FindProductionProjectMaterialRequestByProjectIDDataSet : global::System.Data.DataSet {
+    public partial class FindProductionProjectsEnteredNewStatusDataSet : global::System.Data.DataSet {
         
-        private FindProductionProjectMaterialRequestItemsByProjectIDDataTable tableFindProductionProjectMaterialRequestItemsByProjectID;
+        private FindProductionProjectsEnteredNewStatusDataTable tableFindProductionProjectsEnteredNewStatus;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public FindProductionProjectMaterialRequestByProjectIDDataSet() {
+        public FindProductionProjectsEnteredNewStatusDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace ProductionProjectDLL {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected FindProductionProjectMaterialRequestByProjectIDDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected FindProductionProjectsEnteredNewStatusDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace ProductionProjectDLL {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["FindProductionProjectMaterialRequestItemsByProjectID"] != null)) {
-                    base.Tables.Add(new FindProductionProjectMaterialRequestItemsByProjectIDDataTable(ds.Tables["FindProductionProjectMaterialRequestItemsByProjectID"]));
+                if ((ds.Tables["FindProductionProjectsEnteredNewStatus"] != null)) {
+                    base.Tables.Add(new FindProductionProjectsEnteredNewStatusDataTable(ds.Tables["FindProductionProjectsEnteredNewStatus"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace ProductionProjectDLL {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public FindProductionProjectMaterialRequestItemsByProjectIDDataTable FindProductionProjectMaterialRequestItemsByProjectID {
+        public FindProductionProjectsEnteredNewStatusDataTable FindProductionProjectsEnteredNewStatus {
             get {
-                return this.tableFindProductionProjectMaterialRequestItemsByProjectID;
+                return this.tableFindProductionProjectsEnteredNewStatus;
             }
         }
         
@@ -127,7 +127,7 @@ namespace ProductionProjectDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            FindProductionProjectMaterialRequestByProjectIDDataSet cln = ((FindProductionProjectMaterialRequestByProjectIDDataSet)(base.Clone()));
+            FindProductionProjectsEnteredNewStatusDataSet cln = ((FindProductionProjectsEnteredNewStatusDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace ProductionProjectDLL {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["FindProductionProjectMaterialRequestItemsByProjectID"] != null)) {
-                    base.Tables.Add(new FindProductionProjectMaterialRequestItemsByProjectIDDataTable(ds.Tables["FindProductionProjectMaterialRequestItemsByProjectID"]));
+                if ((ds.Tables["FindProductionProjectsEnteredNewStatus"] != null)) {
+                    base.Tables.Add(new FindProductionProjectsEnteredNewStatusDataTable(ds.Tables["FindProductionProjectsEnteredNewStatus"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace ProductionProjectDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableFindProductionProjectMaterialRequestItemsByProjectID = ((FindProductionProjectMaterialRequestItemsByProjectIDDataTable)(base.Tables["FindProductionProjectMaterialRequestItemsByProjectID"]));
+            this.tableFindProductionProjectsEnteredNewStatus = ((FindProductionProjectsEnteredNewStatusDataTable)(base.Tables["FindProductionProjectsEnteredNewStatus"]));
             if ((initTable == true)) {
-                if ((this.tableFindProductionProjectMaterialRequestItemsByProjectID != null)) {
-                    this.tableFindProductionProjectMaterialRequestItemsByProjectID.InitVars();
+                if ((this.tableFindProductionProjectsEnteredNewStatus != null)) {
+                    this.tableFindProductionProjectsEnteredNewStatus.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace ProductionProjectDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "FindProductionProjectMaterialRequestByProjectIDDataSet";
+            this.DataSetName = "FindProductionProjectsEnteredNewStatusDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/FindProductionProjectMaterialRequestByProjectIDDataSet.xsd";
+            this.Namespace = "http://tempuri.org/FindProductionProjectsEnteredNewStatusDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableFindProductionProjectMaterialRequestItemsByProjectID = new FindProductionProjectMaterialRequestItemsByProjectIDDataTable();
-            base.Tables.Add(this.tableFindProductionProjectMaterialRequestItemsByProjectID);
+            this.tableFindProductionProjectsEnteredNewStatus = new FindProductionProjectsEnteredNewStatusDataTable();
+            base.Tables.Add(this.tableFindProductionProjectsEnteredNewStatus);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeFindProductionProjectMaterialRequestItemsByProjectID() {
+        private bool ShouldSerializeFindProductionProjectsEnteredNewStatus() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace ProductionProjectDLL {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            FindProductionProjectMaterialRequestByProjectIDDataSet ds = new FindProductionProjectMaterialRequestByProjectIDDataSet();
+            FindProductionProjectsEnteredNewStatusDataSet ds = new FindProductionProjectsEnteredNewStatusDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,35 +270,33 @@ namespace ProductionProjectDLL {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void FindProductionProjectMaterialRequestItemsByProjectIDRowChangeEventHandler(object sender, FindProductionProjectMaterialRequestItemsByProjectIDRowChangeEvent e);
+        public delegate void FindProductionProjectsEnteredNewStatusRowChangeEventHandler(object sender, FindProductionProjectsEnteredNewStatusRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class FindProductionProjectMaterialRequestItemsByProjectIDDataTable : global::System.Data.TypedTableBase<FindProductionProjectMaterialRequestItemsByProjectIDRow> {
+        public partial class FindProductionProjectsEnteredNewStatusDataTable : global::System.Data.TypedTableBase<FindProductionProjectsEnteredNewStatusRow> {
             
-            private global::System.Data.DataColumn columnTransactionID;
+            private global::System.Data.DataColumn columnCustomerAssignedID;
             
-            private global::System.Data.DataColumn columnDateOfRequest;
+            private global::System.Data.DataColumn columnAssignedProjectID;
             
-            private global::System.Data.DataColumn columnPartID;
+            private global::System.Data.DataColumn columnProjectName;
             
-            private global::System.Data.DataColumn columnPartNumber;
+            private global::System.Data.DataColumn columnWorkOrderStatus;
             
-            private global::System.Data.DataColumn columnPartDescription;
+            private global::System.Data.DataColumn columnDepartment;
             
-            private global::System.Data.DataColumn columnEmployee;
+            private global::System.Data.DataColumn columnAssignedOffice;
             
-            private global::System.Data.DataColumn columnQuantity;
-            
-            private global::System.Data.DataColumn columnDateReceived;
+            private global::System.Data.DataColumn columnECDDate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FindProductionProjectMaterialRequestItemsByProjectIDDataTable() {
-                this.TableName = "FindProductionProjectMaterialRequestItemsByProjectID";
+            public FindProductionProjectsEnteredNewStatusDataTable() {
+                this.TableName = "FindProductionProjectsEnteredNewStatus";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +304,7 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal FindProductionProjectMaterialRequestItemsByProjectIDDataTable(global::System.Data.DataTable table) {
+            internal FindProductionProjectsEnteredNewStatusDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,72 +321,64 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected FindProductionProjectMaterialRequestItemsByProjectIDDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FindProductionProjectsEnteredNewStatusDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TransactionIDColumn {
+            public global::System.Data.DataColumn CustomerAssignedIDColumn {
                 get {
-                    return this.columnTransactionID;
+                    return this.columnCustomerAssignedID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DateOfRequestColumn {
+            public global::System.Data.DataColumn AssignedProjectIDColumn {
                 get {
-                    return this.columnDateOfRequest;
+                    return this.columnAssignedProjectID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PartIDColumn {
+            public global::System.Data.DataColumn ProjectNameColumn {
                 get {
-                    return this.columnPartID;
+                    return this.columnProjectName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PartNumberColumn {
+            public global::System.Data.DataColumn WorkOrderStatusColumn {
                 get {
-                    return this.columnPartNumber;
+                    return this.columnWorkOrderStatus;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PartDescriptionColumn {
+            public global::System.Data.DataColumn DepartmentColumn {
                 get {
-                    return this.columnPartDescription;
+                    return this.columnDepartment;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn EmployeeColumn {
+            public global::System.Data.DataColumn AssignedOfficeColumn {
                 get {
-                    return this.columnEmployee;
+                    return this.columnAssignedOffice;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn QuantityColumn {
+            public global::System.Data.DataColumn ECDDateColumn {
                 get {
-                    return this.columnQuantity;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DateReceivedColumn {
-                get {
-                    return this.columnDateReceived;
+                    return this.columnECDDate;
                 }
             }
             
@@ -403,52 +393,51 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FindProductionProjectMaterialRequestItemsByProjectIDRow this[int index] {
+            public FindProductionProjectsEnteredNewStatusRow this[int index] {
                 get {
-                    return ((FindProductionProjectMaterialRequestItemsByProjectIDRow)(this.Rows[index]));
+                    return ((FindProductionProjectsEnteredNewStatusRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event FindProductionProjectMaterialRequestItemsByProjectIDRowChangeEventHandler FindProductionProjectMaterialRequestItemsByProjectIDRowChanging;
+            public event FindProductionProjectsEnteredNewStatusRowChangeEventHandler FindProductionProjectsEnteredNewStatusRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event FindProductionProjectMaterialRequestItemsByProjectIDRowChangeEventHandler FindProductionProjectMaterialRequestItemsByProjectIDRowChanged;
+            public event FindProductionProjectsEnteredNewStatusRowChangeEventHandler FindProductionProjectsEnteredNewStatusRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event FindProductionProjectMaterialRequestItemsByProjectIDRowChangeEventHandler FindProductionProjectMaterialRequestItemsByProjectIDRowDeleting;
+            public event FindProductionProjectsEnteredNewStatusRowChangeEventHandler FindProductionProjectsEnteredNewStatusRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event FindProductionProjectMaterialRequestItemsByProjectIDRowChangeEventHandler FindProductionProjectMaterialRequestItemsByProjectIDRowDeleted;
+            public event FindProductionProjectsEnteredNewStatusRowChangeEventHandler FindProductionProjectsEnteredNewStatusRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddFindProductionProjectMaterialRequestItemsByProjectIDRow(FindProductionProjectMaterialRequestItemsByProjectIDRow row) {
+            public void AddFindProductionProjectsEnteredNewStatusRow(FindProductionProjectsEnteredNewStatusRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FindProductionProjectMaterialRequestItemsByProjectIDRow AddFindProductionProjectMaterialRequestItemsByProjectIDRow(System.DateTime DateOfRequest, int PartID, string PartNumber, string PartDescription, string Employee, int Quantity, System.DateTime DateReceived) {
-                FindProductionProjectMaterialRequestItemsByProjectIDRow rowFindProductionProjectMaterialRequestItemsByProjectIDRow = ((FindProductionProjectMaterialRequestItemsByProjectIDRow)(this.NewRow()));
+            public FindProductionProjectsEnteredNewStatusRow AddFindProductionProjectsEnteredNewStatusRow(string CustomerAssignedID, string AssignedProjectID, string ProjectName, string WorkOrderStatus, string Department, string AssignedOffice, System.DateTime ECDDate) {
+                FindProductionProjectsEnteredNewStatusRow rowFindProductionProjectsEnteredNewStatusRow = ((FindProductionProjectsEnteredNewStatusRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        DateOfRequest,
-                        PartID,
-                        PartNumber,
-                        PartDescription,
-                        Employee,
-                        Quantity,
-                        DateReceived};
-                rowFindProductionProjectMaterialRequestItemsByProjectIDRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowFindProductionProjectMaterialRequestItemsByProjectIDRow);
-                return rowFindProductionProjectMaterialRequestItemsByProjectIDRow;
+                        CustomerAssignedID,
+                        AssignedProjectID,
+                        ProjectName,
+                        WorkOrderStatus,
+                        Department,
+                        AssignedOffice,
+                        ECDDate};
+                rowFindProductionProjectsEnteredNewStatusRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFindProductionProjectsEnteredNewStatusRow);
+                return rowFindProductionProjectsEnteredNewStatusRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                FindProductionProjectMaterialRequestItemsByProjectIDDataTable cln = ((FindProductionProjectMaterialRequestItemsByProjectIDDataTable)(base.Clone()));
+                FindProductionProjectsEnteredNewStatusDataTable cln = ((FindProductionProjectsEnteredNewStatusDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -456,79 +445,76 @@ namespace ProductionProjectDLL {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new FindProductionProjectMaterialRequestItemsByProjectIDDataTable();
+                return new FindProductionProjectsEnteredNewStatusDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnTransactionID = base.Columns["TransactionID"];
-                this.columnDateOfRequest = base.Columns["DateOfRequest"];
-                this.columnPartID = base.Columns["PartID"];
-                this.columnPartNumber = base.Columns["PartNumber"];
-                this.columnPartDescription = base.Columns["PartDescription"];
-                this.columnEmployee = base.Columns["Employee"];
-                this.columnQuantity = base.Columns["Quantity"];
-                this.columnDateReceived = base.Columns["DateReceived"];
+                this.columnCustomerAssignedID = base.Columns["CustomerAssignedID"];
+                this.columnAssignedProjectID = base.Columns["AssignedProjectID"];
+                this.columnProjectName = base.Columns["ProjectName"];
+                this.columnWorkOrderStatus = base.Columns["WorkOrderStatus"];
+                this.columnDepartment = base.Columns["Department"];
+                this.columnAssignedOffice = base.Columns["AssignedOffice"];
+                this.columnECDDate = base.Columns["ECDDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnTransactionID = new global::System.Data.DataColumn("TransactionID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTransactionID);
-                this.columnDateOfRequest = new global::System.Data.DataColumn("DateOfRequest", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDateOfRequest);
-                this.columnPartID = new global::System.Data.DataColumn("PartID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPartID);
-                this.columnPartNumber = new global::System.Data.DataColumn("PartNumber", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPartNumber);
-                this.columnPartDescription = new global::System.Data.DataColumn("PartDescription", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPartDescription);
-                this.columnEmployee = new global::System.Data.DataColumn("Employee", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmployee);
-                this.columnQuantity = new global::System.Data.DataColumn("Quantity", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQuantity);
-                this.columnDateReceived = new global::System.Data.DataColumn("DateReceived", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDateReceived);
-                this.columnTransactionID.AutoIncrement = true;
-                this.columnTransactionID.AllowDBNull = false;
-                this.columnTransactionID.ReadOnly = true;
-                this.columnDateOfRequest.AllowDBNull = false;
-                this.columnPartID.AllowDBNull = false;
-                this.columnPartNumber.AllowDBNull = false;
-                this.columnPartNumber.MaxLength = 2147483647;
-                this.columnPartDescription.AllowDBNull = false;
-                this.columnPartDescription.MaxLength = 2147483647;
-                this.columnEmployee.ReadOnly = true;
-                this.columnEmployee.MaxLength = 2147483647;
-                this.columnQuantity.AllowDBNull = false;
+                this.columnCustomerAssignedID = new global::System.Data.DataColumn("CustomerAssignedID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCustomerAssignedID);
+                this.columnAssignedProjectID = new global::System.Data.DataColumn("AssignedProjectID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAssignedProjectID);
+                this.columnProjectName = new global::System.Data.DataColumn("ProjectName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProjectName);
+                this.columnWorkOrderStatus = new global::System.Data.DataColumn("WorkOrderStatus", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWorkOrderStatus);
+                this.columnDepartment = new global::System.Data.DataColumn("Department", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDepartment);
+                this.columnAssignedOffice = new global::System.Data.DataColumn("AssignedOffice", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAssignedOffice);
+                this.columnECDDate = new global::System.Data.DataColumn("ECDDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnECDDate);
+                this.columnCustomerAssignedID.AllowDBNull = false;
+                this.columnCustomerAssignedID.MaxLength = 2147483647;
+                this.columnAssignedProjectID.AllowDBNull = false;
+                this.columnAssignedProjectID.MaxLength = 2147483647;
+                this.columnProjectName.AllowDBNull = false;
+                this.columnProjectName.MaxLength = 2147483647;
+                this.columnWorkOrderStatus.AllowDBNull = false;
+                this.columnWorkOrderStatus.MaxLength = 2147483647;
+                this.columnDepartment.AllowDBNull = false;
+                this.columnDepartment.MaxLength = 2147483647;
+                this.columnAssignedOffice.AllowDBNull = false;
+                this.columnAssignedOffice.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FindProductionProjectMaterialRequestItemsByProjectIDRow NewFindProductionProjectMaterialRequestItemsByProjectIDRow() {
-                return ((FindProductionProjectMaterialRequestItemsByProjectIDRow)(this.NewRow()));
+            public FindProductionProjectsEnteredNewStatusRow NewFindProductionProjectsEnteredNewStatusRow() {
+                return ((FindProductionProjectsEnteredNewStatusRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new FindProductionProjectMaterialRequestItemsByProjectIDRow(builder);
+                return new FindProductionProjectsEnteredNewStatusRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(FindProductionProjectMaterialRequestItemsByProjectIDRow);
+                return typeof(FindProductionProjectsEnteredNewStatusRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.FindProductionProjectMaterialRequestItemsByProjectIDRowChanged != null)) {
-                    this.FindProductionProjectMaterialRequestItemsByProjectIDRowChanged(this, new FindProductionProjectMaterialRequestItemsByProjectIDRowChangeEvent(((FindProductionProjectMaterialRequestItemsByProjectIDRow)(e.Row)), e.Action));
+                if ((this.FindProductionProjectsEnteredNewStatusRowChanged != null)) {
+                    this.FindProductionProjectsEnteredNewStatusRowChanged(this, new FindProductionProjectsEnteredNewStatusRowChangeEvent(((FindProductionProjectsEnteredNewStatusRow)(e.Row)), e.Action));
                 }
             }
             
@@ -536,8 +522,8 @@ namespace ProductionProjectDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.FindProductionProjectMaterialRequestItemsByProjectIDRowChanging != null)) {
-                    this.FindProductionProjectMaterialRequestItemsByProjectIDRowChanging(this, new FindProductionProjectMaterialRequestItemsByProjectIDRowChangeEvent(((FindProductionProjectMaterialRequestItemsByProjectIDRow)(e.Row)), e.Action));
+                if ((this.FindProductionProjectsEnteredNewStatusRowChanging != null)) {
+                    this.FindProductionProjectsEnteredNewStatusRowChanging(this, new FindProductionProjectsEnteredNewStatusRowChangeEvent(((FindProductionProjectsEnteredNewStatusRow)(e.Row)), e.Action));
                 }
             }
             
@@ -545,8 +531,8 @@ namespace ProductionProjectDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.FindProductionProjectMaterialRequestItemsByProjectIDRowDeleted != null)) {
-                    this.FindProductionProjectMaterialRequestItemsByProjectIDRowDeleted(this, new FindProductionProjectMaterialRequestItemsByProjectIDRowChangeEvent(((FindProductionProjectMaterialRequestItemsByProjectIDRow)(e.Row)), e.Action));
+                if ((this.FindProductionProjectsEnteredNewStatusRowDeleted != null)) {
+                    this.FindProductionProjectsEnteredNewStatusRowDeleted(this, new FindProductionProjectsEnteredNewStatusRowChangeEvent(((FindProductionProjectsEnteredNewStatusRow)(e.Row)), e.Action));
                 }
             }
             
@@ -554,14 +540,14 @@ namespace ProductionProjectDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.FindProductionProjectMaterialRequestItemsByProjectIDRowDeleting != null)) {
-                    this.FindProductionProjectMaterialRequestItemsByProjectIDRowDeleting(this, new FindProductionProjectMaterialRequestItemsByProjectIDRowChangeEvent(((FindProductionProjectMaterialRequestItemsByProjectIDRow)(e.Row)), e.Action));
+                if ((this.FindProductionProjectsEnteredNewStatusRowDeleting != null)) {
+                    this.FindProductionProjectsEnteredNewStatusRowDeleting(this, new FindProductionProjectsEnteredNewStatusRowChangeEvent(((FindProductionProjectsEnteredNewStatusRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveFindProductionProjectMaterialRequestItemsByProjectIDRow(FindProductionProjectMaterialRequestItemsByProjectIDRow row) {
+            public void RemoveFindProductionProjectsEnteredNewStatusRow(FindProductionProjectsEnteredNewStatusRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -570,7 +556,7 @@ namespace ProductionProjectDLL {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                FindProductionProjectMaterialRequestByProjectIDDataSet ds = new FindProductionProjectMaterialRequestByProjectIDDataSet();
+                FindProductionProjectsEnteredNewStatusDataSet ds = new FindProductionProjectsEnteredNewStatusDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -588,7 +574,7 @@ namespace ProductionProjectDLL {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "FindProductionProjectMaterialRequestItemsByProjectIDDataTable";
+                attribute2.FixedValue = "FindProductionProjectsEnteredNewStatusDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -632,139 +618,110 @@ namespace ProductionProjectDLL {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class FindProductionProjectMaterialRequestItemsByProjectIDRow : global::System.Data.DataRow {
+        public partial class FindProductionProjectsEnteredNewStatusRow : global::System.Data.DataRow {
             
-            private FindProductionProjectMaterialRequestItemsByProjectIDDataTable tableFindProductionProjectMaterialRequestItemsByProjectID;
+            private FindProductionProjectsEnteredNewStatusDataTable tableFindProductionProjectsEnteredNewStatus;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal FindProductionProjectMaterialRequestItemsByProjectIDRow(global::System.Data.DataRowBuilder rb) : 
+            internal FindProductionProjectsEnteredNewStatusRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableFindProductionProjectMaterialRequestItemsByProjectID = ((FindProductionProjectMaterialRequestItemsByProjectIDDataTable)(this.Table));
+                this.tableFindProductionProjectsEnteredNewStatus = ((FindProductionProjectsEnteredNewStatusDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int TransactionID {
+            public string CustomerAssignedID {
                 get {
-                    return ((int)(this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.TransactionIDColumn]));
+                    return ((string)(this[this.tableFindProductionProjectsEnteredNewStatus.CustomerAssignedIDColumn]));
                 }
                 set {
-                    this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.TransactionIDColumn] = value;
+                    this[this.tableFindProductionProjectsEnteredNewStatus.CustomerAssignedIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime DateOfRequest {
+            public string AssignedProjectID {
                 get {
-                    return ((global::System.DateTime)(this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.DateOfRequestColumn]));
+                    return ((string)(this[this.tableFindProductionProjectsEnteredNewStatus.AssignedProjectIDColumn]));
                 }
                 set {
-                    this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.DateOfRequestColumn] = value;
+                    this[this.tableFindProductionProjectsEnteredNewStatus.AssignedProjectIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int PartID {
+            public string ProjectName {
                 get {
-                    return ((int)(this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.PartIDColumn]));
+                    return ((string)(this[this.tableFindProductionProjectsEnteredNewStatus.ProjectNameColumn]));
                 }
                 set {
-                    this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.PartIDColumn] = value;
+                    this[this.tableFindProductionProjectsEnteredNewStatus.ProjectNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string PartNumber {
+            public string WorkOrderStatus {
                 get {
-                    return ((string)(this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.PartNumberColumn]));
+                    return ((string)(this[this.tableFindProductionProjectsEnteredNewStatus.WorkOrderStatusColumn]));
                 }
                 set {
-                    this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.PartNumberColumn] = value;
+                    this[this.tableFindProductionProjectsEnteredNewStatus.WorkOrderStatusColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string PartDescription {
+            public string Department {
                 get {
-                    return ((string)(this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.PartDescriptionColumn]));
+                    return ((string)(this[this.tableFindProductionProjectsEnteredNewStatus.DepartmentColumn]));
                 }
                 set {
-                    this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.PartDescriptionColumn] = value;
+                    this[this.tableFindProductionProjectsEnteredNewStatus.DepartmentColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Employee {
+            public string AssignedOffice {
                 get {
-                    try {
-                        return ((string)(this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.EmployeeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Employee\' in table \'FindProductionProjectMaterialRequestIte" +
-                                "msByProjectID\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableFindProductionProjectsEnteredNewStatus.AssignedOfficeColumn]));
                 }
                 set {
-                    this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.EmployeeColumn] = value;
+                    this[this.tableFindProductionProjectsEnteredNewStatus.AssignedOfficeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Quantity {
-                get {
-                    return ((int)(this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.QuantityColumn]));
-                }
-                set {
-                    this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.QuantityColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime DateReceived {
+            public System.DateTime ECDDate {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.DateReceivedColumn]));
+                        return ((global::System.DateTime)(this[this.tableFindProductionProjectsEnteredNewStatus.ECDDateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DateReceived\' in table \'FindProductionProjectMaterialReques" +
-                                "tItemsByProjectID\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ECDDate\' in table \'FindProductionProjectsEnteredNewStatus\' " +
+                                "is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.DateReceivedColumn] = value;
+                    this[this.tableFindProductionProjectsEnteredNewStatus.ECDDateColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsEmployeeNull() {
-                return this.IsNull(this.tableFindProductionProjectMaterialRequestItemsByProjectID.EmployeeColumn);
+            public bool IsECDDateNull() {
+                return this.IsNull(this.tableFindProductionProjectsEnteredNewStatus.ECDDateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetEmployeeNull() {
-                this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.EmployeeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDateReceivedNull() {
-                return this.IsNull(this.tableFindProductionProjectMaterialRequestItemsByProjectID.DateReceivedColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDateReceivedNull() {
-                this[this.tableFindProductionProjectMaterialRequestItemsByProjectID.DateReceivedColumn] = global::System.Convert.DBNull;
+            public void SetECDDateNull() {
+                this[this.tableFindProductionProjectsEnteredNewStatus.ECDDateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -772,22 +729,22 @@ namespace ProductionProjectDLL {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class FindProductionProjectMaterialRequestItemsByProjectIDRowChangeEvent : global::System.EventArgs {
+        public class FindProductionProjectsEnteredNewStatusRowChangeEvent : global::System.EventArgs {
             
-            private FindProductionProjectMaterialRequestItemsByProjectIDRow eventRow;
+            private FindProductionProjectsEnteredNewStatusRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FindProductionProjectMaterialRequestItemsByProjectIDRowChangeEvent(FindProductionProjectMaterialRequestItemsByProjectIDRow row, global::System.Data.DataRowAction action) {
+            public FindProductionProjectsEnteredNewStatusRowChangeEvent(FindProductionProjectsEnteredNewStatusRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FindProductionProjectMaterialRequestItemsByProjectIDRow Row {
+            public FindProductionProjectsEnteredNewStatusRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -803,7 +760,7 @@ namespace ProductionProjectDLL {
         }
     }
 }
-namespace ProductionProjectDLL.FindProductionProjectMaterialRequestByProjectIDDataSetTableAdapters {
+namespace ProductionProjectDLL.FindProductionProjectsEnteredNewStatusDataSetTableAdapters {
     
     
     /// <summary>
@@ -815,7 +772,7 @@ namespace ProductionProjectDLL.FindProductionProjectMaterialRequestByProjectIDDa
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class FindProductionProjectMaterialRequestItemsByProjectIDTableAdapter : global::System.ComponentModel.Component {
+    public partial class FindProductionProjectsEnteredNewStatusTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -829,7 +786,7 @@ namespace ProductionProjectDLL.FindProductionProjectMaterialRequestByProjectIDDa
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public FindProductionProjectMaterialRequestItemsByProjectIDTableAdapter() {
+        public FindProductionProjectsEnteredNewStatusTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -926,15 +883,14 @@ namespace ProductionProjectDLL.FindProductionProjectMaterialRequestByProjectIDDa
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "FindProductionProjectMaterialRequestItemsByProjectID";
-            tableMapping.ColumnMappings.Add("TransactionID", "TransactionID");
-            tableMapping.ColumnMappings.Add("DateOfRequest", "DateOfRequest");
-            tableMapping.ColumnMappings.Add("PartID", "PartID");
-            tableMapping.ColumnMappings.Add("PartNumber", "PartNumber");
-            tableMapping.ColumnMappings.Add("PartDescription", "PartDescription");
-            tableMapping.ColumnMappings.Add("Employee", "Employee");
-            tableMapping.ColumnMappings.Add("Quantity", "Quantity");
-            tableMapping.ColumnMappings.Add("DateReceived", "DateReceived");
+            tableMapping.DataSetTable = "FindProductionProjectsEnteredNewStatus";
+            tableMapping.ColumnMappings.Add("CustomerAssignedID", "CustomerAssignedID");
+            tableMapping.ColumnMappings.Add("AssignedProjectID", "AssignedProjectID");
+            tableMapping.ColumnMappings.Add("ProjectName", "ProjectName");
+            tableMapping.ColumnMappings.Add("WorkOrderStatus", "WorkOrderStatus");
+            tableMapping.ColumnMappings.Add("Department", "Department");
+            tableMapping.ColumnMappings.Add("AssignedOffice", "AssignedOffice");
+            tableMapping.ColumnMappings.Add("ECDDate", "ECDDate");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -951,23 +907,30 @@ namespace ProductionProjectDLL.FindProductionProjectMaterialRequestByProjectIDDa
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.FindProductionProjectMaterialRequestItemsByProjectID";
+            this._commandCollection[0].CommandText = "dbo.FindProductionProjectsEnteredNewStatus";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProjectID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StatusID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@StatusChangedDate", global::System.Data.SqlDbType.DateTime, 8, global::System.Data.ParameterDirection.Input, 23, 3, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(FindProductionProjectMaterialRequestByProjectIDDataSet.FindProductionProjectMaterialRequestItemsByProjectIDDataTable dataTable, global::System.Nullable<int> ProjectID) {
+        public virtual int Fill(FindProductionProjectsEnteredNewStatusDataSet.FindProductionProjectsEnteredNewStatusDataTable dataTable, global::System.Nullable<int> StatusID, global::System.Nullable<global::System.DateTime> StatusChangedDate) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((ProjectID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ProjectID.Value));
+            if ((StatusID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(StatusID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((StatusChangedDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(StatusChangedDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -980,15 +943,21 @@ namespace ProductionProjectDLL.FindProductionProjectMaterialRequestByProjectIDDa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual FindProductionProjectMaterialRequestByProjectIDDataSet.FindProductionProjectMaterialRequestItemsByProjectIDDataTable GetData(global::System.Nullable<int> ProjectID) {
+        public virtual FindProductionProjectsEnteredNewStatusDataSet.FindProductionProjectsEnteredNewStatusDataTable GetData(global::System.Nullable<int> StatusID, global::System.Nullable<global::System.DateTime> StatusChangedDate) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((ProjectID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(ProjectID.Value));
+            if ((StatusID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((int)(StatusID.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            FindProductionProjectMaterialRequestByProjectIDDataSet.FindProductionProjectMaterialRequestItemsByProjectIDDataTable dataTable = new FindProductionProjectMaterialRequestByProjectIDDataSet.FindProductionProjectMaterialRequestItemsByProjectIDDataTable();
+            if ((StatusChangedDate.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((System.DateTime)(StatusChangedDate.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            FindProductionProjectsEnteredNewStatusDataSet.FindProductionProjectsEnteredNewStatusDataTable dataTable = new FindProductionProjectsEnteredNewStatusDataSet.FindProductionProjectsEnteredNewStatusDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1062,7 +1031,7 @@ namespace ProductionProjectDLL.FindProductionProjectMaterialRequestByProjectIDDa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(FindProductionProjectMaterialRequestByProjectIDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(FindProductionProjectsEnteredNewStatusDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1072,7 +1041,7 @@ namespace ProductionProjectDLL.FindProductionProjectMaterialRequestByProjectIDDa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(FindProductionProjectMaterialRequestByProjectIDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(FindProductionProjectsEnteredNewStatusDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1082,7 +1051,7 @@ namespace ProductionProjectDLL.FindProductionProjectMaterialRequestByProjectIDDa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(FindProductionProjectMaterialRequestByProjectIDDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(FindProductionProjectsEnteredNewStatusDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1116,7 +1085,7 @@ namespace ProductionProjectDLL.FindProductionProjectMaterialRequestByProjectIDDa
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(FindProductionProjectMaterialRequestByProjectIDDataSet dataSet) {
+        public virtual int UpdateAll(FindProductionProjectsEnteredNewStatusDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
