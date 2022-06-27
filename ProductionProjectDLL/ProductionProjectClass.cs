@@ -218,6 +218,24 @@ namespace ProductionProjectDLL
         FindProductionProjectsEnteredNewStatusDataSet aFindProductionProjectsEnteredNewStatusDataSet;
         FindProductionProjectsEnteredNewStatusDataSetTableAdapters.FindProductionProjectsEnteredNewStatusTableAdapter aFindProductionProjectsEnteredNewStatusTableAdapter;
 
+        FindProductionProjectsNotUpdatedDataSet aFindProductionProjectsNotUpdatedDataSet;
+        FindProductionProjectsNotUpdatedDataSetTableAdapters.FindProductionProjectsNotUpdatedTableAdapter aFindProductionProjectsNotUpdatedTableAdapter;
+
+        public FindProductionProjectsNotUpdatedDataSet FindProductionProjectsNotUpdated()
+        {
+            try
+            {
+                aFindProductionProjectsNotUpdatedDataSet = new FindProductionProjectsNotUpdatedDataSet();
+                aFindProductionProjectsNotUpdatedTableAdapter = new FindProductionProjectsNotUpdatedDataSetTableAdapters.FindProductionProjectsNotUpdatedTableAdapter();
+                aFindProductionProjectsNotUpdatedTableAdapter.Fill(aFindProductionProjectsNotUpdatedDataSet.FindProductionProjectsNotUpdated);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // /Find Production Projects Not Updated " + Ex.Message);
+            }
+
+            return aFindProductionProjectsNotUpdatedDataSet;
+        }
         public FindProductionProjectsEnteredNewStatusDataSet FindProductionProjectsEnteredNewStatus(int intStatusID, DateTime datStatusChangeDate)
         {
             try

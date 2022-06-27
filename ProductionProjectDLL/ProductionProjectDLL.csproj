@@ -185,6 +185,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindProductionProjectsEnteredNewStatusDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindProductionProjectsNotUpdatedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectsNotUpdatedDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindProductionProjectTechAssignmentByEmployeeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -752,6 +757,17 @@
     </None>
     <None Include="FindProductionProjectsEnteredNewStatusDataSet.xss">
       <DependentUpon>FindProductionProjectsEnteredNewStatusDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectsNotUpdatedDataSet.xsc">
+      <DependentUpon>FindProductionProjectsNotUpdatedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectsNotUpdatedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectsNotUpdatedDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectsNotUpdatedDataSet.xss">
+      <DependentUpon>FindProductionProjectsNotUpdatedDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindProductionProjectTechAssignmentByEmployeeDataSet.xsc">
       <DependentUpon>FindProductionProjectTechAssignmentByEmployeeDataSet.xsd</DependentUpon>
