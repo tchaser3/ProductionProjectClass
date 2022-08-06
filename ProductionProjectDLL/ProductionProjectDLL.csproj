@@ -180,10 +180,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindProductionProjectsByCurrentStatusIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindProductionProjectsByDepartmentOfficeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectsByDepartmentOfficeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectsByDepartmentStatusDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectsByDepartmentStatusDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectsbyDepartmentStatusOfficeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectsbyDepartmentStatusOfficeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindProductionProjectsEnteredNewStatusDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FindProductionProjectsEnteredNewStatusDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindProductionProjectsForDepartmentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectsForDepartmentDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="FindProductionProjectsNotUpdatedDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -747,6 +767,39 @@
     <None Include="FindProductionProjectsByCurrentStatusIDDataSet.xss">
       <DependentUpon>FindProductionProjectsByCurrentStatusIDDataSet.xsd</DependentUpon>
     </None>
+    <None Include="FindProductionProjectsByDepartmentOfficeDataSet.xsc">
+      <DependentUpon>FindProductionProjectsByDepartmentOfficeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectsByDepartmentOfficeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectsByDepartmentOfficeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectsByDepartmentOfficeDataSet.xss">
+      <DependentUpon>FindProductionProjectsByDepartmentOfficeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectsByDepartmentStatusDataSet.xsc">
+      <DependentUpon>FindProductionProjectsByDepartmentStatusDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectsByDepartmentStatusDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectsByDepartmentStatusDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectsByDepartmentStatusDataSet.xss">
+      <DependentUpon>FindProductionProjectsByDepartmentStatusDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectsbyDepartmentStatusOfficeDataSet.xsc">
+      <DependentUpon>FindProductionProjectsbyDepartmentStatusOfficeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectsbyDepartmentStatusOfficeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectsbyDepartmentStatusOfficeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectsbyDepartmentStatusOfficeDataSet.xss">
+      <DependentUpon>FindProductionProjectsbyDepartmentStatusOfficeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="FindProductionProjectsEnteredNewStatusDataSet.xsc">
       <DependentUpon>FindProductionProjectsEnteredNewStatusDataSet.xsd</DependentUpon>
     </None>
@@ -757,6 +810,17 @@
     </None>
     <None Include="FindProductionProjectsEnteredNewStatusDataSet.xss">
       <DependentUpon>FindProductionProjectsEnteredNewStatusDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectsForDepartmentDataSet.xsc">
+      <DependentUpon>FindProductionProjectsForDepartmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectsForDepartmentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectsForDepartmentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectsForDepartmentDataSet.xss">
+      <DependentUpon>FindProductionProjectsForDepartmentDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindProductionProjectsNotUpdatedDataSet.xsc">
       <DependentUpon>FindProductionProjectsNotUpdatedDataSet.xsd</DependentUpon>

@@ -221,6 +221,78 @@ namespace ProductionProjectDLL
         FindProductionProjectsNotUpdatedDataSet aFindProductionProjectsNotUpdatedDataSet;
         FindProductionProjectsNotUpdatedDataSetTableAdapters.FindProductionProjectsNotUpdatedTableAdapter aFindProductionProjectsNotUpdatedTableAdapter;
 
+        FindProductionProjectsForDepartmentDataSet aFindProductionProjectsForDepartmentDataSet;
+        FindProductionProjectsForDepartmentDataSetTableAdapters.FindProductionProjectsForDepartmentTableAdapter aFindProductionProjectsForDepartmentTableAdapter;
+
+        FindProductionProjectsByDepartmentOfficeDataSet aFindProductionProjectsByDepartmentOfficeDataSet;
+        FindProductionProjectsByDepartmentOfficeDataSetTableAdapters.FindProductionProjectsByDepartmentOfficeTableAdapter aFindProductionProjectsByDepartmentOfficeTableAdapter;
+
+        FindProductionProjectsByDepartmentStatusDataSet aFindProductionProjectsByDepartmentStatusDataSet;
+        FindProductionProjectsByDepartmentStatusDataSetTableAdapters.FindProductionProjectsByDepartmentStatusTableAdapter aFindProductionProjectsbyDepartmentStatusTableAdapter;
+
+        FindProductionProjectsbyDepartmentStatusOfficeDataSet aFindProductionProjectsbyDepartmentStatusOfficeDataSet;
+        FindProductionProjectsbyDepartmentStatusOfficeDataSetTableAdapters.FindProductionProjectsByDepartmentStatusOfficeTableAdapter aFindProductionProjectsbyDepartmentStatusOfficeTableAdapter;
+
+        public FindProductionProjectsbyDepartmentStatusOfficeDataSet FindProductionProjectsByDepartmentStatusOffice(int intBusinessLineID, int intStatusID, int intOfficeID)
+        {
+            try
+            {
+                aFindProductionProjectsbyDepartmentStatusOfficeDataSet = new FindProductionProjectsbyDepartmentStatusOfficeDataSet();
+                aFindProductionProjectsbyDepartmentStatusOfficeTableAdapter = new FindProductionProjectsbyDepartmentStatusOfficeDataSetTableAdapters.FindProductionProjectsByDepartmentStatusOfficeTableAdapter();
+                aFindProductionProjectsbyDepartmentStatusOfficeTableAdapter.Fill(aFindProductionProjectsbyDepartmentStatusOfficeDataSet.FindProductionProjectsByDepartmentStatusOffice, intBusinessLineID, intOfficeID, intStatusID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Projects Class // Find Production Projects By Department Status Office " + Ex.ToString());
+            }
+
+            return aFindProductionProjectsbyDepartmentStatusOfficeDataSet;
+        }
+        public FindProductionProjectsByDepartmentStatusDataSet FindProductionProjectsByDepartmentStatus(int intBusinessLineID, int intStatusID)
+        {
+            try
+            {
+                aFindProductionProjectsByDepartmentStatusDataSet = new FindProductionProjectsByDepartmentStatusDataSet();
+                aFindProductionProjectsbyDepartmentStatusTableAdapter = new FindProductionProjectsByDepartmentStatusDataSetTableAdapters.FindProductionProjectsByDepartmentStatusTableAdapter();
+                aFindProductionProjectsbyDepartmentStatusTableAdapter.Fill(aFindProductionProjectsByDepartmentStatusDataSet.FindProductionProjectsByDepartmentStatus, intBusinessLineID, intStatusID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Projects Class // Find Production Projects By Department Status " + Ex.ToString());
+            }
+
+            return aFindProductionProjectsByDepartmentStatusDataSet;
+        }
+        public FindProductionProjectsByDepartmentOfficeDataSet FindProductionProjectsByDepartmentOffice (int intBusinessLineID, int intOfficeID)
+        {
+            try
+            {
+                aFindProductionProjectsByDepartmentOfficeDataSet = new FindProductionProjectsByDepartmentOfficeDataSet();
+                aFindProductionProjectsByDepartmentOfficeTableAdapter = new FindProductionProjectsByDepartmentOfficeDataSetTableAdapters.FindProductionProjectsByDepartmentOfficeTableAdapter();
+                aFindProductionProjectsByDepartmentOfficeTableAdapter.Fill(aFindProductionProjectsByDepartmentOfficeDataSet.FindProductionProjectsByDepartmentOffice, intBusinessLineID, intOfficeID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Projects Class // Find Production Projects By Department Office " + Ex.ToString());
+            }
+
+            return aFindProductionProjectsByDepartmentOfficeDataSet;
+        }
+        public FindProductionProjectsForDepartmentDataSet FindProductionProjectsForDepartment(int intDepartmentID)
+        {
+            try
+            {
+                aFindProductionProjectsForDepartmentDataSet = new FindProductionProjectsForDepartmentDataSet();
+                aFindProductionProjectsForDepartmentTableAdapter = new FindProductionProjectsForDepartmentDataSetTableAdapters.FindProductionProjectsForDepartmentTableAdapter();
+                aFindProductionProjectsForDepartmentTableAdapter.Fill(aFindProductionProjectsForDepartmentDataSet.FindProductionProjectsForDepartment, intDepartmentID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Projects Class // Find Production Projects For Department " + Ex.Message);
+            }
+
+            return aFindProductionProjectsForDepartmentDataSet;
+        }
         public FindProductionProjectsNotUpdatedDataSet FindProductionProjectsNotUpdated()
         {
             try
