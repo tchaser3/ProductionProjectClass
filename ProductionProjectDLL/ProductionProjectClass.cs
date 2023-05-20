@@ -233,6 +233,92 @@ namespace ProductionProjectDLL
         FindProductionProjectsbyDepartmentStatusOfficeDataSet aFindProductionProjectsbyDepartmentStatusOfficeDataSet;
         FindProductionProjectsbyDepartmentStatusOfficeDataSetTableAdapters.FindProductionProjectsByDepartmentStatusOfficeTableAdapter aFindProductionProjectsbyDepartmentStatusOfficeTableAdapter;
 
+        ProductionProjectNTPDataSet aProductionProjectNTPDataSet;
+        ProductionProjectNTPDataSetTableAdapters.productionprojectntpTableAdapter aProductionProjectNTPTableAdapter;
+
+        InsertProductionProjectNTPEntryTableAdapters.QueriesTableAdapter aInsertProductionProjectNTPTableAdapter;
+
+        FindProductionProjectNTPForProjectIDDataSet aFindProductionProjectNTPForProjectIDDataSet;
+        FindProductionProjectNTPForProjectIDDataSetTableAdapters.FindProductionProjectNTPForProjectIDTableAdapter aFindProductionProjectNTPForProjectIDTableAdapter;
+
+        FindProductionProjectTotalNTPForProjectIDDataSet aFindProductionProjectTotalNTPForProjectIDDataSet;
+        FindProductionProjectTotalNTPForProjectIDDataSetTableAdapters.FindProductionProjectTotalNTPForProjectIDTableAdapter aFindProductionProjectTotalNTPForProjectIDTableAdapter;
+
+        public FindProductionProjectTotalNTPForProjectIDDataSet FindProductionProjectTotalNTPForProjectID(string strCustomerProjectID)
+        {
+            try
+            {
+                aFindProductionProjectTotalNTPForProjectIDDataSet = new FindProductionProjectTotalNTPForProjectIDDataSet();
+                aFindProductionProjectTotalNTPForProjectIDTableAdapter = new FindProductionProjectTotalNTPForProjectIDDataSetTableAdapters.FindProductionProjectTotalNTPForProjectIDTableAdapter();
+                aFindProductionProjectTotalNTPForProjectIDTableAdapter.Fill(aFindProductionProjectTotalNTPForProjectIDDataSet.FindProductionProjectTotalNTPForProjectID, strCustomerProjectID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Total NTP For Project ID " + Ex.ToString());
+            }
+
+            return aFindProductionProjectTotalNTPForProjectIDDataSet;
+        }
+        public FindProductionProjectNTPForProjectIDDataSet FindProductionProjectNTPForProjectID(string strCustomerProjectID)
+        {
+            try
+            {
+                aFindProductionProjectNTPForProjectIDDataSet = new FindProductionProjectNTPForProjectIDDataSet();
+                aFindProductionProjectNTPForProjectIDTableAdapter = new FindProductionProjectNTPForProjectIDDataSetTableAdapters.FindProductionProjectNTPForProjectIDTableAdapter();
+                aFindProductionProjectNTPForProjectIDTableAdapter.Fill(aFindProductionProjectNTPForProjectIDDataSet.FindProductionProjectNTPForProjectID, strCustomerProjectID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project NTP for Project ID " + Ex.ToString());
+            }
+
+            return aFindProductionProjectNTPForProjectIDDataSet;
+        }
+        public bool InsertProductionProjectNTP(string strCreateUserID, string strPONumber, decimal decPOAmount, int intProjectID)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aInsertProductionProjectNTPTableAdapter = new InsertProductionProjectNTPEntryTableAdapters.QueriesTableAdapter();
+                aInsertProductionProjectNTPTableAdapter.InsertProductionProjectNTP(strCreateUserID, strPONumber, decPOAmount, intProjectID);
+            }
+            catch (Exception Ex)
+            {
+                blnFatalError = true;
+
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project NTP " + Ex.ToString());
+            }
+
+            return blnFatalError;
+        }
+        public ProductionProjectNTPDataSet GetProductionProjectNTPInfo()
+        {
+            try
+            {
+                aProductionProjectNTPDataSet = new ProductionProjectNTPDataSet();
+                aProductionProjectNTPTableAdapter = new ProductionProjectNTPDataSetTableAdapters.productionprojectntpTableAdapter();
+                aProductionProjectNTPTableAdapter.Fill(aProductionProjectNTPDataSet.productionprojectntp);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project NTP Info " + Ex.ToString());
+            }
+
+            return aProductionProjectNTPDataSet;
+        }
+        public void UpdateProductionProjectNTPDB(ProductionProjectNTPDataSet aProductionProjectNTPDataSet)
+        {
+            try
+            {
+                aProductionProjectNTPTableAdapter = new ProductionProjectNTPDataSetTableAdapters.productionprojectntpTableAdapter();
+                aProductionProjectNTPTableAdapter.Update(aProductionProjectNTPDataSet.productionprojectntp);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project NTP DB " + Ex.ToString());
+            }
+        }
         public FindProductionProjectsbyDepartmentStatusOfficeDataSet FindProductionProjectsByDepartmentStatusOffice(int intBusinessLineID, int intStatusID, int intOfficeID)
         {
             try
@@ -288,7 +374,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Projects Class // Find Production Projects For Department " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Projects Class // Find Production Projects For Department " + Ex.ToString());
             }
 
             return aFindProductionProjectsForDepartmentDataSet;
@@ -303,7 +389,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // /Find Production Projects Not Updated " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // /Find Production Projects Not Updated " + Ex.ToString());
             }
 
             return aFindProductionProjectsNotUpdatedDataSet;
@@ -318,7 +404,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Projects Entered New Status " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Projects Entered New Status " + Ex.ToString());
             }
 
             return aFindProductionProjectsEnteredNewStatusDataSet;
@@ -334,7 +420,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Status Date // " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Status Date // " + Ex.ToString());
             }
 
             return blnFatalError;
@@ -350,7 +436,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info Job Type " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info Job Type " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -368,7 +454,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info PO Number " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info PO Number " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -385,7 +471,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Invoiced Production Projects " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Invoiced Production Projects " + Ex.ToString());
             }
 
             return aFindInvoicedProductionProjectsDataSet;
@@ -400,7 +486,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Overdue Business Line Projects By Office " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Overdue Business Line Projects By Office " + Ex.ToString());
             }
 
             return aFindOverdueBusinessLineProjectsByOfficeDataSet;
@@ -415,7 +501,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Open Business Line Projects For Office " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Open Business Line Projects For Office " + Ex.ToString());
             }
 
             return aFindOpenBusinessLineProjectsForOfficeDataSet;
@@ -430,7 +516,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Overdue Office Business Lines " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Overdue Office Business Lines " + Ex.ToString());
             }
 
             return aFindOverdueOfficeBusinessLinesDataSet;
@@ -445,7 +531,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Open Office Business Line " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Open Office Business Line " + Ex.ToString());
             }
 
             return aFindOpenOfficeBusinessLineDataSet;
@@ -460,7 +546,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Overdue Projects By Date Range " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Overdue Projects By Date Range " + Ex.ToString());
             }
 
             return aFindOverdueProjectsByDateRangeDataSet;
@@ -475,7 +561,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Overdue Projects By Office Business " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Overdue Projects By Office Business " + Ex.ToString());
             }
 
             return aFindOverdueProjectsByOfficeBusinessDataSet;
@@ -490,7 +576,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Total Overdue Project Status " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Total Overdue Project Status " + Ex.ToString());
             }
 
             return aFindTotalOverdueProjectStatusDataSet;
@@ -505,7 +591,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Total Overdue Production Projects " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Total Overdue Production Projects " + Ex.ToString());
             }
 
             return aFindTotalOverdueProductionProjectsDataSet;
@@ -520,7 +606,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Total Open Status Projects " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Total Open Status Projects " + Ex.ToString());
             }
 
             return aFindTotalOpenStatusProjectsDataSet;
@@ -535,7 +621,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Total Open Production Projects " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Total Open Production Projects " + Ex.ToString());
             }
 
             return aFindTotalOpenProductionProjectsDataSet;
@@ -550,7 +636,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Overdue Open Production Projects " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Overdue Open Production Projects " + Ex.ToString());
             }
 
             return aFindOverdueOpenProductionProjectsDataSet;
@@ -565,7 +651,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Tech Assignment By Project ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Tech Assignment By Project ID " + Ex.ToString());
             }
 
             return aFindProductionProjectTechAssignmentByProjectIDDataSet;
@@ -580,7 +666,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Tech Assignment By Employee " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Tech Assignment By Employee " + Ex.ToString());
             }
 
             return aFindProductionProjectTechAssignmentByEmployeeDataSet;
@@ -595,7 +681,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Tech Assignment Over Date Range " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Tech Assignment Over Date Range " + Ex.ToString());
             }
 
             return aFindProductionProjectTechAssignmentsOverDateRangeDataSet;
@@ -611,7 +697,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Remove Production Project Tech Assignment " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Remove Production Project Tech Assignment " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -629,7 +715,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Tech Assignment " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Tech Assignment " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -646,7 +732,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Tech Assigned Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Tech Assigned Info " + Ex.ToString());
             }
 
             return aProductionProjectTechAssignedDataSet;
@@ -660,7 +746,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Tech Assigned Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Tech Assigned Info " + Ex.ToString());
             }
         }
         public FindProductionProjectPermitsByProjectIDDataSet FindProductionProjectPermitsByProjectID(int intProjectID)
@@ -673,7 +759,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Permits By Project ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Permits By Project ID " + Ex.ToString());
             }
 
             return aFindProductionProjectPermitsByProjectIDDataSet;
@@ -689,7 +775,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Permit Cost " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Permit Cost " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -707,7 +793,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Permit Received " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Permit Received " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -725,7 +811,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Permit " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Permit " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -742,7 +828,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Permits Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Permits Info " + Ex.ToString());
             }
 
             return aProductionProjectPermitsDataSet;
@@ -756,7 +842,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Permits DB " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Permits DB " + Ex.ToString());
             }
         }
         public bool UpdateProductionProjectMaterialRequestDateReceived(int intTransactionID, DateTime datDateReceived)
@@ -770,7 +856,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Materials Request Date Received " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Materials Request Date Received " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -787,7 +873,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production project Class // Find Production Project Material Request Items By Project ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production project Class // Find Production Project Material Request Items By Project ID " + Ex.ToString());
             }
 
             return aFindProductionProjectMaterialRequestItemsByProjectIDDataSet;
@@ -802,7 +888,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Material Request Items By Request " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Material Request Items By Request " + Ex.ToString());
             }
 
             return aFindProductionProjectMaterialRequestItemsByRequestDataSet;
@@ -818,7 +904,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Material Request Items " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Material Request Items " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -835,7 +921,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Material Request Items Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Material Request Items Info " + Ex.ToString());
             }
 
             return aProductionProjectMaterialRequestItemsDataSet;
@@ -849,7 +935,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Material Request Items DB " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Material Request Items DB " + Ex.ToString());
             }
         }
         public FindProductionProjectMaterialRequestDataSet FindProductionProjectMaterialRequest(int intProjectID)
@@ -862,7 +948,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Material Request " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Material Request " + Ex.ToString());
             }
 
             return aFindProductionProjectMaterialRequestDataSet;
@@ -878,7 +964,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Material Request " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Material Request " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -895,7 +981,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Material Request Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Material Request Info " + Ex.ToString());
             }
 
             return aProductionProjectMaterialRequestDataSet;
@@ -909,7 +995,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Material Request DB " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Material Request DB " + Ex.ToString());
             }
         }
         public FindProductionProjectQCByProjectIDDataSet FindProductionProjectQCByProjectID(int intProjectID)
@@ -922,7 +1008,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project QC By Project ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project QC By Project ID " + Ex.ToString());
             }
 
             return aFindProductionProjectQCByProjectIDDataSet;
@@ -938,7 +1024,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project QC " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project QC " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -955,7 +1041,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project QC Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project QC Info " + Ex.ToString());
             }
 
             return aProductionProjectQCDateSet;
@@ -968,9 +1054,9 @@ namespace ProductionProjectDLL
                 aFindProductionProjectUpdatesByProjectIDTableAdapter = new FindProductionProjectUpdatesByProjectIDDataSetTableAdapters.FindProductionProjectUpdatesByProjectIDTableAdapter();
                 aFindProductionProjectUpdatesByProjectIDTableAdapter.Fill(aFindProductionProjectUpdatesByProjectIDDataSet.FindProductionProjectUpdatesByProjectID, intProjectID);
             }
-            catch (Exception ex)
+            catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Updates By Project ID " + ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Updates By Project ID " + Ex.ToString());
             }
 
             return aFindProductionProjectUpdatesByProjectIDDataSet;
@@ -985,7 +1071,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Updates Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Updates Info " + Ex.ToString());
             }
 
             return aProductionProjectUpdatesDataSet;
@@ -999,7 +1085,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Udpates DB " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Udpates DB " + Ex.ToString());
             }
         }
         public bool InsertProductionProjectUpdate(int intProjectID, int intEmployeeID, DateTime datTransactionDate, string strProjectUpdate)
@@ -1013,7 +1099,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Update " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Update " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1030,7 +1116,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Documentation By Projec ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Documentation By Projec ID " + Ex.ToString());
             }
 
             return aFindProductionProjectDocumentationByProjectIDDataSet;
@@ -1046,7 +1132,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Documentation " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Documentation " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1063,7 +1149,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Documentation Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Documentation Info " + Ex.ToString());
             }
 
             return aProductionProjectDocumentationDataSet;
@@ -1077,7 +1163,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Documentation DB " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Documentation DB " + Ex.ToString());
             }
         }
         public FindProductionProjectInvoicingTotalsByDateRangeDataSet FindProductionProjectInvoicingTotalsByDateRange(DateTime datStartDate, DateTime datEndDate)
@@ -1090,7 +1176,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Invoicing Totals By Date Range " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Invoicing Totals By Date Range " + Ex.ToString());
             }
 
             return aFindProductionProjectInvoicingTotalsByDateRangeDataSet;
@@ -1105,7 +1191,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Invoicing Total By Project ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Invoicing Total By Project ID " + Ex.ToString());
             }
 
             return aFindProductionProjectInvoicingTotalByProjectIDDataSet;
@@ -1120,7 +1206,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Invoicing Transactions " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Invoicing Transactions " + Ex.ToString());
             }
 
             return aFindProductionProjectInvoicingTransactionsDataSet;
@@ -1135,7 +1221,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Open Department Production Projects " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Open Department Production Projects " + Ex.ToString());
             }
 
             return aFindOpenDepartmentProductionProjectsDataSet;
@@ -1151,7 +1237,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Invoice Status " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Invoice Status " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1169,7 +1255,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Clas // Insert Production Project Invoice " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Clas // Insert Production Project Invoice " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1186,7 +1272,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Invoicing Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Invoicing Info " + Ex.ToString());
             }
 
             return aProductionProjectInvoicingDataSet;
@@ -1200,7 +1286,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Invoicing DB " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Invoicing DB " + Ex.ToString());
             }
         }
         public FindProductionProjectCableTotalByProjectIDDataSet FindProductionProjectCableTotalsByProjectID(int intProjectID)
@@ -1213,7 +1299,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Cable Totals By Project ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Cable Totals By Project ID " + Ex.ToString());
             }
 
             return aFindProductionProjectCableTotalsByProjectIDDataSet;
@@ -1228,7 +1314,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Cable By Project ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Cable By Project ID " + Ex.ToString());
             }
 
             return aFindProductionProjectCableByProjectIDDataSet;
@@ -1244,7 +1330,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Cable Part ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Cable Part ID " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1262,7 +1348,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Remove Production Project Cable " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Remove Production Project Cable " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1280,7 +1366,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Cable Type " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Cable Type " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1298,7 +1384,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Cable Footage " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Cable Footage " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1316,7 +1402,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Cable " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Cable " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1333,7 +1419,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Cable Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Cable Info " + Ex.ToString());
             }
 
             return aProductionProjectCableDateSet;
@@ -1347,7 +1433,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Cable DB " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Cable DB " + Ex.ToString());
             }
         }
         public FindProductionProjectInfoPOAmountDataSet FindProductionProjectInfoPOAmount(int intProjectID)
@@ -1360,7 +1446,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Info PO Amount " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Info PO Amount " + Ex.ToString());
             }
 
             return aFindProductionProjectInfoPOAmountDataSet;
@@ -1375,7 +1461,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Info Needing QC " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Info Needing QC " + Ex.ToString());
             }
 
             return aFindProductionProjectInfoNeedingQCDataSet;
@@ -1390,7 +1476,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Info Needing Splicing " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Info Needing Splicing " + Ex.ToString());
             }
 
             return aFindProductionProjectInfoNeedingSplicingDataSet;
@@ -1405,7 +1491,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Info " + Ex.ToString());
             }
 
             return aFindProductionProjectInfoDataSet;
@@ -1421,7 +1507,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Remove Production Project Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Remove Production Project Info " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1439,7 +1525,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info QC Performed " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info QC Performed " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1457,7 +1543,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info Hard Restoration " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info Hard Restoration " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1475,7 +1561,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info Splicing Complete " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info Splicing Complete " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1493,7 +1579,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info PO Amount " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info PO Amount " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1511,7 +1597,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Info " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1528,7 +1614,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Info Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Info Info " + Ex.ToString());
             }
 
             return aProductionProjectInfoDataSet;
@@ -1542,7 +1628,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info DB " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Info DB " + Ex.ToString());
             }
         }
         public bool UpdateProductionProject(int intTransactionID, int intDepartmentID, string strAddress, string strCity, string strState, int intManagerID, int intOfficeID, DateTime datECDDate, string strProjectNotes)
@@ -1556,7 +1642,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1573,7 +1659,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project By Project ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project By Project ID " + Ex.ToString());
             }
 
             return aFindProductionProjectByProjectIDDataSet;
@@ -1588,7 +1674,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Projects By Current ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Projects By Current ID " + Ex.ToString());
             }
 
             return aFindProductionProjectsByCurrentStatusIDDataSet;
@@ -1603,7 +1689,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Open Production Projects " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Open Production Projects " + Ex.ToString());
             }
 
             return aFindOpenProductionProjectsDataSet;
@@ -1618,7 +1704,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Projects By Assigned Project ID " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Projects By Assigned Project ID " + Ex.ToString());
             }
 
             return aFindProductionProjectsByAssignedProjectIDDataSet;
@@ -1634,7 +1720,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Status " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Status " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1652,7 +1738,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project " + Ex.ToString());
 
                 blnFatalError = true;
             }
@@ -1669,7 +1755,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Projects Class // Get Productions Projects Info " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Projects Class // Get Productions Projects Info " + Ex.ToString());
             }
 
             return aProductionProjectsDataSet;
@@ -1683,7 +1769,7 @@ namespace ProductionProjectDLL
             }
             catch (Exception Ex)
             {
-                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Projects Class // Update Productions Projects DB " + Ex.Message);
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Projects Class // Update Productions Projects DB " + Ex.ToString());
             }
         }
     }
