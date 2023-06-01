@@ -24,7 +24,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="UpdateProductionProjectInfoSplicingCompleteEntry" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="UpdateProductionProjectInfoSplicingCompleteEntry" msprop:Generator_UserDSName="UpdateProductionProjectInfoSplicingCompleteEntry">
+  <xs:element name="UpdateProductionProjectInfoSplicingCompleteEntry" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="UpdateProductionProjectInfoSplicingCompleteEntry" msprop:Generator_DataSetName="UpdateProductionProjectInfoSplicingCompleteEntry">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded" />
     </xs:complexType>

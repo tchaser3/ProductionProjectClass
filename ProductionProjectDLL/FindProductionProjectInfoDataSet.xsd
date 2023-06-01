@@ -30,7 +30,7 @@
               <Mapping SourceColumn="PointOfContact" DataSetColumn="PointOfContact" />
               <Mapping SourceColumn="JobType" DataSetColumn="JobType" />
               <Mapping SourceColumn="PONumber" DataSetColumn="PONumber" />
-              <Mapping SourceColumn="SplicingComple" DataSetColumn="SplicingComple" />
+              <Mapping SourceColumn="SplicingComplete" DataSetColumn="SplicingComplete" />
               <Mapping SourceColumn="HardRestoration" DataSetColumn="HardRestoration" />
               <Mapping SourceColumn="QCPerformed" DataSetColumn="QCPerformed" />
               <Mapping SourceColumn="POAmount" DataSetColumn="POAmount" />
@@ -42,60 +42,60 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="FindProductionProjectInfoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FindProductionProjectInfoDataSet" msprop:Generator_UserDSName="FindProductionProjectInfoDataSet">
+  <xs:element name="FindProductionProjectInfoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="FindProductionProjectInfoDataSet" msprop:Generator_DataSetName="FindProductionProjectInfoDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FindProductionProjectInfo" msprop:Generator_TableClassName="FindProductionProjectInfoDataTable" msprop:Generator_TableVarName="tableFindProductionProjectInfo" msprop:Generator_TablePropName="FindProductionProjectInfo" msprop:Generator_RowDeletingName="FindProductionProjectInfoRowDeleting" msprop:Generator_RowChangingName="FindProductionProjectInfoRowChanging" msprop:Generator_RowEvHandlerName="FindProductionProjectInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="FindProductionProjectInfoRowDeleted" msprop:Generator_UserTableName="FindProductionProjectInfo" msprop:Generator_RowChangedName="FindProductionProjectInfoRowChanged" msprop:Generator_RowEvArgName="FindProductionProjectInfoRowChangeEvent" msprop:Generator_RowClassName="FindProductionProjectInfoRow">
+        <xs:element name="FindProductionProjectInfo" msprop:Generator_RowEvHandlerName="FindProductionProjectInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="FindProductionProjectInfoRowDeleted" msprop:Generator_RowDeletingName="FindProductionProjectInfoRowDeleting" msprop:Generator_RowEvArgName="FindProductionProjectInfoRowChangeEvent" msprop:Generator_TablePropName="FindProductionProjectInfo" msprop:Generator_RowChangedName="FindProductionProjectInfoRowChanged" msprop:Generator_RowChangingName="FindProductionProjectInfoRowChanging" msprop:Generator_TableClassName="FindProductionProjectInfoDataTable" msprop:Generator_RowClassName="FindProductionProjectInfoRow" msprop:Generator_TableVarName="tableFindProductionProjectInfo" msprop:Generator_UserTableName="FindProductionProjectInfo">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="TransactionID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:int" />
-              <xs:element name="AssignedProjectID" msprop:Generator_ColumnVarNameInTable="columnAssignedProjectID" msprop:Generator_ColumnPropNameInRow="AssignedProjectID" msprop:Generator_ColumnPropNameInTable="AssignedProjectIDColumn" msprop:Generator_UserColumnName="AssignedProjectID">
+              <xs:element name="TransactionID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_UserColumnName="TransactionID" type="xs:int" />
+              <xs:element name="AssignedProjectID" msprop:Generator_ColumnPropNameInRow="AssignedProjectID" msprop:Generator_ColumnPropNameInTable="AssignedProjectIDColumn" msprop:Generator_ColumnVarNameInTable="columnAssignedProjectID" msprop:Generator_UserColumnName="AssignedProjectID">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="CustomerAssignedID" msprop:Generator_ColumnVarNameInTable="columnCustomerAssignedID" msprop:Generator_ColumnPropNameInRow="CustomerAssignedID" msprop:Generator_ColumnPropNameInTable="CustomerAssignedIDColumn" msprop:Generator_UserColumnName="CustomerAssignedID">
+              <xs:element name="CustomerAssignedID" msprop:Generator_ColumnPropNameInRow="CustomerAssignedID" msprop:Generator_ColumnPropNameInTable="CustomerAssignedIDColumn" msprop:Generator_ColumnVarNameInTable="columnCustomerAssignedID" msprop:Generator_UserColumnName="CustomerAssignedID">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ProjectName" msprop:Generator_ColumnVarNameInTable="columnProjectName" msprop:Generator_ColumnPropNameInRow="ProjectName" msprop:Generator_ColumnPropNameInTable="ProjectNameColumn" msprop:Generator_UserColumnName="ProjectName">
+              <xs:element name="ProjectName" msprop:Generator_ColumnPropNameInRow="ProjectName" msprop:Generator_ColumnPropNameInTable="ProjectNameColumn" msprop:Generator_ColumnVarNameInTable="columnProjectName" msprop:Generator_UserColumnName="ProjectName">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="TransactionDate" msprop:Generator_ColumnVarNameInTable="columnTransactionDate" msprop:Generator_ColumnPropNameInRow="TransactionDate" msprop:Generator_ColumnPropNameInTable="TransactionDateColumn" msprop:Generator_UserColumnName="TransactionDate" type="xs:dateTime" />
-              <xs:element name="PointOfContact" msprop:Generator_ColumnVarNameInTable="columnPointOfContact" msprop:Generator_ColumnPropNameInRow="PointOfContact" msprop:Generator_ColumnPropNameInTable="PointOfContactColumn" msprop:Generator_UserColumnName="PointOfContact">
+              <xs:element name="TransactionDate" msprop:Generator_ColumnPropNameInRow="TransactionDate" msprop:Generator_ColumnPropNameInTable="TransactionDateColumn" msprop:Generator_ColumnVarNameInTable="columnTransactionDate" msprop:Generator_UserColumnName="TransactionDate" type="xs:dateTime" />
+              <xs:element name="PointOfContact" msprop:Generator_ColumnPropNameInRow="PointOfContact" msprop:Generator_ColumnPropNameInTable="PointOfContactColumn" msprop:Generator_ColumnVarNameInTable="columnPointOfContact" msprop:Generator_UserColumnName="PointOfContact">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="JobType" msprop:Generator_ColumnVarNameInTable="columnJobType" msprop:Generator_ColumnPropNameInRow="JobType" msprop:Generator_ColumnPropNameInTable="JobTypeColumn" msprop:Generator_UserColumnName="JobType">
+              <xs:element name="JobType" msprop:Generator_ColumnPropNameInRow="JobType" msprop:Generator_ColumnPropNameInTable="JobTypeColumn" msprop:Generator_ColumnVarNameInTable="columnJobType" msprop:Generator_UserColumnName="JobType">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PONumber" msprop:Generator_ColumnVarNameInTable="columnPONumber" msprop:Generator_ColumnPropNameInRow="PONumber" msprop:Generator_ColumnPropNameInTable="PONumberColumn" msprop:Generator_UserColumnName="PONumber">
+              <xs:element name="PONumber" msprop:Generator_ColumnPropNameInRow="PONumber" msprop:Generator_ColumnPropNameInTable="PONumberColumn" msprop:Generator_ColumnVarNameInTable="columnPONumber" msprop:Generator_UserColumnName="PONumber">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="2147483647" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="SplicingComple" msprop:Generator_ColumnVarNameInTable="columnSplicingComple" msprop:Generator_ColumnPropNameInRow="SplicingComple" msprop:Generator_ColumnPropNameInTable="SplicingCompleColumn" msprop:Generator_UserColumnName="SplicingComple" type="xs:boolean" />
-              <xs:element name="HardRestoration" msprop:Generator_ColumnVarNameInTable="columnHardRestoration" msprop:Generator_ColumnPropNameInRow="HardRestoration" msprop:Generator_ColumnPropNameInTable="HardRestorationColumn" msprop:Generator_UserColumnName="HardRestoration" type="xs:boolean" />
-              <xs:element name="QCPerformed" msprop:Generator_ColumnVarNameInTable="columnQCPerformed" msprop:Generator_ColumnPropNameInRow="QCPerformed" msprop:Generator_ColumnPropNameInTable="QCPerformedColumn" msprop:Generator_UserColumnName="QCPerformed" type="xs:boolean" />
-              <xs:element name="POAmount" msprop:Generator_ColumnVarNameInTable="columnPOAmount" msprop:Generator_ColumnPropNameInRow="POAmount" msprop:Generator_ColumnPropNameInTable="POAmountColumn" msprop:Generator_UserColumnName="POAmount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SplicingComplete" msprop:Generator_ColumnPropNameInRow="SplicingComplete" msprop:Generator_ColumnPropNameInTable="SplicingCompleteColumn" msprop:Generator_ColumnVarNameInTable="columnSplicingComplete" msprop:Generator_UserColumnName="SplicingComplete" type="xs:boolean" />
+              <xs:element name="HardRestoration" msprop:Generator_ColumnPropNameInRow="HardRestoration" msprop:Generator_ColumnPropNameInTable="HardRestorationColumn" msprop:Generator_ColumnVarNameInTable="columnHardRestoration" msprop:Generator_UserColumnName="HardRestoration" type="xs:boolean" />
+              <xs:element name="QCPerformed" msprop:Generator_ColumnPropNameInRow="QCPerformed" msprop:Generator_ColumnPropNameInTable="QCPerformedColumn" msprop:Generator_ColumnVarNameInTable="columnQCPerformed" msprop:Generator_UserColumnName="QCPerformed" type="xs:boolean" />
+              <xs:element name="POAmount" msprop:Generator_ColumnPropNameInRow="POAmount" msprop:Generator_ColumnPropNameInTable="POAmountColumn" msprop:Generator_ColumnVarNameInTable="columnPOAmount" msprop:Generator_UserColumnName="POAmount" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

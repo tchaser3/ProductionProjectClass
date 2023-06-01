@@ -56,8 +56,8 @@ namespace ProductionProjectDLL
         FindProductionProjectInfoNeedingSplicingDataSet aFindProductionProjectInfoNeedingSplicingDataSet;
         FindProductionProjectInfoNeedingSplicingDataSetTableAdapters.FindProductionProjectsNeedingSplicingTableAdapter aFindProductionProjectInfoNeedingSplicingTableAdapter;
 
-        FindProductionProjectInfoNeedingSplicingDataSet aFindProductionProjectInfoNeedingQCDataSet;
-        FindProductionProjectInfoNeedingSplicingDataSetTableAdapters.FindProductionProjectsNeedingSplicingTableAdapter aFindProductionProjectInfoNeedingQCTableAdapter;
+        FindProductionProjectInfoNeedingQCDataSet aFindProductionProjectInfoNeedingQCDataSet;
+        FindProductionProjectInfoNeedingQCDataSetTableAdapters.FindProductionProjectInfoNeedingQCTableAdapter aFindProductionProjectInfoNeedingQCTableAdapter;
 
         FindProductionProjectInfoPOAmountDataSet aFindProductionProjectInfoPOAmountDataSet;
         FindProductionProjectInfoPOAmountDataSetTableAdapters.FindProductionProjectInfoPOAmountTableAdapter aFindProductionProjectInfoPOAmountTableAdapter;
@@ -1451,13 +1451,13 @@ namespace ProductionProjectDLL
 
             return aFindProductionProjectInfoPOAmountDataSet;
         }
-        public FindProductionProjectInfoNeedingSplicingDataSet FindProductionProjectInfoNeedingQC()
+        public FindProductionProjectInfoNeedingQCDataSet FindProductionProjectInfoNeedingQC()
         {
             try
             {
-                aFindProductionProjectInfoNeedingQCDataSet = new FindProductionProjectInfoNeedingSplicingDataSet();
-                aFindProductionProjectInfoNeedingQCTableAdapter = new FindProductionProjectInfoNeedingSplicingDataSetTableAdapters.FindProductionProjectsNeedingSplicingTableAdapter();
-                aFindProductionProjectInfoNeedingQCTableAdapter.Fill(aFindProductionProjectInfoNeedingQCDataSet.FindProductionProjectsNeedingSplicing);
+                aFindProductionProjectInfoNeedingQCDataSet = new FindProductionProjectInfoNeedingQCDataSet();
+                aFindProductionProjectInfoNeedingQCTableAdapter = new FindProductionProjectInfoNeedingQCDataSetTableAdapters.FindProductionProjectInfoNeedingQCTableAdapter();
+                aFindProductionProjectInfoNeedingQCTableAdapter.Fill(aFindProductionProjectInfoNeedingQCDataSet.FindProductionProjectInfoNeedingQC);
             }
             catch (Exception Ex)
             {

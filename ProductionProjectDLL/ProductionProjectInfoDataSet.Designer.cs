@@ -291,13 +291,19 @@ namespace ProductionProjectDLL {
             
             private global::System.Data.DataColumn columnPONumber;
             
-            private global::System.Data.DataColumn columnSplicingComple;
+            private global::System.Data.DataColumn columnSplicingComplete;
             
             private global::System.Data.DataColumn columnHardRestoration;
             
             private global::System.Data.DataColumn columnQCPerformed;
             
             private global::System.Data.DataColumn columnPOAmount;
+            
+            private global::System.Data.DataColumn columnSplicingCompleteDate;
+            
+            private global::System.Data.DataColumn columnHardRestorationDate;
+            
+            private global::System.Data.DataColumn columnQCPerformedDate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -382,9 +388,9 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SplicingCompleColumn {
+            public global::System.Data.DataColumn SplicingCompleteColumn {
                 get {
-                    return this.columnSplicingComple;
+                    return this.columnSplicingComplete;
                 }
             }
             
@@ -409,6 +415,30 @@ namespace ProductionProjectDLL {
             public global::System.Data.DataColumn POAmountColumn {
                 get {
                     return this.columnPOAmount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SplicingCompleteDateColumn {
+                get {
+                    return this.columnSplicingCompleteDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn HardRestorationDateColumn {
+                get {
+                    return this.columnHardRestorationDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn QCPerformedDateColumn {
+                get {
+                    return this.columnQCPerformedDate;
                 }
             }
             
@@ -449,7 +479,7 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public productionprojectinfoRow AddproductionprojectinfoRow(int ProjectID, int JobType, string PointOfContact, string POCPhoneNumber, string PONumber, bool SplicingComple, bool HardRestoration, bool QCPerformed, decimal POAmount) {
+            public productionprojectinfoRow AddproductionprojectinfoRow(int ProjectID, int JobType, string PointOfContact, string POCPhoneNumber, string PONumber, bool SplicingComplete, bool HardRestoration, bool QCPerformed, decimal POAmount, System.DateTime SplicingCompleteDate, System.DateTime HardRestorationDate, System.DateTime QCPerformedDate) {
                 productionprojectinfoRow rowproductionprojectinfoRow = ((productionprojectinfoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -458,10 +488,13 @@ namespace ProductionProjectDLL {
                         PointOfContact,
                         POCPhoneNumber,
                         PONumber,
-                        SplicingComple,
+                        SplicingComplete,
                         HardRestoration,
                         QCPerformed,
-                        POAmount};
+                        POAmount,
+                        SplicingCompleteDate,
+                        HardRestorationDate,
+                        QCPerformedDate};
                 rowproductionprojectinfoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowproductionprojectinfoRow);
                 return rowproductionprojectinfoRow;
@@ -497,10 +530,13 @@ namespace ProductionProjectDLL {
                 this.columnPointOfContact = base.Columns["PointOfContact"];
                 this.columnPOCPhoneNumber = base.Columns["POCPhoneNumber"];
                 this.columnPONumber = base.Columns["PONumber"];
-                this.columnSplicingComple = base.Columns["SplicingComple"];
+                this.columnSplicingComplete = base.Columns["SplicingComplete"];
                 this.columnHardRestoration = base.Columns["HardRestoration"];
                 this.columnQCPerformed = base.Columns["QCPerformed"];
                 this.columnPOAmount = base.Columns["POAmount"];
+                this.columnSplicingCompleteDate = base.Columns["SplicingCompleteDate"];
+                this.columnHardRestorationDate = base.Columns["HardRestorationDate"];
+                this.columnQCPerformedDate = base.Columns["QCPerformedDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -518,14 +554,20 @@ namespace ProductionProjectDLL {
                 base.Columns.Add(this.columnPOCPhoneNumber);
                 this.columnPONumber = new global::System.Data.DataColumn("PONumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPONumber);
-                this.columnSplicingComple = new global::System.Data.DataColumn("SplicingComple", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSplicingComple);
+                this.columnSplicingComplete = new global::System.Data.DataColumn("SplicingComplete", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSplicingComplete);
                 this.columnHardRestoration = new global::System.Data.DataColumn("HardRestoration", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHardRestoration);
                 this.columnQCPerformed = new global::System.Data.DataColumn("QCPerformed", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQCPerformed);
                 this.columnPOAmount = new global::System.Data.DataColumn("POAmount", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPOAmount);
+                this.columnSplicingCompleteDate = new global::System.Data.DataColumn("SplicingCompleteDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSplicingCompleteDate);
+                this.columnHardRestorationDate = new global::System.Data.DataColumn("HardRestorationDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHardRestorationDate);
+                this.columnQCPerformedDate = new global::System.Data.DataColumn("QCPerformedDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQCPerformedDate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTransactionID}, true));
                 this.columnTransactionID.AutoIncrement = true;
@@ -542,7 +584,7 @@ namespace ProductionProjectDLL {
                 this.columnPOCPhoneNumber.MaxLength = 2147483647;
                 this.columnPONumber.AllowDBNull = false;
                 this.columnPONumber.MaxLength = 2147483647;
-                this.columnSplicingComple.AllowDBNull = false;
+                this.columnSplicingComplete.AllowDBNull = false;
                 this.columnHardRestoration.AllowDBNull = false;
                 this.columnQCPerformed.AllowDBNull = false;
             }
@@ -753,12 +795,12 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool SplicingComple {
+            public bool SplicingComplete {
                 get {
-                    return ((bool)(this[this.tableproductionprojectinfo.SplicingCompleColumn]));
+                    return ((bool)(this[this.tableproductionprojectinfo.SplicingCompleteColumn]));
                 }
                 set {
-                    this[this.tableproductionprojectinfo.SplicingCompleColumn] = value;
+                    this[this.tableproductionprojectinfo.SplicingCompleteColumn] = value;
                 }
             }
             
@@ -802,6 +844,57 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime SplicingCompleteDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableproductionprojectinfo.SplicingCompleteDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SplicingCompleteDate\' in table \'productionprojectinfo\' is D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableproductionprojectinfo.SplicingCompleteDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime HardRestorationDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableproductionprojectinfo.HardRestorationDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HardRestorationDate\' in table \'productionprojectinfo\' is DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableproductionprojectinfo.HardRestorationDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime QCPerformedDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableproductionprojectinfo.QCPerformedDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QCPerformedDate\' in table \'productionprojectinfo\' is DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tableproductionprojectinfo.QCPerformedDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsPOAmountNull() {
                 return this.IsNull(this.tableproductionprojectinfo.POAmountColumn);
             }
@@ -810,6 +903,42 @@ namespace ProductionProjectDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetPOAmountNull() {
                 this[this.tableproductionprojectinfo.POAmountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSplicingCompleteDateNull() {
+                return this.IsNull(this.tableproductionprojectinfo.SplicingCompleteDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSplicingCompleteDateNull() {
+                this[this.tableproductionprojectinfo.SplicingCompleteDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsHardRestorationDateNull() {
+                return this.IsNull(this.tableproductionprojectinfo.HardRestorationDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetHardRestorationDateNull() {
+                this[this.tableproductionprojectinfo.HardRestorationDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsQCPerformedDateNull() {
+                return this.IsNull(this.tableproductionprojectinfo.QCPerformedDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetQCPerformedDateNull() {
+                this[this.tableproductionprojectinfo.QCPerformedDateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -978,59 +1107,80 @@ namespace ProductionProjectDLL.ProductionProjectInfoDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("PointOfContact", "PointOfContact");
             tableMapping.ColumnMappings.Add("POCPhoneNumber", "POCPhoneNumber");
             tableMapping.ColumnMappings.Add("PONumber", "PONumber");
-            tableMapping.ColumnMappings.Add("SplicingComple", "SplicingComple");
+            tableMapping.ColumnMappings.Add("SplicingComplete", "SplicingComplete");
             tableMapping.ColumnMappings.Add("HardRestoration", "HardRestoration");
             tableMapping.ColumnMappings.Add("QCPerformed", "QCPerformed");
             tableMapping.ColumnMappings.Add("POAmount", "POAmount");
+            tableMapping.ColumnMappings.Add("SplicingCompleteDate", "SplicingCompleteDate");
+            tableMapping.ColumnMappings.Add("HardRestorationDate", "HardRestorationDate");
+            tableMapping.ColumnMappings.Add("QCPerformedDate", "QCPerformedDate");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[productionprojectinfo] WHERE (([TransactionID] = @Original_TransactionID) AND ([ProjectID] = @Original_ProjectID) AND ([JobType] = @Original_JobType) AND ([SplicingComple] = @Original_SplicingComple) AND ([HardRestoration] = @Original_HardRestoration) AND ([QCPerformed] = @Original_QCPerformed) AND ((@IsNull_POAmount = 1 AND [POAmount] IS NULL) OR ([POAmount] = @Original_POAmount)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[productionprojectinfo] WHERE (([TransactionID] = @Original_TransactionID) AND ([ProjectID] = @Original_ProjectID) AND ([JobType] = @Original_JobType) AND ([SplicingComplete] = @Original_SplicingComplete) AND ([HardRestoration] = @Original_HardRestoration) AND ([QCPerformed] = @Original_QCPerformed) AND ((@IsNull_POAmount = 1 AND [POAmount] IS NULL) OR ([POAmount] = @Original_POAmount)) AND ((@IsNull_SplicingCompleteDate = 1 AND [SplicingCompleteDate] IS NULL) OR ([SplicingCompleteDate] = @Original_SplicingCompleteDate)) AND ((@IsNull_HardRestorationDate = 1 AND [HardRestorationDate] IS NULL) OR ([HardRestorationDate] = @Original_HardRestorationDate)) AND ((@IsNull_QCPerformedDate = 1 AND [QCPerformedDate] IS NULL) OR ([QCPerformedDate] = @Original_QCPerformedDate)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransactionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransactionID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProjectID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProjectID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_JobType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "JobType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SplicingComple", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SplicingComple", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SplicingComplete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SplicingComplete", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HardRestoration", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardRestoration", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QCPerformed", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QCPerformed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_POAmount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POAmount", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_POAmount", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "POAmount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SplicingCompleteDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SplicingCompleteDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SplicingCompleteDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SplicingCompleteDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HardRestorationDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardRestorationDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HardRestorationDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardRestorationDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QCPerformedDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QCPerformedDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QCPerformedDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QCPerformedDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[productionprojectinfo] ([ProjectID], [JobType], [PointOfContact], [POCPhoneNumber], [PONumber], [SplicingComple], [HardRestoration], [QCPerformed], [POAmount]) VALUES (@ProjectID, @JobType, @PointOfContact, @POCPhoneNumber, @PONumber, @SplicingComple, @HardRestoration, @QCPerformed, @POAmount);
-SELECT TransactionID, ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumber, SplicingComple, HardRestoration, QCPerformed, POAmount FROM productionprojectinfo WHERE (TransactionID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[productionprojectinfo] ([ProjectID], [JobType], [PointOfContact], [POCPhoneNumber], [PONumber], [SplicingComplete], [HardRestoration], [QCPerformed], [POAmount], [SplicingCompleteDate], [HardRestorationDate], [QCPerformedDate]) VALUES (@ProjectID, @JobType, @PointOfContact, @POCPhoneNumber, @PONumber, @SplicingComplete, @HardRestoration, @QCPerformed, @POAmount, @SplicingCompleteDate, @HardRestorationDate, @QCPerformedDate);
+SELECT TransactionID, ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumber, SplicingComplete, HardRestoration, QCPerformed, POAmount, SplicingCompleteDate, HardRestorationDate, QCPerformedDate FROM productionprojectinfo WHERE (TransactionID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProjectID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProjectID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@JobType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "JobType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PointOfContact", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PointOfContact", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@POCPhoneNumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POCPhoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PONumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PONumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SplicingComple", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SplicingComple", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SplicingComplete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SplicingComplete", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HardRestoration", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardRestoration", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QCPerformed", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QCPerformed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@POAmount", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "POAmount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SplicingCompleteDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SplicingCompleteDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HardRestorationDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardRestorationDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QCPerformedDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QCPerformedDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[productionprojectinfo] SET [ProjectID] = @ProjectID, [JobType] = @JobType, [PointOfContact] = @PointOfContact, [POCPhoneNumber] = @POCPhoneNumber, [PONumber] = @PONumber, [SplicingComple] = @SplicingComple, [HardRestoration] = @HardRestoration, [QCPerformed] = @QCPerformed, [POAmount] = @POAmount WHERE (([TransactionID] = @Original_TransactionID) AND ([ProjectID] = @Original_ProjectID) AND ([JobType] = @Original_JobType) AND ([SplicingComple] = @Original_SplicingComple) AND ([HardRestoration] = @Original_HardRestoration) AND ([QCPerformed] = @Original_QCPerformed) AND ((@IsNull_POAmount = 1 AND [POAmount] IS NULL) OR ([POAmount] = @Original_POAmount)));
-SELECT TransactionID, ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumber, SplicingComple, HardRestoration, QCPerformed, POAmount FROM productionprojectinfo WHERE (TransactionID = @TransactionID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[productionprojectinfo] SET [ProjectID] = @ProjectID, [JobType] = @JobType, [PointOfContact] = @PointOfContact, [POCPhoneNumber] = @POCPhoneNumber, [PONumber] = @PONumber, [SplicingComplete] = @SplicingComplete, [HardRestoration] = @HardRestoration, [QCPerformed] = @QCPerformed, [POAmount] = @POAmount, [SplicingCompleteDate] = @SplicingCompleteDate, [HardRestorationDate] = @HardRestorationDate, [QCPerformedDate] = @QCPerformedDate WHERE (([TransactionID] = @Original_TransactionID) AND ([ProjectID] = @Original_ProjectID) AND ([JobType] = @Original_JobType) AND ([SplicingComplete] = @Original_SplicingComplete) AND ([HardRestoration] = @Original_HardRestoration) AND ([QCPerformed] = @Original_QCPerformed) AND ((@IsNull_POAmount = 1 AND [POAmount] IS NULL) OR ([POAmount] = @Original_POAmount)) AND ((@IsNull_SplicingCompleteDate = 1 AND [SplicingCompleteDate] IS NULL) OR ([SplicingCompleteDate] = @Original_SplicingCompleteDate)) AND ((@IsNull_HardRestorationDate = 1 AND [HardRestorationDate] IS NULL) OR ([HardRestorationDate] = @Original_HardRestorationDate)) AND ((@IsNull_QCPerformedDate = 1 AND [QCPerformedDate] IS NULL) OR ([QCPerformedDate] = @Original_QCPerformedDate)));
+SELECT TransactionID, ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumber, SplicingComplete, HardRestoration, QCPerformed, POAmount, SplicingCompleteDate, HardRestorationDate, QCPerformedDate FROM productionprojectinfo WHERE (TransactionID = @TransactionID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProjectID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProjectID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@JobType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "JobType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PointOfContact", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PointOfContact", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@POCPhoneNumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POCPhoneNumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PONumber", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PONumber", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SplicingComple", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SplicingComple", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SplicingComplete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SplicingComplete", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HardRestoration", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardRestoration", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QCPerformed", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QCPerformed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@POAmount", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "POAmount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@SplicingCompleteDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SplicingCompleteDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HardRestorationDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardRestorationDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QCPerformedDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QCPerformedDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TransactionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TransactionID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProjectID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProjectID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_JobType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "JobType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SplicingComple", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SplicingComple", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SplicingComplete", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SplicingComplete", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HardRestoration", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardRestoration", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QCPerformed", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QCPerformed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_POAmount", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "POAmount", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_POAmount", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 2, "POAmount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_SplicingCompleteDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SplicingCompleteDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_SplicingCompleteDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "SplicingCompleteDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HardRestorationDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardRestorationDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HardRestorationDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardRestorationDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_QCPerformedDate", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QCPerformedDate", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QCPerformedDate", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QCPerformedDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TransactionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "TransactionID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -1048,8 +1198,8 @@ SELECT TransactionID, ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumb
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT TransactionID, ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumbe" +
-                "r, SplicingComple, HardRestoration, QCPerformed, POAmount FROM dbo.productionpro" +
-                "jectinfo";
+                "r, SplicingComplete, HardRestoration, QCPerformed, POAmount, SplicingCompleteDat" +
+                "e, HardRestorationDate, QCPerformedDate FROM dbo.productionprojectinfo";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1110,11 +1260,11 @@ SELECT TransactionID, ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumb
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_TransactionID, int Original_ProjectID, int Original_JobType, bool Original_SplicingComple, bool Original_HardRestoration, bool Original_QCPerformed, global::System.Nullable<decimal> Original_POAmount) {
+        public virtual int Delete(int Original_TransactionID, int Original_ProjectID, int Original_JobType, bool Original_SplicingComplete, bool Original_HardRestoration, bool Original_QCPerformed, global::System.Nullable<decimal> Original_POAmount, global::System.Nullable<global::System.DateTime> Original_SplicingCompleteDate, global::System.Nullable<global::System.DateTime> Original_HardRestorationDate, global::System.Nullable<global::System.DateTime> Original_QCPerformedDate) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_TransactionID));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_ProjectID));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_JobType));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((bool)(Original_SplicingComple));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((bool)(Original_SplicingComplete));
             this.Adapter.DeleteCommand.Parameters[4].Value = ((bool)(Original_HardRestoration));
             this.Adapter.DeleteCommand.Parameters[5].Value = ((bool)(Original_QCPerformed));
             if ((Original_POAmount.HasValue == true)) {
@@ -1124,6 +1274,30 @@ SELECT TransactionID, ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumb
             else {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SplicingCompleteDate.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((System.DateTime)(Original_SplicingCompleteDate.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Original_HardRestorationDate.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((System.DateTime)(Original_HardRestorationDate.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_QCPerformedDate.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((System.DateTime)(Original_QCPerformedDate.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1145,7 +1319,7 @@ SELECT TransactionID, ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumb
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int ProjectID, int JobType, string PointOfContact, string POCPhoneNumber, string PONumber, bool SplicingComple, bool HardRestoration, bool QCPerformed, global::System.Nullable<decimal> POAmount) {
+        public virtual int Insert(int ProjectID, int JobType, string PointOfContact, string POCPhoneNumber, string PONumber, bool SplicingComplete, bool HardRestoration, bool QCPerformed, global::System.Nullable<decimal> POAmount, global::System.Nullable<global::System.DateTime> SplicingCompleteDate, global::System.Nullable<global::System.DateTime> HardRestorationDate, global::System.Nullable<global::System.DateTime> QCPerformedDate) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ProjectID));
             this.Adapter.InsertCommand.Parameters[1].Value = ((int)(JobType));
             if ((PointOfContact == null)) {
@@ -1166,7 +1340,7 @@ SELECT TransactionID, ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumb
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(PONumber));
             }
-            this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(SplicingComple));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((bool)(SplicingComplete));
             this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(HardRestoration));
             this.Adapter.InsertCommand.Parameters[7].Value = ((bool)(QCPerformed));
             if ((POAmount.HasValue == true)) {
@@ -1174,6 +1348,24 @@ SELECT TransactionID, ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumb
             }
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((SplicingCompleteDate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(SplicingCompleteDate.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((HardRestorationDate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((System.DateTime)(HardRestorationDate.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((QCPerformedDate.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((System.DateTime)(QCPerformedDate.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1201,17 +1393,23 @@ SELECT TransactionID, ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumb
                     string PointOfContact, 
                     string POCPhoneNumber, 
                     string PONumber, 
-                    bool SplicingComple, 
+                    bool SplicingComplete, 
                     bool HardRestoration, 
                     bool QCPerformed, 
                     global::System.Nullable<decimal> POAmount, 
+                    global::System.Nullable<global::System.DateTime> SplicingCompleteDate, 
+                    global::System.Nullable<global::System.DateTime> HardRestorationDate, 
+                    global::System.Nullable<global::System.DateTime> QCPerformedDate, 
                     int Original_TransactionID, 
                     int Original_ProjectID, 
                     int Original_JobType, 
-                    bool Original_SplicingComple, 
+                    bool Original_SplicingComplete, 
                     bool Original_HardRestoration, 
                     bool Original_QCPerformed, 
                     global::System.Nullable<decimal> Original_POAmount, 
+                    global::System.Nullable<global::System.DateTime> Original_SplicingCompleteDate, 
+                    global::System.Nullable<global::System.DateTime> Original_HardRestorationDate, 
+                    global::System.Nullable<global::System.DateTime> Original_QCPerformedDate, 
                     int TransactionID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ProjectID));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(JobType));
@@ -1233,7 +1431,7 @@ SELECT TransactionID, ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumb
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(PONumber));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(SplicingComple));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((bool)(SplicingComplete));
             this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(HardRestoration));
             this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(QCPerformed));
             if ((POAmount.HasValue == true)) {
@@ -1242,21 +1440,63 @@ SELECT TransactionID, ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumb
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_TransactionID));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_ProjectID));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_JobType));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Original_SplicingComple));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((bool)(Original_HardRestoration));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((bool)(Original_QCPerformed));
-            if ((Original_POAmount.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((decimal)(Original_POAmount.Value));
+            if ((SplicingCompleteDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(SplicingCompleteDate.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(TransactionID));
+            if ((HardRestorationDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(HardRestorationDate.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((QCPerformedDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(QCPerformedDate.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_TransactionID));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_ProjectID));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_JobType));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((bool)(Original_SplicingComplete));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(Original_HardRestoration));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((bool)(Original_QCPerformed));
+            if ((Original_POAmount.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((decimal)(Original_POAmount.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((Original_SplicingCompleteDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((System.DateTime)(Original_SplicingCompleteDate.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            }
+            if ((Original_HardRestorationDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((System.DateTime)(Original_HardRestorationDate.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+            }
+            if ((Original_QCPerformedDate.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((System.DateTime)(Original_QCPerformedDate.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(TransactionID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1283,18 +1523,24 @@ SELECT TransactionID, ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumb
                     string PointOfContact, 
                     string POCPhoneNumber, 
                     string PONumber, 
-                    bool SplicingComple, 
+                    bool SplicingComplete, 
                     bool HardRestoration, 
                     bool QCPerformed, 
                     global::System.Nullable<decimal> POAmount, 
+                    global::System.Nullable<global::System.DateTime> SplicingCompleteDate, 
+                    global::System.Nullable<global::System.DateTime> HardRestorationDate, 
+                    global::System.Nullable<global::System.DateTime> QCPerformedDate, 
                     int Original_TransactionID, 
                     int Original_ProjectID, 
                     int Original_JobType, 
-                    bool Original_SplicingComple, 
+                    bool Original_SplicingComplete, 
                     bool Original_HardRestoration, 
                     bool Original_QCPerformed, 
-                    global::System.Nullable<decimal> Original_POAmount) {
-            return this.Update(ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumber, SplicingComple, HardRestoration, QCPerformed, POAmount, Original_TransactionID, Original_ProjectID, Original_JobType, Original_SplicingComple, Original_HardRestoration, Original_QCPerformed, Original_POAmount, Original_TransactionID);
+                    global::System.Nullable<decimal> Original_POAmount, 
+                    global::System.Nullable<global::System.DateTime> Original_SplicingCompleteDate, 
+                    global::System.Nullable<global::System.DateTime> Original_HardRestorationDate, 
+                    global::System.Nullable<global::System.DateTime> Original_QCPerformedDate) {
+            return this.Update(ProjectID, JobType, PointOfContact, POCPhoneNumber, PONumber, SplicingComplete, HardRestoration, QCPerformed, POAmount, SplicingCompleteDate, HardRestorationDate, QCPerformedDate, Original_TransactionID, Original_ProjectID, Original_JobType, Original_SplicingComplete, Original_HardRestoration, Original_QCPerformed, Original_POAmount, Original_SplicingCompleteDate, Original_HardRestorationDate, Original_QCPerformedDate, Original_TransactionID);
         }
     }
     

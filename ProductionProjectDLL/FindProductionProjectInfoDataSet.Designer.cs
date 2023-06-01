@@ -295,7 +295,7 @@ namespace ProductionProjectDLL {
             
             private global::System.Data.DataColumn columnPONumber;
             
-            private global::System.Data.DataColumn columnSplicingComple;
+            private global::System.Data.DataColumn columnSplicingComplete;
             
             private global::System.Data.DataColumn columnHardRestoration;
             
@@ -402,9 +402,9 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SplicingCompleColumn {
+            public global::System.Data.DataColumn SplicingCompleteColumn {
                 get {
-                    return this.columnSplicingComple;
+                    return this.columnSplicingComplete;
                 }
             }
             
@@ -469,7 +469,7 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FindProductionProjectInfoRow AddFindProductionProjectInfoRow(string AssignedProjectID, string CustomerAssignedID, string ProjectName, System.DateTime TransactionDate, string PointOfContact, string JobType, string PONumber, bool SplicingComple, bool HardRestoration, bool QCPerformed, decimal POAmount) {
+            public FindProductionProjectInfoRow AddFindProductionProjectInfoRow(string AssignedProjectID, string CustomerAssignedID, string ProjectName, System.DateTime TransactionDate, string PointOfContact, string JobType, string PONumber, bool SplicingComplete, bool HardRestoration, bool QCPerformed, decimal POAmount) {
                 FindProductionProjectInfoRow rowFindProductionProjectInfoRow = ((FindProductionProjectInfoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -480,7 +480,7 @@ namespace ProductionProjectDLL {
                         PointOfContact,
                         JobType,
                         PONumber,
-                        SplicingComple,
+                        SplicingComplete,
                         HardRestoration,
                         QCPerformed,
                         POAmount};
@@ -521,7 +521,7 @@ namespace ProductionProjectDLL {
                 this.columnPointOfContact = base.Columns["PointOfContact"];
                 this.columnJobType = base.Columns["JobType"];
                 this.columnPONumber = base.Columns["PONumber"];
-                this.columnSplicingComple = base.Columns["SplicingComple"];
+                this.columnSplicingComplete = base.Columns["SplicingComplete"];
                 this.columnHardRestoration = base.Columns["HardRestoration"];
                 this.columnQCPerformed = base.Columns["QCPerformed"];
                 this.columnPOAmount = base.Columns["POAmount"];
@@ -546,8 +546,8 @@ namespace ProductionProjectDLL {
                 base.Columns.Add(this.columnJobType);
                 this.columnPONumber = new global::System.Data.DataColumn("PONumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPONumber);
-                this.columnSplicingComple = new global::System.Data.DataColumn("SplicingComple", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSplicingComple);
+                this.columnSplicingComplete = new global::System.Data.DataColumn("SplicingComplete", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSplicingComplete);
                 this.columnHardRestoration = new global::System.Data.DataColumn("HardRestoration", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHardRestoration);
                 this.columnQCPerformed = new global::System.Data.DataColumn("QCPerformed", typeof(bool), null, global::System.Data.MappingType.Element);
@@ -573,7 +573,7 @@ namespace ProductionProjectDLL {
                 this.columnJobType.MaxLength = 2147483647;
                 this.columnPONumber.AllowDBNull = false;
                 this.columnPONumber.MaxLength = 2147483647;
-                this.columnSplicingComple.AllowDBNull = false;
+                this.columnSplicingComplete.AllowDBNull = false;
                 this.columnHardRestoration.AllowDBNull = false;
                 this.columnQCPerformed.AllowDBNull = false;
             }
@@ -806,12 +806,12 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool SplicingComple {
+            public bool SplicingComplete {
                 get {
-                    return ((bool)(this[this.tableFindProductionProjectInfo.SplicingCompleColumn]));
+                    return ((bool)(this[this.tableFindProductionProjectInfo.SplicingCompleteColumn]));
                 }
                 set {
-                    this[this.tableFindProductionProjectInfo.SplicingCompleColumn] = value;
+                    this[this.tableFindProductionProjectInfo.SplicingCompleteColumn] = value;
                 }
             }
             
@@ -1033,7 +1033,7 @@ namespace ProductionProjectDLL.FindProductionProjectInfoDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("PointOfContact", "PointOfContact");
             tableMapping.ColumnMappings.Add("JobType", "JobType");
             tableMapping.ColumnMappings.Add("PONumber", "PONumber");
-            tableMapping.ColumnMappings.Add("SplicingComple", "SplicingComple");
+            tableMapping.ColumnMappings.Add("SplicingComplete", "SplicingComplete");
             tableMapping.ColumnMappings.Add("HardRestoration", "HardRestoration");
             tableMapping.ColumnMappings.Add("QCPerformed", "QCPerformed");
             tableMapping.ColumnMappings.Add("POAmount", "POAmount");

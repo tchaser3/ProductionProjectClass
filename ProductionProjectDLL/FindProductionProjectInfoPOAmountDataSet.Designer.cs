@@ -291,13 +291,19 @@ namespace ProductionProjectDLL {
             
             private global::System.Data.DataColumn columnPONumber;
             
-            private global::System.Data.DataColumn columnSplicingComple;
+            private global::System.Data.DataColumn columnSplicingComplete;
             
             private global::System.Data.DataColumn columnHardRestoration;
             
             private global::System.Data.DataColumn columnQCPerformed;
             
             private global::System.Data.DataColumn columnPOAmount;
+            
+            private global::System.Data.DataColumn columnSplicingCompleteDate;
+            
+            private global::System.Data.DataColumn columnHardRestorationDate;
+            
+            private global::System.Data.DataColumn columnQCPerformedDate;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -382,9 +388,9 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SplicingCompleColumn {
+            public global::System.Data.DataColumn SplicingCompleteColumn {
                 get {
-                    return this.columnSplicingComple;
+                    return this.columnSplicingComplete;
                 }
             }
             
@@ -409,6 +415,30 @@ namespace ProductionProjectDLL {
             public global::System.Data.DataColumn POAmountColumn {
                 get {
                     return this.columnPOAmount;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SplicingCompleteDateColumn {
+                get {
+                    return this.columnSplicingCompleteDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn HardRestorationDateColumn {
+                get {
+                    return this.columnHardRestorationDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn QCPerformedDateColumn {
+                get {
+                    return this.columnQCPerformedDate;
                 }
             }
             
@@ -449,7 +479,7 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FindProductionProjectInfoPOAmountRow AddFindProductionProjectInfoPOAmountRow(int ProjectID, int JobType, string PointOfContact, string POCPhoneNumber, string PONumber, bool SplicingComple, bool HardRestoration, bool QCPerformed, decimal POAmount) {
+            public FindProductionProjectInfoPOAmountRow AddFindProductionProjectInfoPOAmountRow(int ProjectID, int JobType, string PointOfContact, string POCPhoneNumber, string PONumber, bool SplicingComplete, bool HardRestoration, bool QCPerformed, decimal POAmount, System.DateTime SplicingCompleteDate, System.DateTime HardRestorationDate, System.DateTime QCPerformedDate) {
                 FindProductionProjectInfoPOAmountRow rowFindProductionProjectInfoPOAmountRow = ((FindProductionProjectInfoPOAmountRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -458,10 +488,13 @@ namespace ProductionProjectDLL {
                         PointOfContact,
                         POCPhoneNumber,
                         PONumber,
-                        SplicingComple,
+                        SplicingComplete,
                         HardRestoration,
                         QCPerformed,
-                        POAmount};
+                        POAmount,
+                        SplicingCompleteDate,
+                        HardRestorationDate,
+                        QCPerformedDate};
                 rowFindProductionProjectInfoPOAmountRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindProductionProjectInfoPOAmountRow);
                 return rowFindProductionProjectInfoPOAmountRow;
@@ -497,10 +530,13 @@ namespace ProductionProjectDLL {
                 this.columnPointOfContact = base.Columns["PointOfContact"];
                 this.columnPOCPhoneNumber = base.Columns["POCPhoneNumber"];
                 this.columnPONumber = base.Columns["PONumber"];
-                this.columnSplicingComple = base.Columns["SplicingComple"];
+                this.columnSplicingComplete = base.Columns["SplicingComplete"];
                 this.columnHardRestoration = base.Columns["HardRestoration"];
                 this.columnQCPerformed = base.Columns["QCPerformed"];
                 this.columnPOAmount = base.Columns["POAmount"];
+                this.columnSplicingCompleteDate = base.Columns["SplicingCompleteDate"];
+                this.columnHardRestorationDate = base.Columns["HardRestorationDate"];
+                this.columnQCPerformedDate = base.Columns["QCPerformedDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -518,14 +554,20 @@ namespace ProductionProjectDLL {
                 base.Columns.Add(this.columnPOCPhoneNumber);
                 this.columnPONumber = new global::System.Data.DataColumn("PONumber", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPONumber);
-                this.columnSplicingComple = new global::System.Data.DataColumn("SplicingComple", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSplicingComple);
+                this.columnSplicingComplete = new global::System.Data.DataColumn("SplicingComplete", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSplicingComplete);
                 this.columnHardRestoration = new global::System.Data.DataColumn("HardRestoration", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHardRestoration);
                 this.columnQCPerformed = new global::System.Data.DataColumn("QCPerformed", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQCPerformed);
                 this.columnPOAmount = new global::System.Data.DataColumn("POAmount", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPOAmount);
+                this.columnSplicingCompleteDate = new global::System.Data.DataColumn("SplicingCompleteDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSplicingCompleteDate);
+                this.columnHardRestorationDate = new global::System.Data.DataColumn("HardRestorationDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHardRestorationDate);
+                this.columnQCPerformedDate = new global::System.Data.DataColumn("QCPerformedDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnQCPerformedDate);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTransactionID}, true));
                 this.columnTransactionID.AutoIncrement = true;
@@ -540,7 +582,7 @@ namespace ProductionProjectDLL {
                 this.columnPOCPhoneNumber.MaxLength = 2147483647;
                 this.columnPONumber.AllowDBNull = false;
                 this.columnPONumber.MaxLength = 2147483647;
-                this.columnSplicingComple.AllowDBNull = false;
+                this.columnSplicingComplete.AllowDBNull = false;
                 this.columnHardRestoration.AllowDBNull = false;
                 this.columnQCPerformed.AllowDBNull = false;
             }
@@ -751,12 +793,12 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool SplicingComple {
+            public bool SplicingComplete {
                 get {
-                    return ((bool)(this[this.tableFindProductionProjectInfoPOAmount.SplicingCompleColumn]));
+                    return ((bool)(this[this.tableFindProductionProjectInfoPOAmount.SplicingCompleteColumn]));
                 }
                 set {
-                    this[this.tableFindProductionProjectInfoPOAmount.SplicingCompleColumn] = value;
+                    this[this.tableFindProductionProjectInfoPOAmount.SplicingCompleteColumn] = value;
                 }
             }
             
@@ -801,6 +843,57 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime SplicingCompleteDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableFindProductionProjectInfoPOAmount.SplicingCompleteDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SplicingCompleteDate\' in table \'FindProductionProjectInfoPO" +
+                                "Amount\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindProductionProjectInfoPOAmount.SplicingCompleteDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime HardRestorationDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableFindProductionProjectInfoPOAmount.HardRestorationDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'HardRestorationDate\' in table \'FindProductionProjectInfoPOA" +
+                                "mount\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindProductionProjectInfoPOAmount.HardRestorationDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime QCPerformedDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableFindProductionProjectInfoPOAmount.QCPerformedDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'QCPerformedDate\' in table \'FindProductionProjectInfoPOAmoun" +
+                                "t\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindProductionProjectInfoPOAmount.QCPerformedDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsPOAmountNull() {
                 return this.IsNull(this.tableFindProductionProjectInfoPOAmount.POAmountColumn);
             }
@@ -809,6 +902,42 @@ namespace ProductionProjectDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetPOAmountNull() {
                 this[this.tableFindProductionProjectInfoPOAmount.POAmountColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSplicingCompleteDateNull() {
+                return this.IsNull(this.tableFindProductionProjectInfoPOAmount.SplicingCompleteDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSplicingCompleteDateNull() {
+                this[this.tableFindProductionProjectInfoPOAmount.SplicingCompleteDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsHardRestorationDateNull() {
+                return this.IsNull(this.tableFindProductionProjectInfoPOAmount.HardRestorationDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetHardRestorationDateNull() {
+                this[this.tableFindProductionProjectInfoPOAmount.HardRestorationDateColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsQCPerformedDateNull() {
+                return this.IsNull(this.tableFindProductionProjectInfoPOAmount.QCPerformedDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetQCPerformedDateNull() {
+                this[this.tableFindProductionProjectInfoPOAmount.QCPerformedDateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -977,10 +1106,13 @@ namespace ProductionProjectDLL.FindProductionProjectInfoPOAmountDataSetTableAdap
             tableMapping.ColumnMappings.Add("PointOfContact", "PointOfContact");
             tableMapping.ColumnMappings.Add("POCPhoneNumber", "POCPhoneNumber");
             tableMapping.ColumnMappings.Add("PONumber", "PONumber");
-            tableMapping.ColumnMappings.Add("SplicingComple", "SplicingComple");
+            tableMapping.ColumnMappings.Add("SplicingComplete", "SplicingComplete");
             tableMapping.ColumnMappings.Add("HardRestoration", "HardRestoration");
             tableMapping.ColumnMappings.Add("QCPerformed", "QCPerformed");
             tableMapping.ColumnMappings.Add("POAmount", "POAmount");
+            tableMapping.ColumnMappings.Add("SplicingCompleteDate", "SplicingCompleteDate");
+            tableMapping.ColumnMappings.Add("HardRestorationDate", "HardRestorationDate");
+            tableMapping.ColumnMappings.Add("QCPerformedDate", "QCPerformedDate");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
