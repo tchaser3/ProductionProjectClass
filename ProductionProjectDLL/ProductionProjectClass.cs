@@ -244,6 +244,170 @@ namespace ProductionProjectDLL
         FindProductionProjectTotalNTPForProjectIDDataSet aFindProductionProjectTotalNTPForProjectIDDataSet;
         FindProductionProjectTotalNTPForProjectIDDataSetTableAdapters.FindProductionProjectTotalNTPForProjectIDTableAdapter aFindProductionProjectTotalNTPForProjectIDTableAdapter;
 
+        ProductionProjectUndergroundDataSet aProductionProjectUndergroundDataSet;
+        ProductionProjectUndergroundDataSetTableAdapters.productionprojectundergroundTableAdapter aProductionProjectUndergroundTableAdapter;
+
+        InsertProductionProjectUndergroundEntryTableAdapters.QueriesTableAdapter aInsertProductionProjectUndergroundTableAdapter;
+
+        UpdateProductionProjectUndergroundDateCompletedEntryTableAdapters.QueriesTableAdapter aUpdateProductionProjectUndergroundDateCompletedTableAdapter;
+
+        UpdateProductionProjectUndergroundRestorationCompletedEntryTableAdapters.QueriesTableAdapter aUpdateProductionProductionProjectUndergroundRestorationCompletedTableAdapter;
+
+        FindProductionProjectUndergroundNotCompleteDataSet aFindProductionProjectUndergroundNotCompleteDataSet;
+        FindProductionProjectUndergroundNotCompleteDataSetTableAdapters.FindProductionProjectUndergroundNotCompletedTableAdapter aFindProductionProjectUndergroundNotCompleteTableAdapter;
+
+        UpdateProductionProjectUndergroundNeedingRestorationEntryTableAdapters.QueriesTableAdapter aUpdateProductionProjectUndergroundNeedingRestorationTableAdapter;
+
+        FindProductionProjectUndergroundNeedingRestorationDataSet aFindProductionProjectUndergroundNeedingRestorationDataSet;
+        FindProductionProjectUndergroundNeedingRestorationDataSetTableAdapters.FindProductionProjectUndergroundNeedingRestorationTableAdapter aFindProductionProjectUndergroundNeedingRestorationTableAdapter;
+
+        FindProductionProjectUndergroundByProjectStatusDataSet aFindProductionProjectUndergroundByProjectStatusDataSet;
+        FindProductionProjectUndergroundByProjectStatusDataSetTableAdapters.FindProductionProjectUndergroundByProjectStatusTableAdapter aFindProductionProjectUndergroundByProjectStatusTableAdapter;
+
+        public FindProductionProjectUndergroundByProjectStatusDataSet FindProductionProjectUndergroundByProjectStatus(int intProjectStatus)
+        {
+            try
+            {
+                aFindProductionProjectUndergroundByProjectStatusDataSet = new FindProductionProjectUndergroundByProjectStatusDataSet();
+                aFindProductionProjectUndergroundByProjectStatusTableAdapter = new FindProductionProjectUndergroundByProjectStatusDataSetTableAdapters.FindProductionProjectUndergroundByProjectStatusTableAdapter();
+                aFindProductionProjectUndergroundByProjectStatusTableAdapter.Fill(aFindProductionProjectUndergroundByProjectStatusDataSet.FindProductionProjectUndergroundByProjectStatus, intProjectStatus);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Underground By Project Status " + Ex.ToString());
+            }
+
+            return aFindProductionProjectUndergroundByProjectStatusDataSet;
+        }
+        public FindProductionProjectUndergroundNeedingRestorationDataSet FindProductionProjectUndergroundNeedingRestoration()
+        {
+            try
+            {
+                aFindProductionProjectUndergroundNeedingRestorationDataSet = new FindProductionProjectUndergroundNeedingRestorationDataSet();
+                aFindProductionProjectUndergroundNeedingRestorationTableAdapter = new FindProductionProjectUndergroundNeedingRestorationDataSetTableAdapters.FindProductionProjectUndergroundNeedingRestorationTableAdapter();
+                aFindProductionProjectUndergroundNeedingRestorationTableAdapter.Fill(aFindProductionProjectUndergroundNeedingRestorationDataSet.FindProductionProjectUndergroundNeedingRestoration);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Underground Needing Restoration " + Ex.ToString());
+            }
+
+            return aFindProductionProjectUndergroundNeedingRestorationDataSet;
+        }
+        public bool UpdateProductionProjectUndergroundNeedingRestoration(int intProjectID, string strModifiedUser)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateProductionProjectUndergroundNeedingRestorationTableAdapter = new UpdateProductionProjectUndergroundNeedingRestorationEntryTableAdapters.QueriesTableAdapter();
+                aUpdateProductionProjectUndergroundNeedingRestorationTableAdapter.UpdateProductionProjectUndergroundNeedingRestoration(intProjectID, strModifiedUser);
+            }
+            catch (Exception Ex)
+            {
+                blnFatalError = true;
+
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Underground Needing Restoration " + Ex.ToString());
+            }
+
+            return blnFatalError;
+        }
+        public FindProductionProjectUndergroundNotCompleteDataSet FindProductionProjectUndergroundNotComplete()
+        {
+            try
+            {
+                aFindProductionProjectUndergroundNotCompleteDataSet = new FindProductionProjectUndergroundNotCompleteDataSet();
+                aFindProductionProjectUndergroundNotCompleteTableAdapter = new FindProductionProjectUndergroundNotCompleteDataSetTableAdapters.FindProductionProjectUndergroundNotCompletedTableAdapter();
+                aFindProductionProjectUndergroundNotCompleteTableAdapter.Fill(aFindProductionProjectUndergroundNotCompleteDataSet.FindProductionProjectUndergroundNotCompleted);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Underground Not Complete " + Ex.ToString());
+            }
+
+            return aFindProductionProjectUndergroundNotCompleteDataSet;
+        }
+        public bool UpdateProductionProjectUndergroundRestorationCompleted(int intProjectID, string strModifiedUser)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateProductionProductionProjectUndergroundRestorationCompletedTableAdapter = new UpdateProductionProjectUndergroundRestorationCompletedEntryTableAdapters.QueriesTableAdapter();
+                aUpdateProductionProductionProjectUndergroundRestorationCompletedTableAdapter.UpdateProductionProjectUndergroundRestorationCompleted(intProjectID, strModifiedUser);
+            }
+            catch (Exception Ex)
+            {
+                blnFatalError = true;
+
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Underground Restoration Completed " + Ex.ToString());
+            }
+
+            return blnFatalError;
+        }
+        public bool UpdateProductionProjectUndergroundDateCompleted(int intProjectID, string strModifiedUser, DateTime datDateCompleted)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateProductionProjectUndergroundDateCompletedTableAdapter = new UpdateProductionProjectUndergroundDateCompletedEntryTableAdapters.QueriesTableAdapter();
+                aUpdateProductionProjectUndergroundDateCompletedTableAdapter.UpdateProductionProjectUndergroundDateCompleted(intProjectID, strModifiedUser, datDateCompleted);
+            }
+            catch (Exception Ex)
+            {
+                blnFatalError = true;
+
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Underground Date Completed " + Ex.ToString());
+            }
+
+            return blnFatalError;
+        }
+        public bool InsertProductionProjectUnderground(int intProjectID, string strCreatedUser, int intTotalFootage)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aInsertProductionProjectUndergroundTableAdapter = new InsertProductionProjectUndergroundEntryTableAdapters.QueriesTableAdapter();
+                aInsertProductionProjectUndergroundTableAdapter.InsertProductionProjectUnderground(intProjectID, strCreatedUser, intTotalFootage);
+            }
+            catch (Exception Ex)
+            {
+                blnFatalError = true;
+
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Insert Production Project Underground " + Ex.ToString());
+            }
+
+            return blnFatalError;
+        }
+        public ProductionProjectUndergroundDataSet GetProductionProjectUndergroundInfo()
+        {
+            try
+            {
+                aProductionProjectUndergroundDataSet = new ProductionProjectUndergroundDataSet();
+                aProductionProjectUndergroundTableAdapter = new ProductionProjectUndergroundDataSetTableAdapters.productionprojectundergroundTableAdapter();
+                aProductionProjectUndergroundTableAdapter.Fill(aProductionProjectUndergroundDataSet.productionprojectunderground);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Get Production Project Underground Info " + Ex.ToString());
+            }
+
+            return aProductionProjectUndergroundDataSet;
+        }
+        public void UpdateProductionProjectUndergroundDB(ProductionProjectUndergroundDataSet aProductionProjectUndergroundDataSet)
+        {
+            try
+            {
+                aProductionProjectUndergroundTableAdapter = new ProductionProjectUndergroundDataSetTableAdapters.productionprojectundergroundTableAdapter();
+                aProductionProjectUndergroundTableAdapter.Update(aProductionProjectUndergroundDataSet.productionprojectunderground);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Underground DB " + Ex.ToString());
+            }
+        }
         public FindProductionProjectTotalNTPForProjectIDDataSet FindProductionProjectTotalNTPForProjectID(string strCustomerProjectID)
         {
             try
