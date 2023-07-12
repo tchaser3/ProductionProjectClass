@@ -264,6 +264,44 @@ namespace ProductionProjectDLL
         FindProductionProjectUndergroundByProjectStatusDataSet aFindProductionProjectUndergroundByProjectStatusDataSet;
         FindProductionProjectUndergroundByProjectStatusDataSetTableAdapters.FindProductionProjectUndergroundByProjectStatusTableAdapter aFindProductionProjectUndergroundByProjectStatusTableAdapter;
 
+        FindProductionProjectUndergroundByProjectIDDataSet aFindProductionProjectUndergroundByProjectIDDataSet;
+        FindProductionProjectUndergroundByProjectIDDataSetTableAdapters.FindProductionProjectUndergroundByProjectIDTableAdapter aFindProductionProjectUndergroundByProjectIDTableAdapter;
+
+        UpdateProductionProjectUndergroundFootageEntryTableAdapters.QueriesTableAdapter aUpdateProductionProjectUndergroundFootageTableAdapter;
+
+        public bool UpdateProductionProjectUndergroundFootage(int intProjectID, string strModifiedUser, int intFootage)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateProductionProjectUndergroundFootageTableAdapter = new UpdateProductionProjectUndergroundFootageEntryTableAdapters.QueriesTableAdapter();
+                aUpdateProductionProjectUndergroundFootageTableAdapter.UpdateProductionProjectUndergroundFootage(intProjectID, strModifiedUser, intFootage);
+            }
+            catch (Exception Ex)
+            {
+                blnFatalError = true;
+
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Underground Footage " + Ex.ToString());
+            }
+
+            return blnFatalError;
+        }
+        public FindProductionProjectUndergroundByProjectIDDataSet FindProductionProjectUndergroundByProjectID(int intProjectID)
+        {
+            try
+            {
+                aFindProductionProjectUndergroundByProjectIDDataSet = new FindProductionProjectUndergroundByProjectIDDataSet();
+                aFindProductionProjectUndergroundByProjectIDTableAdapter = new FindProductionProjectUndergroundByProjectIDDataSetTableAdapters.FindProductionProjectUndergroundByProjectIDTableAdapter();
+                aFindProductionProjectUndergroundByProjectIDTableAdapter.Fill(aFindProductionProjectUndergroundByProjectIDDataSet.FindProductionProjectUndergroundByProjectID, intProjectID);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Production Project Underground By Project ID " + Ex.ToString());
+            }
+
+            return aFindProductionProjectUndergroundByProjectIDDataSet;
+        }
         public FindProductionProjectUndergroundByProjectStatusDataSet FindProductionProjectUndergroundByProjectStatus(int intProjectStatus)
         {
             try

@@ -235,6 +235,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindProductionProjectTotalNTPForProjectIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindProductionProjectUndergroundByProjectIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProductionProjectUndergroundByProjectIDDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindProductionProjectUndergroundByProjectStatusDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -521,6 +526,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdateProductionProjectUndergroundDateCompletedEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateProductionProjectUndergroundFootageEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectUndergroundFootageEntry.xsd</DependentUpon>
     </Compile>
     <Compile Include="UpdateProductionProjectUndergroundNeedingRestorationEntry.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -952,6 +962,17 @@
     </None>
     <None Include="FindProductionProjectTotalNTPForProjectIDDataSet.xss">
       <DependentUpon>FindProductionProjectTotalNTPForProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectUndergroundByProjectIDDataSet.xsc">
+      <DependentUpon>FindProductionProjectUndergroundByProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProductionProjectUndergroundByProjectIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProductionProjectUndergroundByProjectIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProductionProjectUndergroundByProjectIDDataSet.xss">
+      <DependentUpon>FindProductionProjectUndergroundByProjectIDDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindProductionProjectUndergroundByProjectStatusDataSet.xsc">
       <DependentUpon>FindProductionProjectUndergroundByProjectStatusDataSet.xsd</DependentUpon>
@@ -1572,6 +1593,17 @@
     </None>
     <None Include="UpdateProductionProjectUndergroundDateCompletedEntry.xss">
       <DependentUpon>UpdateProductionProjectUndergroundDateCompletedEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectUndergroundFootageEntry.xsc">
+      <DependentUpon>UpdateProductionProjectUndergroundFootageEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectUndergroundFootageEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectUndergroundFootageEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectUndergroundFootageEntry.xss">
+      <DependentUpon>UpdateProductionProjectUndergroundFootageEntry.xsd</DependentUpon>
     </None>
     <None Include="UpdateProductionProjectUndergroundNeedingRestorationEntry.xsc">
       <DependentUpon>UpdateProductionProjectUndergroundNeedingRestorationEntry.xsd</DependentUpon>
