@@ -365,14 +365,14 @@ namespace ProductionProjectDLL
 
             return aFindProductionProjectUndergroundNotCompleteDataSet;
         }
-        public bool UpdateProductionProjectUndergroundRestorationCompleted(int intProjectID, string strModifiedUser)
+        public bool UpdateProductionProjectUndergroundRestorationCompleted(int intProjectID, string strModifiedUser, DateTime datRestorationCompleteDate)
         {
             bool blnFatalError = false;
 
             try
             {
                 aUpdateProductionProductionProjectUndergroundRestorationCompletedTableAdapter = new UpdateProductionProjectUndergroundRestorationCompletedEntryTableAdapters.QueriesTableAdapter();
-                aUpdateProductionProductionProjectUndergroundRestorationCompletedTableAdapter.UpdateProductionProjectUndergroundRestorationCompleted(intProjectID, strModifiedUser);
+                aUpdateProductionProductionProjectUndergroundRestorationCompletedTableAdapter.UpdateProductionProjectUndergroundRestorationCompleted(intProjectID, strModifiedUser, datRestorationCompleteDate);
             }
             catch (Exception Ex)
             {
