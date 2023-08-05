@@ -299,6 +299,8 @@ namespace ProductionProjectDLL {
             
             private global::System.Data.DataColumn columnProjectID;
             
+            private global::System.Data.DataColumn columnECDDate;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public FindOpenProductionProjectUndergroundDataTable() {
@@ -414,6 +416,14 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ECDDateColumn {
+                get {
+                    return this.columnECDDate;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -449,7 +459,7 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FindOpenProductionProjectUndergroundRow AddFindOpenProductionProjectUndergroundRow(string CustomerAssignedID, string AssignedProjectID, string ProjectName, string BusinessAddress, string AssignedOffice, System.DateTime DateReceived, decimal POAmount, string WorkOrderStatus, string ProjectNotes, int ProjectID) {
+            public FindOpenProductionProjectUndergroundRow AddFindOpenProductionProjectUndergroundRow(string CustomerAssignedID, string AssignedProjectID, string ProjectName, string BusinessAddress, string AssignedOffice, System.DateTime DateReceived, decimal POAmount, string WorkOrderStatus, string ProjectNotes, int ProjectID, System.DateTime ECDDate) {
                 FindOpenProductionProjectUndergroundRow rowFindOpenProductionProjectUndergroundRow = ((FindOpenProductionProjectUndergroundRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         CustomerAssignedID,
@@ -461,7 +471,8 @@ namespace ProductionProjectDLL {
                         POAmount,
                         WorkOrderStatus,
                         ProjectNotes,
-                        ProjectID};
+                        ProjectID,
+                        ECDDate};
                 rowFindOpenProductionProjectUndergroundRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindOpenProductionProjectUndergroundRow);
                 return rowFindOpenProductionProjectUndergroundRow;
@@ -494,6 +505,7 @@ namespace ProductionProjectDLL {
                 this.columnWorkOrderStatus = base.Columns["WorkOrderStatus"];
                 this.columnProjectNotes = base.Columns["ProjectNotes"];
                 this.columnProjectID = base.Columns["ProjectID"];
+                this.columnECDDate = base.Columns["ECDDate"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -519,6 +531,8 @@ namespace ProductionProjectDLL {
                 base.Columns.Add(this.columnProjectNotes);
                 this.columnProjectID = new global::System.Data.DataColumn("ProjectID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProjectID);
+                this.columnECDDate = new global::System.Data.DataColumn("ECDDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnECDDate);
                 this.columnCustomerAssignedID.AllowDBNull = false;
                 this.columnCustomerAssignedID.MaxLength = 2147483647;
                 this.columnAssignedProjectID.AllowDBNull = false;
@@ -798,6 +812,23 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime ECDDate {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableFindOpenProductionProjectUnderground.ECDDateColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'ECDDate\' in table \'FindOpenProductionProjectUnderground\' is" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindOpenProductionProjectUnderground.ECDDateColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsPOAmountNull() {
                 return this.IsNull(this.tableFindOpenProductionProjectUnderground.POAmountColumn);
             }
@@ -818,6 +849,18 @@ namespace ProductionProjectDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetProjectNotesNull() {
                 this[this.tableFindOpenProductionProjectUnderground.ProjectNotesColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsECDDateNull() {
+                return this.IsNull(this.tableFindOpenProductionProjectUnderground.ECDDateColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetECDDateNull() {
+                this[this.tableFindOpenProductionProjectUnderground.ECDDateColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -990,6 +1033,7 @@ namespace ProductionProjectDLL.FindOpenProductionProjectUndergroundDataSetTableA
             tableMapping.ColumnMappings.Add("WorkOrderStatus", "WorkOrderStatus");
             tableMapping.ColumnMappings.Add("ProjectNotes", "ProjectNotes");
             tableMapping.ColumnMappings.Add("ProjectID", "ProjectID");
+            tableMapping.ColumnMappings.Add("ECDDate", "ECDDate");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
