@@ -5,6 +5,7 @@
  * Description: This is used for production projects */
 
 using NewEventLogDLL;
+using ProductionProjectDLL.FindOpenProductionProjectUndergroundDataSetTableAdapters;
 using System;
 
 namespace ProductionProjectDLL
@@ -269,6 +270,24 @@ namespace ProductionProjectDLL
 
         UpdateProductionProjectUndergroundFootageEntryTableAdapters.QueriesTableAdapter aUpdateProductionProjectUndergroundFootageTableAdapter;
 
+        FindOpenProductionProjectUndergroundDataSet aFindOpenProductionProjectUndergroundDataSet;
+        FindOpenProductionProjectUndergroundDataSetTableAdapters.FindOpenProductionProjectUndergroundTableAdapter aFindOpenProductionProjectUndergroundTableAdpater;
+
+        public FindOpenProductionProjectUndergroundDataSet FindOpenProductionProjectUnderground()
+        {
+            try
+            {
+                aFindOpenProductionProjectUndergroundDataSet = new FindOpenProductionProjectUndergroundDataSet();
+                aFindOpenProductionProjectUndergroundTableAdpater = new FindOpenProductionProjectUndergroundDataSetTableAdapters.FindOpenProductionProjectUndergroundTableAdapter();
+                aFindOpenProductionProjectUndergroundTableAdpater.Fill(aFindOpenProductionProjectUndergroundDataSet.FindOpenProductionProjectUnderground);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Open Production Project Underground " + Ex.ToString());
+            }
+
+            return aFindOpenProductionProjectUndergroundDataSet;
+        }
         public bool UpdateProductionProjectUndergroundFootage(int intProjectID, string strModifiedUser, int intFootage)
         {
             bool blnFatalError = false;
