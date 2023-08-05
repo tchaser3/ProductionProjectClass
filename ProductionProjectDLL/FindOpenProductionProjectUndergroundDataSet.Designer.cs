@@ -297,6 +297,8 @@ namespace ProductionProjectDLL {
             
             private global::System.Data.DataColumn columnProjectNotes;
             
+            private global::System.Data.DataColumn columnProjectID;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public FindOpenProductionProjectUndergroundDataTable() {
@@ -404,6 +406,14 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ProjectIDColumn {
+                get {
+                    return this.columnProjectID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -439,7 +449,7 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FindOpenProductionProjectUndergroundRow AddFindOpenProductionProjectUndergroundRow(string CustomerAssignedID, string AssignedProjectID, string ProjectName, string BusinessAddress, string AssignedOffice, System.DateTime DateReceived, decimal POAmount, string WorkOrderStatus, string ProjectNotes) {
+            public FindOpenProductionProjectUndergroundRow AddFindOpenProductionProjectUndergroundRow(string CustomerAssignedID, string AssignedProjectID, string ProjectName, string BusinessAddress, string AssignedOffice, System.DateTime DateReceived, decimal POAmount, string WorkOrderStatus, string ProjectNotes, int ProjectID) {
                 FindOpenProductionProjectUndergroundRow rowFindOpenProductionProjectUndergroundRow = ((FindOpenProductionProjectUndergroundRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         CustomerAssignedID,
@@ -450,7 +460,8 @@ namespace ProductionProjectDLL {
                         DateReceived,
                         POAmount,
                         WorkOrderStatus,
-                        ProjectNotes};
+                        ProjectNotes,
+                        ProjectID};
                 rowFindOpenProductionProjectUndergroundRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindOpenProductionProjectUndergroundRow);
                 return rowFindOpenProductionProjectUndergroundRow;
@@ -482,6 +493,7 @@ namespace ProductionProjectDLL {
                 this.columnPOAmount = base.Columns["POAmount"];
                 this.columnWorkOrderStatus = base.Columns["WorkOrderStatus"];
                 this.columnProjectNotes = base.Columns["ProjectNotes"];
+                this.columnProjectID = base.Columns["ProjectID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -505,6 +517,8 @@ namespace ProductionProjectDLL {
                 base.Columns.Add(this.columnWorkOrderStatus);
                 this.columnProjectNotes = new global::System.Data.DataColumn("ProjectNotes", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnProjectNotes);
+                this.columnProjectID = new global::System.Data.DataColumn("ProjectID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnProjectID);
                 this.columnCustomerAssignedID.AllowDBNull = false;
                 this.columnCustomerAssignedID.MaxLength = 2147483647;
                 this.columnAssignedProjectID.AllowDBNull = false;
@@ -519,6 +533,7 @@ namespace ProductionProjectDLL {
                 this.columnWorkOrderStatus.AllowDBNull = false;
                 this.columnWorkOrderStatus.MaxLength = 2147483647;
                 this.columnProjectNotes.MaxLength = 2147483647;
+                this.columnProjectID.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -772,6 +787,17 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int ProjectID {
+                get {
+                    return ((int)(this[this.tableFindOpenProductionProjectUnderground.ProjectIDColumn]));
+                }
+                set {
+                    this[this.tableFindOpenProductionProjectUnderground.ProjectIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsPOAmountNull() {
                 return this.IsNull(this.tableFindOpenProductionProjectUnderground.POAmountColumn);
             }
@@ -963,6 +989,7 @@ namespace ProductionProjectDLL.FindOpenProductionProjectUndergroundDataSetTableA
             tableMapping.ColumnMappings.Add("POAmount", "POAmount");
             tableMapping.ColumnMappings.Add("WorkOrderStatus", "WorkOrderStatus");
             tableMapping.ColumnMappings.Add("ProjectNotes", "ProjectNotes");
+            tableMapping.ColumnMappings.Add("ProjectID", "ProjectID");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
