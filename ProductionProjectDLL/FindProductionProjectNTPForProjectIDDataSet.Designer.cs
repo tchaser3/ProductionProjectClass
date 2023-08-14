@@ -295,6 +295,10 @@ namespace ProductionProjectDLL {
             
             private global::System.Data.DataColumn columnPositiveOrNegativeAdjustment;
             
+            private global::System.Data.DataColumn columnTransactionID;
+            
+            private global::System.Data.DataColumn columnPONumber;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public FindProductionProjectNTPForProjectIDDataTable() {
@@ -394,6 +398,22 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn TransactionIDColumn {
+                get {
+                    return this.columnTransactionID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PONumberColumn {
+                get {
+                    return this.columnPONumber;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -429,7 +449,7 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FindProductionProjectNTPForProjectIDRow AddFindProductionProjectNTPForProjectIDRow(System.DateTime CreateDateTime, string CreateUser, string AssignedProjectID, string CustomerAssignedID, string ProjectName, decimal POAmount, bool IsAdjustment, string PositiveOrNegativeAdjustment) {
+            public FindProductionProjectNTPForProjectIDRow AddFindProductionProjectNTPForProjectIDRow(System.DateTime CreateDateTime, string CreateUser, string AssignedProjectID, string CustomerAssignedID, string ProjectName, decimal POAmount, bool IsAdjustment, string PositiveOrNegativeAdjustment, string PONumber) {
                 FindProductionProjectNTPForProjectIDRow rowFindProductionProjectNTPForProjectIDRow = ((FindProductionProjectNTPForProjectIDRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         CreateDateTime,
@@ -439,7 +459,9 @@ namespace ProductionProjectDLL {
                         ProjectName,
                         POAmount,
                         IsAdjustment,
-                        PositiveOrNegativeAdjustment};
+                        PositiveOrNegativeAdjustment,
+                        null,
+                        PONumber};
                 rowFindProductionProjectNTPForProjectIDRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindProductionProjectNTPForProjectIDRow);
                 return rowFindProductionProjectNTPForProjectIDRow;
@@ -470,6 +492,8 @@ namespace ProductionProjectDLL {
                 this.columnPOAmount = base.Columns["POAmount"];
                 this.columnIsAdjustment = base.Columns["IsAdjustment"];
                 this.columnPositiveOrNegativeAdjustment = base.Columns["PositiveOrNegativeAdjustment"];
+                this.columnTransactionID = base.Columns["TransactionID"];
+                this.columnPONumber = base.Columns["PONumber"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -491,6 +515,12 @@ namespace ProductionProjectDLL {
                 base.Columns.Add(this.columnIsAdjustment);
                 this.columnPositiveOrNegativeAdjustment = new global::System.Data.DataColumn("PositiveOrNegativeAdjustment", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPositiveOrNegativeAdjustment);
+                this.columnTransactionID = new global::System.Data.DataColumn("TransactionID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTransactionID);
+                this.columnPONumber = new global::System.Data.DataColumn("PONumber", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPONumber);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTransactionID}, false));
                 this.columnCreateUser.MaxLength = 200;
                 this.columnAssignedProjectID.AllowDBNull = false;
                 this.columnAssignedProjectID.MaxLength = 2147483647;
@@ -499,6 +529,12 @@ namespace ProductionProjectDLL {
                 this.columnProjectName.AllowDBNull = false;
                 this.columnProjectName.MaxLength = 2147483647;
                 this.columnPositiveOrNegativeAdjustment.MaxLength = 200;
+                this.columnTransactionID.AutoIncrement = true;
+                this.columnTransactionID.AutoIncrementSeed = -1;
+                this.columnTransactionID.AutoIncrementStep = -1;
+                this.columnTransactionID.ReadOnly = true;
+                this.columnTransactionID.Unique = true;
+                this.columnPONumber.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -759,6 +795,40 @@ namespace ProductionProjectDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int TransactionID {
+                get {
+                    try {
+                        return ((int)(this[this.tableFindProductionProjectNTPForProjectID.TransactionIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TransactionID\' in table \'FindProductionProjectNTPForProject" +
+                                "ID\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindProductionProjectNTPForProjectID.TransactionIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PONumber {
+                get {
+                    try {
+                        return ((string)(this[this.tableFindProductionProjectNTPForProjectID.PONumberColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'PONumber\' in table \'FindProductionProjectNTPForProjectID\' i" +
+                                "s DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFindProductionProjectNTPForProjectID.PONumberColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsCreateDateTimeNull() {
                 return this.IsNull(this.tableFindProductionProjectNTPForProjectID.CreateDateTimeColumn);
             }
@@ -815,6 +885,30 @@ namespace ProductionProjectDLL {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetPositiveOrNegativeAdjustmentNull() {
                 this[this.tableFindProductionProjectNTPForProjectID.PositiveOrNegativeAdjustmentColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsTransactionIDNull() {
+                return this.IsNull(this.tableFindProductionProjectNTPForProjectID.TransactionIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetTransactionIDNull() {
+                this[this.tableFindProductionProjectNTPForProjectID.TransactionIDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPONumberNull() {
+                return this.IsNull(this.tableFindProductionProjectNTPForProjectID.PONumberColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPONumberNull() {
+                this[this.tableFindProductionProjectNTPForProjectID.PONumberColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -985,6 +1079,8 @@ namespace ProductionProjectDLL.FindProductionProjectNTPForProjectIDDataSetTableA
             tableMapping.ColumnMappings.Add("POAmount", "POAmount");
             tableMapping.ColumnMappings.Add("IsAdjustment", "IsAdjustment");
             tableMapping.ColumnMappings.Add("PositiveOrNegativeAdjustment", "PositiveOrNegativeAdjustment");
+            tableMapping.ColumnMappings.Add("TransactionID", "TransactionID");
+            tableMapping.ColumnMappings.Add("PONumber", "PONumber");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
