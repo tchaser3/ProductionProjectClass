@@ -462,6 +462,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UpdateProductionProjectCableTypeEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UpdateProductionProjectECDDateEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectECDDateEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UpdateProductionProjectInfoHardRestorationEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1455,6 +1460,17 @@
     </None>
     <None Include="UpdateProductionProjectCableTypeEntry.xss">
       <DependentUpon>UpdateProductionProjectCableTypeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectECDDateEntry.xsc">
+      <DependentUpon>UpdateProductionProjectECDDateEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectECDDateEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectECDDateEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectECDDateEntry.xss">
+      <DependentUpon>UpdateProductionProjectECDDateEntry.xsd</DependentUpon>
     </None>
     <None Include="UpdateProductionProjectInfoHardRestorationEntry.xsc">
       <DependentUpon>UpdateProductionProjectInfoHardRestorationEntry.xsd</DependentUpon>

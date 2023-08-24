@@ -273,6 +273,25 @@ namespace ProductionProjectDLL
         FindOpenProductionProjectUndergroundDataSet aFindOpenProductionProjectUndergroundDataSet;
         FindOpenProductionProjectUndergroundDataSetTableAdapters.FindOpenProductionProjectUndergroundTableAdapter aFindOpenProductionProjectUndergroundTableAdpater;
 
+        UpdateProductionProjectECDDateEntryTableAdapters.QueriesTableAdapter aUpdateProductionProjectECDDateTableAdapter;
+
+        public bool UpdateProductionProjectECDDate(int intTransactionID, DateTime datECDDate)
+        {
+            bool blnFatalError = false;
+
+            try
+            {
+                aUpdateProductionProjectECDDateTableAdapter = new UpdateProductionProjectECDDateEntryTableAdapters.QueriesTableAdapter();
+                aUpdateProductionProjectECDDateTableAdapter.UpdateProductionProjectECDDate(intTransactionID, datECDDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project ECD Date " + Ex.ToString());
+            }
+
+            return blnFatalError;
+        }
+
         public FindOpenProductionProjectUndergroundDataSet FindOpenProductionProjectUnderground()
         {
             try
