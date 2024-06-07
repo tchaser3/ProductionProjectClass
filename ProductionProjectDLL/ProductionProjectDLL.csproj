@@ -447,6 +447,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RemoveProductionProjectTechAssignmentEntry.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UpdateProductionProjectAssignedOfficeEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateProductionProjectAssignedOfficeEntry.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UpdateProductionProjectCableFootageEntry.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1427,6 +1432,17 @@
     </None>
     <None Include="RemoveProductionProjectTechAssignmentEntry.xss">
       <DependentUpon>RemoveProductionProjectTechAssignmentEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectAssignedOfficeEntry.xsc">
+      <DependentUpon>UpdateProductionProjectAssignedOfficeEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateProductionProjectAssignedOfficeEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateProductionProjectAssignedOfficeEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateProductionProjectAssignedOfficeEntry.xss">
+      <DependentUpon>UpdateProductionProjectAssignedOfficeEntry.xsd</DependentUpon>
     </None>
     <None Include="UpdateProductionProjectCableFootageEntry.xsc">
       <DependentUpon>UpdateProductionProjectCableFootageEntry.xsd</DependentUpon>

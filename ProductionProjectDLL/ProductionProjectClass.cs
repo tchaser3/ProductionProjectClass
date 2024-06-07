@@ -275,6 +275,17 @@ namespace ProductionProjectDLL
 
         UpdateProductionProjectECDDateEntryTableAdapters.QueriesTableAdapter aUpdateProductionProjectECDDateTableAdapter;
 
+        UpdateProductionProjectAssignedOfficeEntryTableAdapters.QueriesTableAdapter aUpdateProductionProjectAssignedOfficeTableAdapter;
+
+        public bool UpdateProductionProjectAssignedOffice(int intTransactionID, int intAssignedOfficeID)
+        {
+            bool blnFatalError = false;
+
+            aUpdateProductionProjectAssignedOfficeTableAdapter = new UpdateProductionProjectAssignedOfficeEntryTableAdapters.QueriesTableAdapter();
+            aUpdateProductionProjectAssignedOfficeTableAdapter.UpdateProductionProjectAssignedOffice(intTransactionID, intAssignedOfficeID);
+
+            return blnFatalError;
+        }
         public bool UpdateProductionProjectECDDate(int intTransactionID, DateTime datECDDate)
         {
             bool blnFatalError = false;
