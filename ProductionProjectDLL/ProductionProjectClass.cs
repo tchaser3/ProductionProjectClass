@@ -277,13 +277,40 @@ namespace ProductionProjectDLL
 
         UpdateProductionProjectAssignedOfficeEntryTableAdapters.QueriesTableAdapter aUpdateProductionProjectAssignedOfficeTableAdapter;
 
+        FindOpenProductionOutageProjectsDataSet aFindOpenProductionOutageProjectsDataSet;
+        FindOpenProductionOutageProjectsDataSetTableAdapters.FindOpenProductionOutageProjectsTableAdapter aFindOpenProductionOutageProjectsTableAdapter;
+
+        public FindOpenProductionOutageProjectsDataSet FindOpenProductionOutageProjects()
+        {
+            try
+            {
+                aFindOpenProductionOutageProjectsDataSet = new FindOpenProductionOutageProjectsDataSet();
+                aFindOpenProductionOutageProjectsTableAdapter = new FindOpenProductionOutageProjectsDataSetTableAdapters.FindOpenProductionOutageProjectsTableAdapter();
+                aFindOpenProductionOutageProjectsTableAdapter.Fill(aFindOpenProductionOutageProjectsDataSet.FindOpenProductionOutageProjects);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Open Production Project Underground " + Ex.ToString());
+            }
+
+            return aFindOpenProductionOutageProjectsDataSet;
+        }
         public bool UpdateProductionProjectAssignedOffice(int intTransactionID, int intAssignedOfficeID)
         {
             bool blnFatalError = false;
 
-            aUpdateProductionProjectAssignedOfficeTableAdapter = new UpdateProductionProjectAssignedOfficeEntryTableAdapters.QueriesTableAdapter();
-            aUpdateProductionProjectAssignedOfficeTableAdapter.UpdateProductionProjectAssignedOffice(intTransactionID, intAssignedOfficeID);
+            try
+            {
+                aUpdateProductionProjectAssignedOfficeTableAdapter = new UpdateProductionProjectAssignedOfficeEntryTableAdapters.QueriesTableAdapter();
+                aUpdateProductionProjectAssignedOfficeTableAdapter.UpdateProductionProjectAssignedOffice(intTransactionID, intAssignedOfficeID);
 
+            }
+            catch (Exception Ex)
+            {
+                blnFatalError = true;
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Update Production Project Assigned Office " + Ex.ToString());
+            }
+            
             return blnFatalError;
         }
         public bool UpdateProductionProjectECDDate(int intTransactionID, DateTime datECDDate)

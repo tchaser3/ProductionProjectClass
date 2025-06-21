@@ -65,6 +65,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindOpenOfficeBusinessLineDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindOpenProductionOutageProjectsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenProductionOutageProjectsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindOpenProductionProjectsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -603,6 +608,17 @@
     </None>
     <None Include="FindOpenOfficeBusinessLineDataSet.xss">
       <DependentUpon>FindOpenOfficeBusinessLineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenProductionOutageProjectsDataSet.xsc">
+      <DependentUpon>FindOpenProductionOutageProjectsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenProductionOutageProjectsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenProductionOutageProjectsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenProductionOutageProjectsDataSet.xss">
+      <DependentUpon>FindOpenProductionOutageProjectsDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindOpenProductionProjectsDataSet.xsc">
       <DependentUpon>FindOpenProductionProjectsDataSet.xsd</DependentUpon>
