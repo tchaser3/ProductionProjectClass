@@ -280,6 +280,23 @@ namespace ProductionProjectDLL
         FindOpenProductionOutageProjectsDataSet aFindOpenProductionOutageProjectsDataSet;
         FindOpenProductionOutageProjectsDataSetTableAdapters.FindOpenProductionOutageProjectsTableAdapter aFindOpenProductionOutageProjectsTableAdapter;
 
+        FindProjectOpenInvoicingDataSet aFindProjectOpenInvoicingDataSet;
+        FindProjectOpenInvoicingDataSetTableAdapters.FindProjectOpenInvoicingTableAdapter aFindProjectOpenInvoicingTableAdapter;
+
+        public FindProjectOpenInvoicingDataSet FindProjectOpenInvoicing()
+        {
+            try
+            {
+                aFindProjectOpenInvoicingDataSet = new FindProjectOpenInvoicingDataSet();
+                aFindProjectOpenInvoicingTableAdapter = new FindProjectOpenInvoicingDataSetTableAdapters.FindProjectOpenInvoicingTableAdapter();
+                aFindProjectOpenInvoicingTableAdapter.Fill(aFindProjectOpenInvoicingDataSet.FindProjectOpenInvoicing);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "Production Project Class // Find Project Open Invoicing " + Ex.ToString());
+            }
+            return aFindProjectOpenInvoicingDataSet;
+        }
         public FindOpenProductionOutageProjectsDataSet FindOpenProductionOutageProjects()
         {
             try

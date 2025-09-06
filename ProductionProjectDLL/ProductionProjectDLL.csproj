@@ -275,6 +275,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindProdutionProjectsByAssignedProjectIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindProjectOpenInvoicingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindProjectOpenInvoicingDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindTotalOpenProductionProjectsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1070,6 +1075,17 @@
     </None>
     <None Include="FindProdutionProjectsByAssignedProjectIDDataSet.xss">
       <DependentUpon>FindProdutionProjectsByAssignedProjectIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectOpenInvoicingDataSet.xsc">
+      <DependentUpon>FindProjectOpenInvoicingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindProjectOpenInvoicingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindProjectOpenInvoicingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindProjectOpenInvoicingDataSet.xss">
+      <DependentUpon>FindProjectOpenInvoicingDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindTotalOpenProductionProjectsDataSet.xsc">
       <DependentUpon>FindTotalOpenProductionProjectsDataSet.xsd</DependentUpon>
